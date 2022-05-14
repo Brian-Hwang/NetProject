@@ -42,6 +42,7 @@ int main(int argc, char *argv[]){
     uint16_t port = 8080;
     Address destination(InetSocketAddress(interfaces.GetAddress(1), port));
 
+    //need to pass full path to sender
     TPSenderHelper sender (destination, "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/testfile.txt");
     sender.SetAttribute("NPackets", UintegerValue(1000));
     sender.SetAttribute("DataRate", DataRateValue(DataRate("2Mb/s")));

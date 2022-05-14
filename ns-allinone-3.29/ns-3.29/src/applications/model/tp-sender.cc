@@ -75,9 +75,9 @@ void TPSender::StartApplication(void){
 
     if(!m_file){
         m_file.open(m_filename);
-        NS_LOG_UNCOND("Opening File...");
+        NS_LOG_INFO("Opening File...");
         if(m_file.is_open()){
-            NS_LOG_UNCOND("Opened File!");
+            NS_LOG_INFO("Opened File!");
         }
     }
 
@@ -92,6 +92,13 @@ void TPSender::SendPacket(void){
     NS_LOG_FUNCTION(this);
 
     Ptr<Packet> packet = Create<Packet> (m_packetSize);
+
+    char *content = new char[2];
+    m_file.read(content, 1);
+    content[1] = '\0';
+
+    NS_LOG_INFO("Read " << content << " from file" );
+    
     m_txTrace(packet);
 
     //send packet over socket (this is fully abstracted, no need to change based on TCP/UDP)
@@ -101,6 +108,7 @@ void TPSender::SendPacket(void){
     if(++m_packetsSent < m_nPackets){
         ScheduleTx();
     }
+    delete[] content;
 }
 
 void TPSender::ScheduleTx(void){
