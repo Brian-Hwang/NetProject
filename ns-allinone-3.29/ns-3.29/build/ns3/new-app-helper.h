@@ -1,5 +1,5 @@
-#ifndef NEWAPPHELPER_H_
-#define NEWAPPHELPER_H_
+#ifndef TPSENDHELPER_H_
+#define TPSENDHELPER_H_
 
 #include <stdint.h>
 #include "ns3/application-container.h"
@@ -9,9 +9,9 @@
 #include "ns3/new-app.h"
 
 namespace ns3{
-class NewAppHelper{
+class TPSenderHelper{
     public:
-        NewAppHelper(bool mode, Address address);
+        TPSenderHelper(Address address);
         void SetAttribute(std::string name, const AttributeValue &value);
         ApplicationContainer Install(Ptr<Node> node) const;
         ApplicationContainer Install(std::string nodeName) const;

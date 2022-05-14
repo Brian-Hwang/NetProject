@@ -1,17 +1,17 @@
-#ifndef NEWAPPHELPER_H_
-#define NEWAPPHELPER_H_
+#ifndef TPRECVHELPER_H_
+#define TPRECVHELPER_H_
 
 #include <stdint.h>
 #include "ns3/application-container.h"
 #include "ns3/node-container.h"
 #include "ns3/object-factory.h"
 #include "ns3/ipv4-address.h"
-#include "ns3/new-app.h"
+#include "ns3/tp-receiver.h"
 
 namespace ns3{
-class NewAppHelper{
+class TPReceiverHelper{
     public:
-        NewAppHelper(bool mode, Address address);
+        TPReceiverHelper(Address address);
         void SetAttribute(std::string name, const AttributeValue &value);
         ApplicationContainer Install(Ptr<Node> node) const;
         ApplicationContainer Install(std::string nodeName) const;

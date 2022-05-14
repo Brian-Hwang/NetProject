@@ -14,15 +14,13 @@
 
 namespace ns3{
 
-//class Socket;
-//class Packet;
 
-class NewApp : public Application
+class TPSender : public Application
 {
     public:
         static TypeId GetTypeId(void);
-        NewApp();
-        virtual ~NewApp();
+        TPSender();
+        virtual ~TPSender();
 
     private:
         virtual void StartApplication(void);
@@ -34,9 +32,6 @@ class NewApp : public Application
         //function for actually sending a packet
         void SendPacket(void);
 
-        void HandleRead(Ptr<Socket> socket);
-
-        bool m_mode;
         Address m_address;
         uint32_t m_nPackets;
         DataRate m_dataRate;
@@ -47,8 +42,7 @@ class NewApp : public Application
         EventId m_sendEvent;
         bool m_running;
 
-        TracedCallback<Ptr<const Packet>> m_txTrace;
-        TracedCallback<Ptr<const Packet>> m_rxTrace;
+TracedCallback<Ptr<const Packet>> m_txTrace;
 };
 };
 #endif
