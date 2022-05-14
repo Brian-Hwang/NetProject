@@ -13,5 +13,5 @@ Added Files:
 - scratch/test.cc
   
 TODO:
-  Actually transmit the file data from TPSender to TPReceiver
-  Implement some mechanism that stops the sender if it reaches EOF
+  - Actually transmit the file data from TPSender to TPReceiver
+  - Implement some mechanism that stops the sender if it reaches EOF
