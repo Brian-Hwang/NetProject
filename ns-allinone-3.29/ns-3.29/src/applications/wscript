@@ -8,6 +8,7 @@ def build(bld):
         'model/packet-sink.cc',
         'model/udp-client.cc',
         'model/udp-server.cc',
+        'model/new-app.cc',
         'model/seq-ts-header.cc',
         'model/udp-trace-client.cc',
         'model/packet-loss-counter.cc',
@@ -23,6 +24,7 @@ def build(bld):
         'helper/packet-sink-helper.cc',
         'helper/udp-client-server-helper.cc',
         'helper/udp-echo-helper.cc',
+        'helper/new-app-helper.cc',
         'helper/three-gpp-http-helper.cc',
         ]
 
@@ -40,6 +42,7 @@ def build(bld):
         'model/packet-sink.h',
         'model/udp-client.h',
         'model/udp-server.h',
+        'model/new-app.h',
         'model/seq-ts-header.h',
         'model/udp-trace-client.h',
         'model/packet-loss-counter.h',
@@ -55,6 +58,7 @@ def build(bld):
         'helper/packet-sink-helper.h',
         'helper/udp-client-server-helper.h',
         'helper/udp-echo-helper.h',
+        'helper/new-app-helper.h',
         'helper/three-gpp-http-helper.h'
         ]
     
