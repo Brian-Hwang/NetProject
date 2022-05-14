@@ -14,8 +14,8 @@ NS_LOG_COMPONENT_DEFINE("TestTeamProject");
 
 int main(int argc, char *argv[]){
 
-    LogComponentEnable("TPReceiver", LOG_LEVEL_ALL);
-    LogComponentEnable("TPSender", LOG_LEVEL_ALL);
+    //LogComponentEnable("TPReceiver", LOG_LEVEL_ALL);
+    //LogComponentEnable("TPSender", LOG_LEVEL_ALL);
 
     std::string dr = "1Mbps";
     std::string delay = "1us";
@@ -42,7 +42,7 @@ int main(int argc, char *argv[]){
     uint16_t port = 8080;
     Address destination(InetSocketAddress(interfaces.GetAddress(1), port));
 
-    TPSenderHelper sender (destination);
+    TPSenderHelper sender (destination, "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/testfile.txt");
     sender.SetAttribute("NPackets", UintegerValue(1000));
     sender.SetAttribute("DataRate", DataRateValue(DataRate("2Mb/s")));
     ApplicationContainer senderApp = sender.Install(nodes.Get(0));

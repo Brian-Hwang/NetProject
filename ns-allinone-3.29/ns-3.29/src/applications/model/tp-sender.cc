@@ -12,6 +12,7 @@
 #include "ns3/trace-source-accessor.h"
 #include "ns3/udp-socket-factory.h"
 #include "ns3/tp-sender.h"
+#include "ns3/string.h"
 
 namespace ns3{
 
@@ -31,6 +32,10 @@ TypeId TPSender::GetTypeId(void){
                 UintegerValue(10000),
                 MakeUintegerAccessor(&TPSender::m_nPackets),
                 MakeUintegerChecker<uint32_t>())
+        .AddAttribute("FileName", "The name of the file to be transmitted.",
+                StringValue(),
+                MakeStringAccessor(&TPSender::m_filename),
+                MakeStringChecker())
         .AddAttribute("DataRate", "The data rate",
                 DataRateValue(DataRate("500kb/s")),
                 MakeDataRateAccessor(&TPSender::m_dataRate),
@@ -45,7 +50,8 @@ TPSender::TPSender()
     :m_socket(0),
     m_packetSize(1000),
     m_packetsSent(0),
-    m_running(false)
+    m_running(false),
+    m_file(NULL)
 {
     NS_LOG_FUNCTION(this);
 }
@@ -65,6 +71,14 @@ void TPSender::StartApplication(void){
         m_socket = Socket::CreateSocket(GetNode(), tid);
         m_socket->Bind();
         m_socket->Connect(m_address);
+    }
+
+    if(!m_file){
+        m_file.open(m_filename);
+        NS_LOG_UNCOND("Opening File...");
+        if(m_file.is_open()){
+            NS_LOG_UNCOND("Opened File!");
+        }
     }
 
     //indicate that application is running now
@@ -112,6 +126,9 @@ void TPSender::StopApplication(){
 
     if(m_socket){
         m_socket->Close();
+    }
+    if(m_file.is_open()){
+        m_file.close();
     }
 }
     

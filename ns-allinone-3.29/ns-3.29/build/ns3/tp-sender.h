@@ -11,6 +11,10 @@
 #include "ns3/boolean.h" 
 #include "ns3/log.h" 
 #include "ns3/uinteger.h" 
+#include "ns3/string.h"
+#include <iostream>
+#include <fstream>
+
 
 namespace ns3{
 
@@ -41,6 +45,9 @@ class TPSender : public Application
         uint32_t m_packetsSent;
         EventId m_sendEvent;
         bool m_running;
+
+        std::string m_filename;
+        std::ifstream m_file;
 
 TracedCallback<Ptr<const Packet>> m_txTrace;
 };

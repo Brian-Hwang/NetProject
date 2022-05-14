@@ -11,7 +11,7 @@
 namespace ns3{
 class TPSenderHelper{
     public:
-        TPSenderHelper(Address address);
+        TPSenderHelper(Address address, std::string filename);
         void SetAttribute(std::string name, const AttributeValue &value);
         ApplicationContainer Install(Ptr<Node> node) const;
         ApplicationContainer Install(std::string nodeName) const;

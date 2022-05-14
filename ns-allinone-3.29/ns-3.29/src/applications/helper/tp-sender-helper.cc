@@ -5,9 +5,10 @@
 
 namespace ns3{
 
-TPSenderHelper::TPSenderHelper(Address address){
+TPSenderHelper::TPSenderHelper(Address address, std::string filename){
     m_factory.SetTypeId("ns3::TPSender");
     m_factory.Set("Address", AddressValue(address));
+    m_factory.Set("FileName", StringValue(filename));
 }
 
 void TPSenderHelper::SetAttribute(std::string name, const AttributeValue &value){
