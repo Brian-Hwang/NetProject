@@ -11,6 +11,9 @@
 #include "ns3/boolean.h" 
 #include "ns3/log.h" 
 #include "ns3/uinteger.h" 
+#include "ns3/string.h"
+#include <iostream>
+#include <fstream>
 
 namespace ns3{
 
@@ -35,7 +38,10 @@ class TPReceiver : public Application
         Ptr<Socket> m_socket;
         uint32_t m_totalRx;
         bool m_running;
-
+        std::string m_inFilename;
+        std::string m_outFilename;
+        std::ofstream m_inFile;
+        std::ofstream m_outFile;
         TracedCallback<Ptr<const Packet>> m_rxTrace;
 };
 };

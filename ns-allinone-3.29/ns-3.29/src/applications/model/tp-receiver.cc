@@ -27,6 +27,14 @@ TypeId TPReceiver::GetTypeId(void){
                 AddressValue(),
                 MakeAddressAccessor(&TPReceiver::m_address),
                 MakeAddressChecker())
+        .AddAttribute("InFile", "The name of the input file to get data for calculation from.",
+                StringValue(),
+                MakeStringAccessor(&TPReceiver::m_inFilename),
+                MakeStringChecker())
+        .AddAttribute("OutFile", "The name of the output file to write received data to.",
+                StringValue(),
+                MakeStringAccessor(&TPReceiver::m_outFilename),
+                MakeStringChecker())
         .AddTraceSource("Rx", "A packet has been received",
                 MakeTraceSourceAccessor(&TPReceiver::m_rxTrace), "ns3::Packet::TracedCallback")
         ;
@@ -36,7 +44,9 @@ TypeId TPReceiver::GetTypeId(void){
 TPReceiver::TPReceiver()
     :m_socket(0),
     m_totalRx(0),
-    m_running(false)
+    m_running(false),
+    m_inFile(NULL),
+    m_outFile(NULL)
 {
     NS_LOG_FUNCTION(this);
 }
@@ -58,6 +68,22 @@ void TPReceiver::StartApplication(void){
         m_socket->ShutdownSend();
         m_socket->SetRecvCallback(MakeCallback(&TPReceiver::HandleRead, this));
     }
+
+    if(!m_inFile){
+        m_inFile.open(m_inFilename);
+        NS_LOG_INFO("Opening Input File...");
+        if(m_inFile.is_open()){
+            NS_LOG_INFO("Opened Input File!");
+        }
+    }
+    
+    if(!m_outFile){
+        m_outFile.open(m_outFilename);
+        NS_LOG_INFO("Opening Output File...");
+        if(m_outFile.is_open()){
+            NS_LOG_INFO("Opened Output File!");
+        }
+    }
 }
 
 void TPReceiver::HandleRead(Ptr<Socket> socket){
@@ -68,6 +94,11 @@ void TPReceiver::HandleRead(Ptr<Socket> socket){
         if(packet->GetSize() > 0){
             m_totalRx++;
             m_rxTrace(packet);
+            uint8_t *payload = new uint8_t [packet->GetSize()];
+            packet->CopyData(payload, packet->GetSize());
+            NS_LOG_INFO("Received " << payload << " from sender.");
+            m_outFile << reinterpret_cast<char*>(payload);
+            delete[] payload;
         }
     }
 }

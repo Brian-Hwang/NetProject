@@ -58,7 +58,7 @@ int main(int argc, char *argv[]){
     senderApp.Start(Seconds(1.0));
     senderApp.Stop(Seconds(5.0));
 
-    TPReceiverHelper receiver(Address(InetSocketAddress(interfaces.GetAddress(1), port)));
+    TPReceiverHelper receiver(Address(InetSocketAddress(interfaces.GetAddress(1), port)), "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt", "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt");
     ApplicationContainer receiverApp = receiver.Install(nodes.Get(1));
     receiverApp.Start(Seconds(0.5));
     receiverApp.Stop(Seconds(7.0));

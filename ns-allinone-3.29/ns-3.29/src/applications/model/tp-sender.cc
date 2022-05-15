@@ -97,12 +97,13 @@ void TPSender::SendPacket(void){
     
     NS_LOG_INFO("Read " << content << " from file" );
     
-    uint8_t *buf = new uint8_t[1];
+    uint8_t *buf = new uint8_t[2];
     buf[0] = (uint8_t)content[0];
+    buf[1] = (uint8_t)content[1];
     
-    NS_LOG_INFO("Converted char to " << buf[0]);
+    NS_LOG_INFO("Converted char to " << buf);
 
-    Ptr<Packet> packet = Create<Packet> (buf, 1);
+    Ptr<Packet> packet = Create<Packet> (buf, 2);
     
     m_txTrace(packet);
 
@@ -110,7 +111,7 @@ void TPSender::SendPacket(void){
     m_socket->Send(packet);
 
     //continue sending until all number of packets have been sent
-    if(++m_packetsSent < m_nPackets){
+    if(++m_packetsSent < m_nPackets && !m_file.eof()){
         ScheduleTx();
     }
     delete[] content;
