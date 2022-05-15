@@ -12,6 +12,7 @@
 #include "ns3/log.h" 
 #include "ns3/uinteger.h" 
 #include "ns3/string.h"
+#include "ns3/nstime.h"
 #include <iostream>
 #include <fstream>
 
@@ -32,15 +33,21 @@ class TPReceiver : public Application
         virtual void StopApplication(void);
 
         void HandleRead(Ptr<Socket> socket);
+        void ScheduleDisplay(void);
+        void Display(void);
 
         Address m_address;
 
         Ptr<Socket> m_socket;
         uint32_t m_totalRx;
         bool m_running;
+        uint8_t m_fieldSize;
+        uint8_t m_currPos;
+        Time m_dispFreq;
+        EventId m_displayEvent;
         std::string m_inFilename;
         std::string m_outFilename;
-        std::ofstream m_inFile;
+        std::ifstream m_inFile;
         std::ofstream m_outFile;
         TracedCallback<Ptr<const Packet>> m_rxTrace;
 };

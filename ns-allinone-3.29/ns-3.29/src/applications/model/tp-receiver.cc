@@ -35,6 +35,14 @@ TypeId TPReceiver::GetTypeId(void){
                 StringValue(),
                 MakeStringAccessor(&TPReceiver::m_outFilename),
                 MakeStringChecker())
+        .AddAttribute("GameSize", "Size of the displayed field in game.",
+                UintegerValue(),
+                MakeUintegerAccessor(&TPReceiver::m_fieldSize),
+                MakeUintegerChecker<uint8_t>())
+        .AddAttribute("DisplayFreq", "Time between displaying different frames. (FPS maybe?)",
+                TimeValue(Seconds(0.1)),
+                MakeTimeAccessor(&TPReceiver::m_dispFreq),
+                MakeTimeChecker())
         .AddTraceSource("Rx", "A packet has been received",
                 MakeTraceSourceAccessor(&TPReceiver::m_rxTrace), "ns3::Packet::TracedCallback")
         ;
@@ -45,6 +53,7 @@ TPReceiver::TPReceiver()
     :m_socket(0),
     m_totalRx(0),
     m_running(false),
+    m_currPos((int)(m_fieldSize/2)),
     m_inFile(NULL),
     m_outFile(NULL)
 {
@@ -84,6 +93,42 @@ void TPReceiver::StartApplication(void){
             NS_LOG_INFO("Opened Output File!");
         }
     }
+
+    m_running = true;
+
+    Display();
+}
+
+void TPReceiver::ScheduleDisplay(void){
+    NS_LOG_FUNCTION(this);
+    if(m_running){
+        m_displayEvent = Simulator::Schedule(m_dispFreq, &TPReceiver::Display, this);
+    }
+}
+
+
+void TPReceiver::Display(void){
+    NS_LOG_FUNCTION(this);
+    uint8_t dim = m_fieldSize * m_fieldSize; 
+    NS_LOG_INFO("Dimension: " << dim);
+    //read frame from inFile
+    //char *frame = new char[m_fieldSize * m_fieldSize + 1];
+    char *frame = new char[dim+1];
+    //m_inFile.read(frame, m_fieldSize * m_fieldSize);
+    m_inFile.read(frame, dim);
+    //frame[m_fieldSize * m_fieldSize] = '\0';
+    frame[dim] = '\0';
+    NS_LOG_INFO("Next Frame is " << frame);
+    //place player based on m_currPos
+    frame[dim - m_fieldSize + m_currPos] = '2';
+    
+    //write to outFile
+    m_outFile << frame;
+
+    delete[] frame;
+    if(!m_inFile.eof()){
+        ScheduleDisplay();
+    }
 }
 
 void TPReceiver::HandleRead(Ptr<Socket> socket){
@@ -97,7 +142,16 @@ void TPReceiver::HandleRead(Ptr<Socket> socket){
             uint8_t *payload = new uint8_t [packet->GetSize()];
             packet->CopyData(payload, packet->GetSize());
             NS_LOG_INFO("Received " << payload << " from sender.");
-            m_outFile << reinterpret_cast<char*>(payload);
+            //m_outFile << reinterpret_cast<char*>(payload);
+            
+            if (payload[0] == '1'){
+                m_currPos = (m_currPos + 1 > m_fieldSize - 1)? m_fieldSize - 1
+                                                             : m_currPos + 1;
+            }else if(payload[0] == '2'){
+                m_currPos = (m_currPos - 1 < 0)? 0
+                                               : m_currPos - 1;
+            }
+
             delete[] payload;
         }
     }
@@ -106,8 +160,18 @@ void TPReceiver::HandleRead(Ptr<Socket> socket){
 void TPReceiver::StopApplication(){
     NS_LOG_FUNCTION(this);
     m_running = false;
+    if(m_displayEvent.IsRunning()){
+    
+        Simulator::Cancel(m_displayEvent);
+    }
     if(m_socket){
         m_socket->Close();
+    }
+    if(m_inFile.is_open()){
+        m_inFile.close();
+    }
+    if(m_outFile.is_open()){
+        m_outFile.close();
     }
 }
     

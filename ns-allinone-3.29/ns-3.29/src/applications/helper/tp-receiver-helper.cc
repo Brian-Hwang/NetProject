@@ -5,11 +5,12 @@
 
 namespace ns3{
 
-TPReceiverHelper::TPReceiverHelper(Address address, std::string infile, std::string outfile){
+TPReceiverHelper::TPReceiverHelper(Address address, std::string infile, std::string outfile, uint8_t size){
     m_factory.SetTypeId("ns3::TPReceiver");
     m_factory.Set("Local", AddressValue(address));
     m_factory.Set("InFile", StringValue(infile));
     m_factory.Set("OutFile", StringValue(outfile));
+    m_factory.Set("GameSize", UintegerValue(size));
 }
 
 void TPReceiverHelper::SetAttribute(std::string name, const AttributeValue &value){

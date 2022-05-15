@@ -21,7 +21,7 @@ NS_LOG_COMPONENT_DEFINE("TestTeamProject");
 
 int main(int argc, char *argv[]){
 
-    //LogComponentEnable("TPReceiver", LOG_LEVEL_ALL);
+    LogComponentEnable("TPReceiver", LOG_LEVEL_ALL);
     LogComponentEnable("TPSender", LOG_LEVEL_ALL);
 
     std::string dr = "1Mbps";
@@ -50,7 +50,7 @@ int main(int argc, char *argv[]){
     Address destination(InetSocketAddress(interfaces.GetAddress(1), port));
 
     //need to pass full path to sender
-    TPSenderHelper sender (destination, "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/testfile.txt");
+    TPSenderHelper sender (destination, "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/move.txt");
     sender.SetAttribute("NPackets", UintegerValue(1000));
     sender.SetAttribute("DataRate", DataRateValue(DataRate("2Mb/s")));
     ApplicationContainer senderApp = sender.Install(nodes.Get(0));
@@ -58,7 +58,7 @@ int main(int argc, char *argv[]){
     senderApp.Start(Seconds(1.0));
     senderApp.Stop(Seconds(5.0));
 
-    TPReceiverHelper receiver(Address(InetSocketAddress(interfaces.GetAddress(1), port)), "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt", "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt");
+    TPReceiverHelper receiver(Address(InetSocketAddress(interfaces.GetAddress(1), port)), "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt", "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
     ApplicationContainer receiverApp = receiver.Install(nodes.Get(1));
     receiverApp.Start(Seconds(0.5));
     receiverApp.Stop(Seconds(7.0));
