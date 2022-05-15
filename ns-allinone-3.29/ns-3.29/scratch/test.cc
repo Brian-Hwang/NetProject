@@ -10,12 +10,19 @@
 #include "ns3/point-to-point-module.h"
 using namespace ns3;
 
+static void Rxcontent(std::string context, Ptr<const Packet> p){
+    uint8_t *buf = new uint8_t [1];
+    p->CopyData(buf, 1);
+    NS_LOG_UNCOND("Received Packet! Contents: " << std::to_string(buf[0]));
+    delete[] buf;
+}
+
 NS_LOG_COMPONENT_DEFINE("TestTeamProject");
 
 int main(int argc, char *argv[]){
 
     //LogComponentEnable("TPReceiver", LOG_LEVEL_ALL);
-    //LogComponentEnable("TPSender", LOG_LEVEL_ALL);
+    LogComponentEnable("TPSender", LOG_LEVEL_ALL);
 
     std::string dr = "1Mbps";
     std::string delay = "1us";
@@ -55,7 +62,7 @@ int main(int argc, char *argv[]){
     ApplicationContainer receiverApp = receiver.Install(nodes.Get(1));
     receiverApp.Start(Seconds(0.5));
     receiverApp.Stop(Seconds(7.0));
-    
+    receiverApp.Get(0)->TraceConnect("Rx", "Arrived", MakeCallback(&Rxcontent));    
 
     Simulator::Run();
     Simulator::Stop(Seconds(8.0));

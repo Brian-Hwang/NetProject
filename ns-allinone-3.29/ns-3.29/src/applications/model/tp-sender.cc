@@ -91,13 +91,18 @@ void TPSender::StartApplication(void){
 void TPSender::SendPacket(void){
     NS_LOG_FUNCTION(this);
 
-    Ptr<Packet> packet = Create<Packet> (m_packetSize);
-
     char *content = new char[2];
     m_file.read(content, 1);
     content[1] = '\0';
-
+    
     NS_LOG_INFO("Read " << content << " from file" );
+    
+    uint8_t *buf = new uint8_t[1];
+    buf[0] = (uint8_t)content[0];
+    
+    NS_LOG_INFO("Converted char to " << buf[0]);
+
+    Ptr<Packet> packet = Create<Packet> (buf, 1);
     
     m_txTrace(packet);
 
@@ -109,6 +114,7 @@ void TPSender::SendPacket(void){
         ScheduleTx();
     }
     delete[] content;
+    delete[] buf;
 }
 
 void TPSender::ScheduleTx(void){
