@@ -35,6 +35,7 @@ class TPReceiver : public Application
         void HandleRead(Ptr<Socket> socket);
         void ScheduleDisplay(void);
         void Display(void);
+        char* NextFrame(uint16_t);
 
         Address m_address;
 
@@ -42,6 +43,7 @@ class TPReceiver : public Application
         uint32_t m_totalRx;
         bool m_running;
         uint8_t m_fieldSize;
+        bool m_fileIO;
         uint8_t m_currPos;
         Time m_dispFreq;
         EventId m_displayEvent;
@@ -50,6 +52,7 @@ class TPReceiver : public Application
         std::ifstream m_inFile;
         std::ofstream m_outFile;
         TracedCallback<Ptr<const Packet>> m_rxTrace;
+        TracedCallback<Ptr<const Packet>> m_txTrace;
 };
 };
 #endif

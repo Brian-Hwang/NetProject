@@ -114,8 +114,8 @@ void TPSender::SendPacket(void){
     if(++m_packetsSent < m_nPackets && !m_file.eof()){
         ScheduleTx();
     }
-    //delete[] content;
-    //delete[] buf;
+    delete[] content;
+    delete[] buf;
 }
 
 void TPSender::ScheduleTx(void){

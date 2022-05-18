@@ -43,8 +43,14 @@ TypeId TPReceiver::GetTypeId(void){
                 TimeValue(Seconds(0.1)),
                 MakeTimeAccessor(&TPReceiver::m_dispFreq),
                 MakeTimeChecker())
+        .AddAttribute("FileIO", "Determines whether the application runs its own frame generation, or if it gets frames over File IO",
+                BooleanValue(false),
+                MakeBooleanAccessor(&TPReceiver::m_fileIO),
+                MakeBooleanChecker())
         .AddTraceSource("Rx", "A packet has been received",
                 MakeTraceSourceAccessor(&TPReceiver::m_rxTrace), "ns3::Packet::TracedCallback")
+        .AddTraceSource("Tx", "A packet has been sent",
+                MakeTraceSourceAccessor(&TPReceiver::m_txTrace), "ns3::Packet::TracedCallback")
         ;
     return tid;
 }
@@ -53,7 +59,7 @@ TPReceiver::TPReceiver()
     :m_socket(0),
     m_totalRx(0),
     m_running(false),
-    m_currPos((int)(m_fieldSize/2)),
+    m_currPos(0),
     m_inFile(NULL),
     m_outFile(NULL)
 {
@@ -78,20 +84,17 @@ void TPReceiver::StartApplication(void){
         m_socket->SetRecvCallback(MakeCallback(&TPReceiver::HandleRead, this));
     }
 
-    if(!m_inFile){
+    m_currPos = (int)(m_fieldSize/2);
+
+    if(!m_inFile && m_fileIO){
         m_inFile.open(m_inFilename);
-        NS_LOG_INFO("Opening Input File...");
-        if(m_inFile.is_open()){
-            NS_LOG_INFO("Opened Input File!");
-        }
+
+        NS_ASSERT_MSG(m_inFile, "Unable to open Input File.");
     }
     
     if(!m_outFile){
         m_outFile.open(m_outFilename);
-        NS_LOG_INFO("Opening Output File...");
-        if(m_outFile.is_open()){
-            NS_LOG_INFO("Opened Output File!");
-        }
+        NS_ASSERT_MSG(m_outFile, "Unable to open Output File.");
     }
 
     m_running = true;
@@ -106,19 +109,35 @@ void TPReceiver::ScheduleDisplay(void){
     }
 }
 
+char *TPReceiver::NextFrame(uint16_t dim){
+    NS_LOG_FUNCTION(this);
+
+    NS_LOG_DEBUG("Frame Dimension: " << dim);
+    char *frame = new char[dim+1];
+   
+    if(m_fileIO){
+
+        //read frame from input file
+        m_inFile.read(frame, dim);
+        frame[dim] = '\0';
+    
+    }else{
+        /* Insert game's frame generation logic here*/
+    }
+
+    return frame;
+}
+
 
 void TPReceiver::Display(void){
     NS_LOG_FUNCTION(this);
-    uint8_t dim = m_fieldSize * m_fieldSize; 
-    NS_LOG_INFO("Dimension: " << dim);
-    //read frame from inFile
-    //char *frame = new char[m_fieldSize * m_fieldSize + 1];
-    char *frame = new char[dim+1];
-    //m_inFile.read(frame, m_fieldSize * m_fieldSize);
-    m_inFile.read(frame, dim);
-    //frame[m_fieldSize * m_fieldSize] = '\0';
-    frame[dim] = '\0';
-    NS_LOG_INFO("Next Frame is " << frame);
+    
+    uint16_t dim = m_fieldSize * m_fieldSize; 
+    
+    char *frame = NextFrame(dim);
+    
+    NS_LOG_DEBUG("Next Frame is " << frame);
+    
     //place player based on m_currPos
     frame[dim - m_fieldSize + m_currPos] = '2';
     
@@ -126,7 +145,7 @@ void TPReceiver::Display(void){
     m_outFile << frame;
 
     delete[] frame;
-    if(!m_inFile.eof()){
+    if(!m_fileIO || !m_inFile.eof()){
         ScheduleDisplay();
     }
 }
@@ -141,8 +160,7 @@ void TPReceiver::HandleRead(Ptr<Socket> socket){
             m_rxTrace(packet);
             uint8_t *payload = new uint8_t [packet->GetSize()];
             packet->CopyData(payload, packet->GetSize());
-            NS_LOG_INFO("Received " << payload << " from sender.");
-            //m_outFile << reinterpret_cast<char*>(payload);
+            NS_LOG_DEBUG("Received " << payload << " from sender.");
             
             if (payload[0] == '1'){
                 m_currPos = (m_currPos + 1 > m_fieldSize - 1)? m_fieldSize - 1

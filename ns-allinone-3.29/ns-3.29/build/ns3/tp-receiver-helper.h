@@ -11,7 +11,7 @@
 namespace ns3{
 class TPReceiverHelper{
     public:
-        TPReceiverHelper(Address address, std::string infile, std::string outfile, uint8_t size);
+        TPReceiverHelper(Address address, std::string outfile, uint8_t size);
         void SetAttribute(std::string name, const AttributeValue &value);
         ApplicationContainer Install(Ptr<Node> node) const;
         ApplicationContainer Install(std::string nodeName) const;

@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
     LogComponentEnable("TPReceiver", LOG_LEVEL_ALL);
     LogComponentEnable("TPSender", LOG_LEVEL_ALL);
 
-    std::string dr = "1Mbps";
+    std::string dr = "1Kbps";
     std::string delay = "1us";
 
     NS_LOG_UNCOND("Test");
@@ -58,10 +58,13 @@ int main(int argc, char *argv[]){
     senderApp.Start(Seconds(1.0));
     senderApp.Stop(Seconds(5.0));
 
-    TPReceiverHelper receiver(Address(InetSocketAddress(interfaces.GetAddress(1), port)), "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt", "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
+    TPReceiverHelper receiver(Address(InetSocketAddress(interfaces.GetAddress(1), port)), "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
+    receiver.SetAttribute("FileIO", BooleanValue(true));
+    receiver.SetAttribute("InFile", StringValue("/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt"));
+    receiver.SetAttribute("DisplayFreq", TimeValue(Seconds(0.05)));
     ApplicationContainer receiverApp = receiver.Install(nodes.Get(1));
-    receiverApp.Start(Seconds(0.5));
-    receiverApp.Stop(Seconds(7.0));
+    receiverApp.Start(Seconds(1.0));
+    receiverApp.Stop(Seconds(5.0));
     receiverApp.Get(0)->TraceConnect("Rx", "Arrived", MakeCallback(&Rxcontent));    
 
     Simulator::Run();
