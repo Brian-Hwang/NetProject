@@ -14,6 +14,212 @@
 #include "ns3/tp-sender.h"
 #include "ns3/string.h"
 
+#include<iostream>
+#include<fstream>
+#include<string>
+#include<stdio.h>
+
+int moving_algorithm(string input_frame, int current_position)  
+{
+
+	// move right = 2
+	// move left = 1
+	// stay = 0
+	int move = 0;
+	string oneline = "3333333333";
+
+	int number_of_obstacles_in_left = 0;
+	int number_of_obstacles_in_right = 0;
+	int number_of_obstacles_on_current_position = 0;
+
+	for (int i = 9; i >= 0; i--) {
+
+		for (int j = 0; j < 10; j++) {
+
+			oneline[j] = input_frame[i * 10 + j];
+			if (input_frame[i * 10 + j] == '1') {
+				if (j < current_position) {
+					number_of_obstacles_in_left += 1;
+				}
+				else if (j > current_position) {
+					number_of_obstacles_in_right += 1;
+
+				}
+				else {
+					number_of_obstacles_on_current_position += 1;
+				}
+
+			}
+
+		}
+
+		// if current position is same as the wall.
+		// and obstacle is on top of the characters head
+		// -> MOVE LEFT OR RIGHT
+		// 
+		//        100000000
+		//        8
+
+		//        100000101
+		//                8
+
+		if (i == 9) {
+			if (current_position == 9) {
+				if (oneline[current_position] == '1') {
+					move = 1;
+					cout << "moved left. position = wall. obstacle - on top of head";
+					cout << endl;
+					return move;
+				}
+
+			}
+			else if (current_position == 0) {
+				if (oneline[current_position] == '1') {
+					move = 2;
+					cout << "moved right. position = wall. obstacle - on top of head";
+					cout << endl;
+					return move;
+				}
+			}
+		}
+
+		// if current position is same as the wall.
+		// and moving results death
+		// -> STAY
+		// 
+		//        011000000
+		//        8
+
+		//        100000110
+		//                8
+
+		if (i == 9) {
+			if (current_position == 9) {
+				if (oneline[current_position - 1] == '1') {
+					move = 0;
+					cout << "stayed . position = wall. obstacle - next to the character";
+					cout << endl;
+					return move;
+				}
+
+			}
+			else if (current_position == 0) {
+				if (oneline[current_position + 1] == '1') {
+					move = 0;
+					cout << "stayed . position = wall. obstacle - next to the character";
+					cout << endl;
+					return move;
+				}
+			}
+		}
+		// if two obstacles exist in the side 
+		// -> STAY
+
+		//        100010101
+		//             8
+		if (i == 9) {
+
+			if (current_position > 0 && current_position < 9) {
+				if (oneline[current_position - 1] == '1' && oneline[current_position + 1] == '1') {
+					move = 0;
+					cout << "stayed . position = not wall. two obstacles side by side ";
+					cout << endl;
+					return move;
+				}
+			}
+		}
+
+		// if obstacle is on top of the characters head
+		// if choosing wrong direction may cause death
+		// -> MOVE LEFT OR RIGHT
+
+		//        100011001
+		//             8
+
+		//        100001101
+		//             8
+		if (i == 9) {
+			if (current_position > 0 && current_position < 9) {
+				if (oneline[current_position] == '1') {
+					if (oneline[current_position + 1] == '1') {
+						move = 2;
+						cout << "move right . position = not wall. obstacle left to the character";
+						cout << endl;
+						return move;
+					}
+					else if (oneline[current_position - 1] == '1') {
+						move = 1;
+						cout << "move left . position = not wall. obstacle right to the character";
+						cout << endl;
+						return move;
+					}
+				}
+
+			}
+		}
+
+		cout << oneline;
+		cout << endl;
+	}
+	cout << "number_of_obstacles_in_left: ";
+	cout << number_of_obstacles_in_left;
+	cout << endl;
+	cout << "number_of_obstacles_in_right: ";
+	cout << number_of_obstacles_in_right;
+	cout << endl;
+
+	// else, determine direction by counting number of obstacles in each side.
+
+	// 
+	// if 	number_of_obstacles_in_left < number_of_obstacles_in_right 
+	// move left
+	// 
+	//        11~~~~~~~~
+	//        ~111~~~~~~   when total obstacles in left side is bigger
+	//        1000000111
+	//           8  
+
+
+	// if 	number_of_obstacles_in_left > number_of_obstacles_in_right 
+	// move right
+	// 
+	//        00~~~~1~11
+	//        ~100~~11~1   when total obstacles in right side is bigger
+	//        1000010111
+	//           8  
+	// 
+	// 
+	// if 	number_of_obstacles_in_left = number_of_obstacles_in_right 
+	// stay
+	//        1~~~~~~~~~
+	//        ~1~~~~~~~~   when total obstacles in left == total obstacles in right
+	//        1000000111
+	//             8  
+	// 
+	if (number_of_obstacles_in_left < number_of_obstacles_in_right) {
+		move = 1;
+		cout << "move left . position = not wall. more obstacles in right side";
+		cout << endl;
+		return move;
+	}
+	if (number_of_obstacles_in_left > number_of_obstacles_in_right) {
+		move = 2;
+		cout << "move right . position = not wall. more obstacles in left side";
+		cout << endl;
+		return move;
+	}
+	if (number_of_obstacles_in_left == number_of_obstacles_in_right) {
+		move = 0;
+		cout << "stay . position = not wall. same number of obstacles in both sides";
+		cout << endl;
+		return move;
+	}
+
+    // if not returned until here, error.
+	return -4;
+}
+
+
 namespace ns3{
 
 NS_LOG_COMPONENT_DEFINE ("TPSender");
@@ -75,13 +281,19 @@ void TPSender::StartApplication(void){
 
 }
 
+
+
+
 void TPSender::computeResponse(void){
     NS_LOG_FUNCTION(this);
-    uint8_t move = 0;
-    /*Receive Packet with frame here*/
-
-    /*Insert AI for movement here*/
     
+    /*Receive Packet with frame here*/
+    string input_frame = "0000000000000010000000000000010000001000010000001010101000000000000000000000100001000000000100000000";
+	int current_position = 6;
+    /*Insert AI for movement here*/
+    uint8_t move = moving_algorithm(input_frame,current_position);
+
+
     //assuming that a variable 'move' is set, which is 0 when no movement is required
     if(move){
         char *buf = new char[2];
