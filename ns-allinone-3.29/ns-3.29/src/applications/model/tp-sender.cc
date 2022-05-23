@@ -32,14 +32,12 @@ TypeId TPSender::GetTypeId(void){
                 UintegerValue(10000),
                 MakeUintegerAccessor(&TPSender::m_nPackets),
                 MakeUintegerChecker<uint32_t>())
-        .AddAttribute("FileName", "The name of the file to be transmitted.",
-                StringValue(),
-                MakeStringAccessor(&TPSender::m_filename),
-                MakeStringChecker())
         .AddAttribute("DataRate", "The data rate",
                 DataRateValue(DataRate("500kb/s")),
                 MakeDataRateAccessor(&TPSender::m_dataRate),
                 MakeDataRateChecker())
+        .AddTraceSource("Rx", "A new packet is created and is sent",
+                MakeTraceSourceAccessor(&TPSender::m_rxTrace), "ns3::Packet::TracedCallback")
         .AddTraceSource("Tx", "A new packet is created and is sent",
                 MakeTraceSourceAccessor(&TPSender::m_txTrace), "ns3::Packet::TracedCallback")
         ;
@@ -50,8 +48,7 @@ TPSender::TPSender()
     :m_socket(0),
     m_packetSize(1000),
     m_packetsSent(0),
-    m_running(false),
-    m_file(NULL)
+    m_running(false)
 {
     NS_LOG_FUNCTION(this);
 }
@@ -73,35 +70,35 @@ void TPSender::StartApplication(void){
         m_socket->Connect(m_address);
     }
 
-    if(!m_file){
-        m_file.open(m_filename);
-        NS_LOG_INFO("Opening File...");
-        if(m_file.is_open()){
-            NS_LOG_INFO("Opened File!");
-        }
-    }
-
     //indicate that application is running now
     m_running = true;
 
-    //Send first packet
-    SendPacket();
 }
 
-void TPSender::SendPacket(void){
+void TPSender::computeResponse(void){
+    NS_LOG_FUNCTION(this);
+    uint8_t move = 0;
+    /*Receive Packet with frame here*/
+
+    /*Insert AI for movement here*/
+    
+    //assuming that a variable 'move' is set, which is 0 when no movement is required
+    if(move){
+        char *buf = new char[2];
+        buf[0] = (char)move;
+        buf[1] = '\0';
+        SendPacket(buf);
+    }
+}
+
+void TPSender::SendPacket(char *payload){
     NS_LOG_FUNCTION(this);
 
-    char *content = new char[2];
-    m_file.read(content, 1);
-    content[1] = '\0';
+    uint8_t *buf = new uint8_t[strlen(payload)];
+    for (uint8_t i = 0; i < strlen(payload); i++)
+        buf[i] = (uint8_t)payload[0];
     
-    NS_LOG_INFO("Read " << content << " from file" );
-    
-    uint8_t *buf = new uint8_t[2];
-    buf[0] = (uint8_t)content[0];
-    buf[1] = (uint8_t)content[1];
-    
-    NS_LOG_INFO("Converted char to " << buf);
+    NS_LOG_DEBUG("Converted char to " << buf);
 
     Ptr<Packet> packet = Create<Packet> (buf, 2);
     
@@ -110,26 +107,11 @@ void TPSender::SendPacket(void){
     //send packet over socket (this is fully abstracted, no need to change based on TCP/UDP)
     m_socket->Send(packet);
 
-    //continue sending until all number of packets have been sent
-    if(++m_packetsSent < m_nPackets && !m_file.eof()){
-        ScheduleTx();
-    }
-    delete[] content;
+    m_packetsSent++;
+
+    delete[] payload;
     delete[] buf;
 }
-
-void TPSender::ScheduleTx(void){
-    NS_LOG_FUNCTION(this);
-    if(m_running){
-        //getting next transmission tiome based on transmission rate
-        Time tNext(
-                Seconds (m_packetSize*8/static_cast<double>(m_dataRate.GetBitRate())));
-        
-        //creating new send event with the scheduler using the calculated time and the function call being scheduled, here: SendPacket()
-        m_sendEvent = Simulator::Schedule(tNext, &TPSender::SendPacket, this);
-    }
-}
-
 
 void TPSender::StopApplication(){
     NS_LOG_FUNCTION(this);
@@ -141,9 +123,6 @@ void TPSender::StopApplication(){
 
     if(m_socket){
         m_socket->Close();
-    }
-    if(m_file.is_open()){
-        m_file.close();
     }
 }
     

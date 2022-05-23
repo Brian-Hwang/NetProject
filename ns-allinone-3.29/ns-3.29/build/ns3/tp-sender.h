@@ -30,11 +30,12 @@ class TPSender : public Application
         virtual void StartApplication(void);
         virtual void StopApplication(void);
 
-        //function for scheduling next packet send
-        void ScheduleTx(void);
 
-        //function for actually sending a packet
-        void SendPacket(void);
+        //function for actually sending a packet with payload
+        void SendPacket(char* payload);
+
+        //function for reacting to game's state
+        void computeResponse(void);
 
         Address m_address;
         uint32_t m_nPackets;
@@ -46,10 +47,8 @@ class TPSender : public Application
         EventId m_sendEvent;
         bool m_running;
 
-        std::string m_filename;
-        std::ifstream m_file;
-
-TracedCallback<Ptr<const Packet>> m_txTrace;
+        TracedCallback<Ptr<const Packet>> m_rxTrace;
+        TracedCallback<Ptr<const Packet>> m_txTrace;
 };
 };
 #endif
