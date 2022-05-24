@@ -8,18 +8,20 @@
 #include "ns3/ipv4-address.h"
 #include "ns3/tp-sender.h"
 
-namespace ns3{
-class TPSenderHelper{
+namespace ns3
+{
+    class TPSenderHelper_STU
+    {
     public:
-        TPSenderHelper(Address address, std::string filename);
+        TPSenderHelper_STU(Address address, std::string filename);
         void SetAttribute(std::string name, const AttributeValue &value);
         ApplicationContainer Install(Ptr<Node> node) const;
         ApplicationContainer Install(std::string nodeName) const;
         ApplicationContainer Install(NodeContainer c) const;
 
     private:
-        Ptr<Application> InstallPriv(Ptr<Node>node) const;
+        Ptr<Application> InstallPriv(Ptr<Node> node) const;
         ObjectFactory m_factory;
-};
+    };
 };
 #endif

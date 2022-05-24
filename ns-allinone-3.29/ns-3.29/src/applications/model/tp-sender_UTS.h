@@ -7,33 +7,32 @@
 #include "ns3/traced-callback.h"
 #include "ns3/address.h"
 #include "ns3/data-rate.h"
-#include "ns3/socket.h" 
-#include "ns3/boolean.h" 
-#include "ns3/log.h" 
-#include "ns3/uinteger.h" 
+#include "ns3/socket.h"
+#include "ns3/boolean.h"
+#include "ns3/log.h"
+#include "ns3/uinteger.h"
 #include "ns3/string.h"
 #include <iostream>
 #include <fstream>
 
-
-namespace ns3{
-
-
-class TPSender : public Application
+namespace ns3
 {
+
+    class TPSender_UTS : public Application
+    {
     public:
         static TypeId GetTypeId(void);
-        TPSender();
-        virtual ~TPSender();
+        TPSender_UTS();
+        virtual ~TPSender_UTS();
 
     private:
         virtual void StartApplication(void);
         virtual void StopApplication(void);
 
-        //function for scheduling next packet send
+        // function for scheduling next packet send
         void ScheduleTx(void);
 
-        //function for actually sending a packet
+        // function for actually sending a packet
         void SendPacket(void);
 
         Address m_address;
@@ -49,8 +48,7 @@ class TPSender : public Application
         std::string m_filename;
         std::ifstream m_file;
 
-TracedCallback<Ptr<const Packet>> m_txTrace;
-};
+        TracedCallback<Ptr<const Packet>> m_txTrace;
+    };
 };
 #endif
-
