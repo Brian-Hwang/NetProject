@@ -1,5 +1,5 @@
-#ifndef TPRECV_H_
-#define TPRECV_H_
+#ifndef GAMESERVER_H_
+#define GAMESERVER_H_
 
 #include "ns3/application.h"
 #include "ns3/event-id.h"
@@ -22,12 +22,12 @@ namespace ns3
     // class Socket;
     // class Packet;
 
-    class TPReceiverUTS : public Application
+    class GameServer : public Application
     {
     public:
         static TypeId GetTypeId(void);
-        TPReceiverUTS();
-        virtual ~TPReceiverUTS();
+        GameServer();
+        virtual ~GameServer();
 
     private:
         virtual void StartApplication(void);
@@ -37,6 +37,7 @@ namespace ns3
         void ScheduleDisplay(void);
         void Display(void);
         char *NextFrame(uint16_t);
+        void SendFrame(void);
 
         Address m_address;
 
@@ -46,6 +47,7 @@ namespace ns3
         uint8_t m_fieldSize;
         bool m_fileIO;
         uint8_t m_currPos;
+        char *m_nextFrame;
         Time m_dispFreq;
         EventId m_displayEvent;
         std::string m_inFilename;

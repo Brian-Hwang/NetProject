@@ -11,63 +11,71 @@
 #include "ns3/packet.h"
 #include "ns3/trace-source-accessor.h"
 #include "ns3/udp-socket-factory.h"
-#include "ns3/tp-receiver_STU.h"
+#include "ns3/game-server.h"
 
 namespace ns3
 {
 
-    NS_LOG_COMPONENT_DEFINE("TPReceiverSTU");
+    NS_LOG_COMPONENT_DEFINE("GameServer");
 
-    NS_OBJECT_ENSURE_REGISTERED(TPReceiverSTU);
+    NS_OBJECT_ENSURE_REGISTERED(GameServer);
 
-    TypeId TPReceiverSTU::GetTypeId(void)
+    TypeId GameServer::GetTypeId(void)
     {
-        static TypeId tid = TypeId("ns3::TPReceiverSTU")
+        static TypeId tid = TypeId("ns3::GameServer")
                                 .SetParent<Application>()
-                                .AddConstructor<TPReceiverSTU>()
+                                .AddConstructor<GameServer>()
                                 .AddAttribute("Local", "The Address on which to Bind the RX socket.",
                                               AddressValue(),
-                                              MakeAddressAccessor(&TPReceiverSTU::m_address),
+                                              MakeAddressAccessor(&GameServer::m_address),
                                               MakeAddressChecker())
                                 .AddAttribute("InFile", "The name of the input file to get data for calculation from.",
                                               StringValue(),
-                                              MakeStringAccessor(&TPReceiverSTU::m_inFilename),
+                                              MakeStringAccessor(&GameServer::m_inFilename),
                                               MakeStringChecker())
                                 .AddAttribute("OutFile", "The name of the output file to write received data to.",
                                               StringValue(),
-                                              MakeStringAccessor(&TPReceiverSTU::m_outFilename),
+                                              MakeStringAccessor(&GameServer::m_outFilename),
                                               MakeStringChecker())
                                 .AddAttribute("GameSize", "Size of the displayed field in game.",
                                               UintegerValue(),
-                                              MakeUintegerAccessor(&TPReceiverSTU::m_fieldSize),
+                                              MakeUintegerAccessor(&GameServer::m_fieldSize),
                                               MakeUintegerChecker<uint8_t>())
+                                .AddAttribute("DisplayFreq", "Time between displaying different frames. (FPS maybe?)",
+                                              TimeValue(Seconds(0.1)),
+                                              MakeTimeAccessor(&GameServer::m_dispFreq),
+                                              MakeTimeChecker())
                                 .AddAttribute("FileIO", "Determines whether the application runs its own frame generation, or if it gets frames over File IO",
                                               BooleanValue(false),
-                                              MakeBooleanAccessor(&TPReceiverSTU::m_fileIO),
+                                              MakeBooleanAccessor(&GameServer::m_fileIO),
                                               MakeBooleanChecker())
                                 .AddTraceSource("Rx", "A packet has been received",
-                                                MakeTraceSourceAccessor(&TPReceiverSTU::m_rxTrace), "ns3::Packet::TracedCallback")
+                                                MakeTraceSourceAccessor(&GameServer::m_rxTrace), "ns3::Packet::TracedCallback")
                                 .AddTraceSource("Tx", "A packet has been sent",
-                                                MakeTraceSourceAccessor(&TPReceiverSTU::m_txTrace), "ns3::Packet::TracedCallback");
+                                                MakeTraceSourceAccessor(&GameServer::m_txTrace), "ns3::Packet::TracedCallback");
         return tid;
     }
 
-    TPReceiverSTU::TPReceiverSTU()
+    GameServer::GameServer()
         : m_socket(0),
           m_totalRx(0),
           m_running(false),
+          m_currPos(0),
+          m_nextFrame(NULL),
           m_inFile(NULL),
           m_outFile(NULL)
     {
         NS_LOG_FUNCTION(this);
     }
 
-    TPReceiverSTU::~TPReceiverSTU()
+    GameServer::~GameServer()
     {
         NS_LOG_FUNCTION(this);
+
+        delete[] m_nextFrame;
     }
 
-    void TPReceiverSTU::StartApplication(void)
+    void GameServer::StartApplication(void)
     {
         NS_LOG_FUNCTION(this);
 
@@ -79,9 +87,11 @@ namespace ns3
             m_socket->Bind(m_address);
             m_socket->Listen();
             m_socket->ShutdownSend();
-            m_socket->SetRecvCallback(MakeCallback(&TPReceiverSTU::HandleRead, this));
+            m_socket->SetRecvCallback(MakeCallback(&GameServer::HandleRead, this));
         }
-        m_obstacle = (uint8_t *)malloc(sizeof(uint8_t) * m_fieldSize * m_fieldSize);
+
+        m_currPos = (int)(m_fieldSize / 2);
+        m_nextFrame = new char[m_fieldSize * m_fieldSize];
 
         if (!m_inFile && m_fileIO)
         {
@@ -97,27 +107,34 @@ namespace ns3
         }
 
         m_running = true;
-        MakeAIDecision();
-        Display();
+
+        //send first frame
+        SendFrame();
+
+        //Schedule Display first frame
+        ScheduleDisplay();
     }
 
-    void TPReceiverSTU::MakeAIDecision(void)
+    void GameServer::SendFrame(void){
+        m_nextFrame = NextFrame(m_fieldSize * m_fieldSize);
+
+        //Create a packet sending the frame here
+        
+        //Send the actual packet here
+        
+        //perform any tracing
+    }
+
+    void GameServer::ScheduleDisplay(void)
     {
         NS_LOG_FUNCTION(this);
-        uint16_t dim = m_fieldSize * m_fieldSize;
-
-        char *frame = NextFrame(dim);
-
-        NS_LOG_DEBUG("Next Frame is " << frame);
-
-        DoAI(); // do AI HERE
-        // write to outFile
-        m_outFile << frame;
-        delete[] frame;
+        if (m_running)
+        {
+            m_displayEvent = Simulator::Schedule(m_dispFreq, &GameServer::Display, this);
+        }
     }
-    void TPReceiverSTU::DoAI() {}
 
-    char *TPReceiverSTU::NextFrame(uint16_t dim)
+    char *GameServer::NextFrame(uint16_t dim)
     {
         NS_LOG_FUNCTION(this);
 
@@ -139,7 +156,28 @@ namespace ns3
         return frame;
     }
 
-    void TPReceiverSTU::HandleRead(Ptr<Socket> socket)
+    void GameServer::Display(void)
+    {
+        NS_LOG_FUNCTION(this);
+
+        uint16_t dim = m_fieldSize * m_fieldSize;
+
+        NS_LOG_DEBUG("Next Frame is " << m_nextFrame);
+
+        // place player based on m_currPos
+        m_nextFrame[dim - m_fieldSize + m_currPos] = '2';
+
+        // write to outFile
+        m_outFile << m_nextFrame;
+
+        if (!m_fileIO || !m_inFile.eof())
+        {
+            SendFrame();
+            ScheduleDisplay();
+        }
+    }
+
+    void GameServer::HandleRead(Ptr<Socket> socket)
     {
         NS_LOG_FUNCTION(this);
         Ptr<Packet> packet;
@@ -154,24 +192,31 @@ namespace ns3
                 packet->CopyData(payload, packet->GetSize());
                 NS_LOG_DEBUG("Received " << payload << " from sender.");
 
-                for (uint8_t i = 0; i < packet->GetSize(); i++)
+                if (payload[0] == '1')
                 {
-                    if (payload[i] == '1')
-                    {
-                        m_obstacle[i] = 1;
-                    }
-                    else
-                        m_obstacle[i] = 0;
+                    m_currPos = (m_currPos + 1 > m_fieldSize - 1) ? m_fieldSize - 1
+                                                                  : m_currPos + 1;
                 }
+                else if (payload[0] == '2')
+                {
+                    m_currPos = (m_currPos - 1 < 0) ? 0
+                                                    : m_currPos - 1;
+                }
+
                 delete[] payload;
             }
         }
     }
 
-    void TPReceiverSTU::StopApplication()
+    void GameServer::StopApplication()
     {
         NS_LOG_FUNCTION(this);
         m_running = false;
+        if (m_displayEvent.IsRunning())
+        {
+
+            Simulator::Cancel(m_displayEvent);
+        }
         if (m_socket)
         {
             m_socket->Close();

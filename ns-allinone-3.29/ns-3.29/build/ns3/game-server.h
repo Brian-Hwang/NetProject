@@ -1,5 +1,5 @@
-#ifndef TPRECV_H_
-#define TPRECV_H_
+#ifndef GAMESERVER_H_
+#define GAMESERVER_H_
 
 #include "ns3/application.h"
 #include "ns3/event-id.h"
@@ -7,26 +7,27 @@
 #include "ns3/traced-callback.h"
 #include "ns3/address.h"
 #include "ns3/data-rate.h"
-#include "ns3/socket.h" 
-#include "ns3/boolean.h" 
-#include "ns3/log.h" 
-#include "ns3/uinteger.h" 
+#include "ns3/socket.h"
+#include "ns3/boolean.h"
+#include "ns3/log.h"
+#include "ns3/uinteger.h"
 #include "ns3/string.h"
 #include "ns3/nstime.h"
 #include <iostream>
 #include <fstream>
 
-namespace ns3{
-
-//class Socket;
-//class Packet;
-
-class TPReceiver : public Application
+namespace ns3
 {
+
+    // class Socket;
+    // class Packet;
+
+    class GameServer : public Application
+    {
     public:
         static TypeId GetTypeId(void);
-        TPReceiver();
-        virtual ~TPReceiver();
+        GameServer();
+        virtual ~GameServer();
 
     private:
         virtual void StartApplication(void);
@@ -35,7 +36,8 @@ class TPReceiver : public Application
         void HandleRead(Ptr<Socket> socket);
         void ScheduleDisplay(void);
         void Display(void);
-        char* NextFrame(uint16_t);
+        char *NextFrame(uint16_t);
+        void SendFrame(void);
 
         Address m_address;
 
@@ -45,6 +47,7 @@ class TPReceiver : public Application
         uint8_t m_fieldSize;
         bool m_fileIO;
         uint8_t m_currPos;
+        char *m_nextFrame;
         Time m_dispFreq;
         EventId m_displayEvent;
         std::string m_inFilename;
@@ -53,7 +56,6 @@ class TPReceiver : public Application
         std::ofstream m_outFile;
         TracedCallback<Ptr<const Packet>> m_rxTrace;
         TracedCallback<Ptr<const Packet>> m_txTrace;
-};
+    };
 };
 #endif
-

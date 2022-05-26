@@ -1,5 +1,5 @@
-#ifndef NEWAPP_H_
-#define NEWAPP_H_
+#ifndef GAMEUSER_H_
+#define GAMEUSER_H_
 
 #include "ns3/application.h"
 #include "ns3/event-id.h"
@@ -18,23 +18,20 @@
 namespace ns3
 {
 
-    class TPSender_UTS : public Application
+    class GameUser : public Application
     {
     public:
         static TypeId GetTypeId(void);
-        TPSender_UTS();
-        virtual ~TPSender_UTS();
+        GameUser();
+        virtual ~GameUser();
 
     private:
         virtual void StartApplication(void);
         virtual void StopApplication(void);
 
-        // function for scheduling next packet send
-        void ScheduleTx(void);
-
         // function for actually sending a packet
-        void SendPacket(void);
-
+        void SendPacket(char *payload);
+        void computeResponse(void);
         Address m_address;
         uint32_t m_nPackets;
         DataRate m_dataRate;
@@ -42,12 +39,9 @@ namespace ns3
         Ptr<Socket> m_socket;
         uint32_t m_packetSize;
         uint32_t m_packetsSent;
-        EventId m_sendEvent;
         bool m_running;
 
-        std::string m_filename;
-        std::ifstream m_file;
-
+        TracedCallback<Ptr<const Packet>> m_rxTrace;
         TracedCallback<Ptr<const Packet>> m_txTrace;
     };
 };

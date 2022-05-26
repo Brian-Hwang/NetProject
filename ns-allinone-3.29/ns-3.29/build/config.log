@@ -1,16 +1,16 @@
-# project ns (3.29) configured on Wed May 25 03:55:53 2022 by
-# waf 2.0.9 (abi 20, python 3080af0 on linux)
+# project ns (3.29) configured on Thu May 26 13:32:38 2022 by
+# waf 2.0.9 (abi 20, python 20711f0 on linux2)
 # using ./waf configure --build-profile=debug --enable-examples --enable-tests
 #
 ----------------------------------------
 Setting top to
-/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29
+/root/NetProject/ns-allinone-3.29/ns-3.29
 ----------------------------------------
 Setting out to
-/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build
+/root/NetProject/ns-allinone-3.29/ns-3.29/build
 ----------------------------------------
 Checking for 'gcc' (C compiler)
-find program=['gcc', 'cc'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='CC' -> ['/usr/bin/gcc']
+find program=['gcc', 'cc'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='CC' -> ['/usr/bin/gcc']
 ['/usr/bin/gcc', '-dM', '-E', '-']
 out: #define __SSP_STRONG__ 3
 #define __DBL_MIN_EXP__ (-1021)
@@ -41,7 +41,6 @@ out: #define __SSP_STRONG__ 3
 #define __FLT_EVAL_METHOD__ 0
 #define __unix__ 1
 #define __FLT64_DECIMAL_DIG__ 17
-#define __CET__ 3
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
 #define __x86_64 1
 #define __UINT_FAST64_MAX__ 0xffffffffffffffffUL
@@ -110,7 +109,7 @@ out: #define __SSP_STRONG__ 3
 #define __FLT64X_MIN_10_EXP__ (-4931)
 #define __LDBL_HAS_QUIET_NAN__ 1
 #define __FLT64_MANT_DIG__ 53
-#define __GNUC__ 9
+#define __GNUC__ 7
 #define __pie__ 2
 #define __MMX__ 1
 #define __FLT_HAS_DENORM__ 1
@@ -120,7 +119,6 @@ out: #define __SSP_STRONG__ 3
 #define __DBL_MAX__ ((double)1.79769313486231570814527423731704357e+308L)
 #define __INT_FAST32_MAX__ 0x7fffffffffffffffL
 #define __DBL_HAS_INFINITY__ 1
-#define __HAVE_SPECULATION_SAFE_VALUE 1
 #define __DEC32_MIN_EXP__ (-94)
 #define __INTPTR_WIDTH__ 64
 #define __FLT32X_HAS_DENORM__ 1
@@ -138,6 +136,7 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_HLE_RELEASE 131072
 #define __PTRDIFF_MAX__ 0x7fffffffffffffffL
 #define __amd64 1
+#define __STDC_NO_THREADS__ 1
 #define __ATOMIC_HLE_ACQUIRE 65536
 #define __FLT32_HAS_QUIET_NAN__ 1
 #define __LONG_LONG_MAX__ 0x7fffffffffffffffLL
@@ -147,7 +146,7 @@ out: #define __SSP_STRONG__ 3
 #define __LONG_LONG_WIDTH__ 64
 #define __FLT32_MAX_EXP__ 128
 #define __GCC_HAVE_DWARF2_CFI_ASM 1
-#define __GXX_ABI_VERSION 1013
+#define __GXX_ABI_VERSION 1011
 #define __FLT_MIN_EXP__ (-125)
 #define __FLT64X_HAS_QUIET_NAN__ 1
 #define __INT_FAST64_TYPE__ long int
@@ -169,7 +168,7 @@ out: #define __SSP_STRONG__ 3
 #define __NO_INLINE__ 1
 #define __FLT_MANT_DIG__ 24
 #define __LDBL_DECIMAL_DIG__ 21
-#define __VERSION__ "9.3.0"
+#define __VERSION__ "7.5.0"
 #define __UINT64_C(c) c ## UL
 #define _STDC_PREDEF_H 1
 #define __GCC_ATOMIC_INT_LOCK_FREE 2
@@ -237,7 +236,7 @@ out: #define __SSP_STRONG__ 3
 #define __INT_LEAST64_TYPE__ long int
 #define __INT16_TYPE__ short int
 #define __INT_LEAST8_TYPE__ signed char
-#define __STDC_VERSION__ 201710L
+#define __STDC_VERSION__ 201112L
 #define __DEC32_MAX_EXP__ 97
 #define __INT_FAST8_MAX__ 0x7f
 #define __FLT128_MAX__ 1.18973149535723176508575932662800702e+4932F128
@@ -330,7 +329,7 @@ out: #define __SSP_STRONG__ 3
 #define __DEC128_MAX_EXP__ 6145
 #define __FLT32X_HAS_QUIET_NAN__ 1
 #define __ATOMIC_CONSUME 1
-#define __GNUC_MINOR__ 3
+#define __GNUC_MINOR__ 5
 #define __INT_FAST16_WIDTH__ 64
 #define __UINTMAX_MAX__ 0xffffffffffffffffUL
 #define __DEC32_MANT_DIG__ 7
@@ -361,14 +360,14 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
 
-find program=['ar'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='AR' -> ['/usr/bin/ar']
+find program=['ar'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='AR' -> ['/usr/bin/ar']
 /usr/bin/gcc
 ----------------------------------------
 Checking for cc version
-9.3.0
+7.5.0
 ----------------------------------------
 Checking for 'g++' (C++ compiler)
-find program=['g++', 'c++'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='CXX' -> ['/usr/bin/g++']
+find program=['g++', 'c++'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='CXX' -> ['/usr/bin/g++']
 ['/usr/bin/g++', '-dM', '-E', '-']
 out: #define __SSP_STRONG__ 3
 #define __DBL_MIN_EXP__ (-1021)
@@ -399,7 +398,6 @@ out: #define __SSP_STRONG__ 3
 #define __FLT_EVAL_METHOD__ 0
 #define __unix__ 1
 #define __FLT64_DECIMAL_DIG__ 17
-#define __CET__ 3
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
 #define __x86_64 1
 #define __UINT_FAST64_MAX__ 0xffffffffffffffffUL
@@ -468,7 +466,7 @@ out: #define __SSP_STRONG__ 3
 #define __FLT64X_MIN_10_EXP__ (-4931)
 #define __LDBL_HAS_QUIET_NAN__ 1
 #define __FLT64_MANT_DIG__ 53
-#define __GNUC__ 9
+#define __GNUC__ 7
 #define __pie__ 2
 #define __MMX__ 1
 #define __FLT_HAS_DENORM__ 1
@@ -478,7 +476,6 @@ out: #define __SSP_STRONG__ 3
 #define __DBL_MAX__ ((double)1.79769313486231570814527423731704357e+308L)
 #define __INT_FAST32_MAX__ 0x7fffffffffffffffL
 #define __DBL_HAS_INFINITY__ 1
-#define __HAVE_SPECULATION_SAFE_VALUE 1
 #define __DEC32_MIN_EXP__ (-94)
 #define __INTPTR_WIDTH__ 64
 #define __FLT32X_HAS_DENORM__ 1
@@ -496,6 +493,7 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_HLE_RELEASE 131072
 #define __PTRDIFF_MAX__ 0x7fffffffffffffffL
 #define __amd64 1
+#define __STDC_NO_THREADS__ 1
 #define __ATOMIC_HLE_ACQUIRE 65536
 #define __FLT32_HAS_QUIET_NAN__ 1
 #define __LONG_LONG_MAX__ 0x7fffffffffffffffLL
@@ -505,7 +503,7 @@ out: #define __SSP_STRONG__ 3
 #define __LONG_LONG_WIDTH__ 64
 #define __FLT32_MAX_EXP__ 128
 #define __GCC_HAVE_DWARF2_CFI_ASM 1
-#define __GXX_ABI_VERSION 1013
+#define __GXX_ABI_VERSION 1011
 #define __FLT_MIN_EXP__ (-125)
 #define __FLT64X_HAS_QUIET_NAN__ 1
 #define __INT_FAST64_TYPE__ long int
@@ -527,7 +525,7 @@ out: #define __SSP_STRONG__ 3
 #define __NO_INLINE__ 1
 #define __FLT_MANT_DIG__ 24
 #define __LDBL_DECIMAL_DIG__ 21
-#define __VERSION__ "9.3.0"
+#define __VERSION__ "7.5.0"
 #define __UINT64_C(c) c ## UL
 #define _STDC_PREDEF_H 1
 #define __GCC_ATOMIC_INT_LOCK_FREE 2
@@ -595,7 +593,7 @@ out: #define __SSP_STRONG__ 3
 #define __INT_LEAST64_TYPE__ long int
 #define __INT16_TYPE__ short int
 #define __INT_LEAST8_TYPE__ signed char
-#define __STDC_VERSION__ 201710L
+#define __STDC_VERSION__ 201112L
 #define __DEC32_MAX_EXP__ 97
 #define __INT_FAST8_MAX__ 0x7f
 #define __FLT128_MAX__ 1.18973149535723176508575932662800702e+4932F128
@@ -688,7 +686,7 @@ out: #define __SSP_STRONG__ 3
 #define __DEC128_MAX_EXP__ 6145
 #define __FLT32X_HAS_QUIET_NAN__ 1
 #define __ATOMIC_CONSUME 1
-#define __GNUC_MINOR__ 3
+#define __GNUC_MINOR__ 5
 #define __INT_FAST16_WIDTH__ 64
 #define __UINTMAX_MAX__ 0xffffffffffffffffUL
 #define __DEC32_MANT_DIG__ 7
@@ -719,115 +717,420 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
 
-find program=['ar'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='AR' -> ['/usr/bin/ar']
+find program=['ar'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='AR' -> ['/usr/bin/ar']
 /usr/bin/g++
 ------------------------------------------------------
 Checking for compilation flag -Wl,--soname=foo support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_da4f132ca373e3ee423c06917a9db520/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_1e52f57ef45600f83f888d18d75c07c6/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_da4f132ca373e3ee423c06917a9db520/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_1e52f57ef45600f83f888d18d75c07c6/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for compilation flag -std=c++11 support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_da4f132ca373e3ee423c06917a9db520/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_1e52f57ef45600f83f888d18d75c07c6/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_da4f132ca373e3ee423c06917a9db520/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_1e52f57ef45600f83f888d18d75c07c6/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for program 'python'
 /usr/bin/python
-find program=['python'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='PYTHON' -> ['/usr/bin/python']
+find program=['python'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='PYTHON' -> ['/usr/bin/python']
 ['/usr/bin/python', '-c', 'import imp;print(imp.get_tag())']
-out: cpython-38
-
-err: <string>:1: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+err: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: 'module' object has no attribute 'get_tag'
 
 ['/usr/bin/python', '-c', 'import sys\nfor x in sys.version_info: print(str(x))']
-out: 3
-8
-10
+out: 2
+7
+17
 final
 0
 
 ['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(standard_lib=0, prefix='/usr/local') or ''))"]
-out: '/usr/local/lib/python3/dist-packages'
+out: '/usr/local/lib/python2.7/dist-packages'
 
-'/usr/local/lib/python3/dist-packages'
+'/usr/local/lib/python2.7/dist-packages'
 
 ['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(plat_specific=1, standard_lib=0, prefix='/usr/local') or ''))"]
-out: '/usr/local/lib/python3/dist-packages'
+out: '/usr/local/lib/python2.7/dist-packages'
 
-'/usr/local/lib/python3/dist-packages'
+'/usr/local/lib/python2.7/dist-packages'
 
 ------------------------------------------------------
 Checking for python version >= 2.3
-3.8.10
+2.7.17
 ['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_config_var('prefix') or ''))\nprint(repr(get_config_var('SO') or ''))\nprint(repr(get_config_var('LDFLAGS') or ''))\nprint(repr(get_config_var('LIBDIR') or ''))\nprint(repr(get_config_var('LIBPL') or ''))\nprint(repr(get_config_var('INCLUDEPY') or ''))\nprint(repr(get_config_var('Py_ENABLE_SHARED') or ''))\nprint(repr(get_config_var('MACOSX_DEPLOYMENT_TARGET') or ''))\nprint(repr(get_config_var('LDSHARED') or ''))\nprint(repr(get_config_var('CFLAGS') or ''))\nprint(repr(get_config_var('LDVERSION') or ''))"]
 out: '/usr'
-'.cpython-38-x86_64-linux-gnu.so'
-'-Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
+'.so'
+'-Wl,-Bsymbolic-functions -Wl,-z,relro'
 '/usr/lib'
-'/usr/lib/python3.8/config-3.8-x86_64-linux-gnu'
-'/usr/include/python3.8'
+'/usr/lib/python2.7/config-x86_64-linux-gnu'
+'/usr/include/python2.7'
 1
 ''
-'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
-'-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g   -fstack-protector-strong -Wformat -Werror=format-security  -g -fwrapv -O2   '
-'3.8'
-
-err: <string>:4: DeprecationWarning: SO is deprecated, use EXT_SUFFIX
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=. -fstack-protector-strong -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=. -fstack-protector-strong -Wformat -Werror=format-security  '
+''
 
 '/usr'
-'.cpython-38-x86_64-linux-gnu.so'
-'-Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
+'.so'
+'-Wl,-Bsymbolic-functions -Wl,-z,relro'
 '/usr/lib'
-'/usr/lib/python3.8/config-3.8-x86_64-linux-gnu'
-'/usr/include/python3.8'
+'/usr/lib/python2.7/config-x86_64-linux-gnu'
+'/usr/include/python2.7'
 1
 ''
-'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
-'-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g   -fstack-protector-strong -Wformat -Werror=format-security  -g -fwrapv -O2   '
-'3.8'
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=. -fstack-protector-strong -Wformat -Werror=format-security  '
+'-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=. -fstack-protector-strong -Wformat -Werror=format-security  '
+''
 
 Configuration returned from ['/usr/bin/python']:
 prefix = '/usr'
-SO = '.cpython-38-x86_64-linux-gnu.so'
-LDFLAGS = '-Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
+SO = '.so'
+LDFLAGS = '-Wl,-Bsymbolic-functions -Wl,-z,relro'
 LIBDIR = '/usr/lib'
-LIBPL = '/usr/lib/python3.8/config-3.8-x86_64-linux-gnu'
-INCLUDEPY = '/usr/include/python3.8'
+LIBPL = '/usr/lib/python2.7/config-x86_64-linux-gnu'
+INCLUDEPY = '/usr/include/python2.7'
 Py_ENABLE_SHARED = 1
 MACOSX_DEPLOYMENT_TARGET = ''
-LDSHARED = 'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
-CFLAGS = '-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g   -fstack-protector-strong -Wformat -Werror=format-security  -g -fwrapv -O2   '
-LDVERSION = '3.8'
+LDSHARED = 'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=. -fstack-protector-strong -Wformat -Werror=format-security  '
+CFLAGS = '-fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=. -fstack-protector-strong -Wformat -Werror=format-security  '
+LDVERSION = ''
 
 ------------------------------------------------------
 python-config
-/usr/bin/python3.8-config
-find program=['/usr/bin/python-config', 'python3.8-config', 'python-config-3.8', 'python3.8m-config'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='PYTHON_CONFIG' -> ['/usr/bin/python3.8-config']
-------------------------------------------------------------------
-Asking python-config for pyembed '--cflags --libs --ldflags' flags
-['/usr/bin/python3.8-config', '--cflags', '--libs', '--ldflags']
-out: -I/usr/include/python3.8 -I/usr/include/python3.8  -Wno-unused-result -Wsign-compare -g -fdebug-prefix-map=/build/python3.8-4OrTnN/python3.8-3.8.10=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O3 -Wall
- -lcrypt -lpthread -ldl  -lutil -lm -lm 
--L/usr/lib/python3.8/config-3.8-x86_64-linux-gnu -L/usr/lib  -lcrypt -lpthread -ldl  -lutil -lm -lm 
-
-Unhandled flag '-Wno-unused-result'
-Unhandled flag '-Wsign-compare'
-Unhandled flag '-specs=/usr/share/dpkg/no-pie-compile.specs'
+not found
+find program=['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='PYTHON_CONFIG' -> None
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Could not find the program ['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config']
+Unhandled flag '-Wall'
+Unhandled flag '-Wstrict-prototypes'
+Unhandled flag '-Wdate-time'
+Unhandled flag '-Wformat'
+Unhandled flag '-Werror=format-security'
+Unhandled flag 'x86_64-linux-gnu-gcc'
+Unhandled flag '-shared'
+Unhandled flag '-Wall'
+Unhandled flag '-Wstrict-prototypes'
+Unhandled flag '-Wdate-time'
 Unhandled flag '-Wformat'
 Unhandled flag '-Werror=format-security'
 Unhandled flag '-Wall'
-yes
-------------------------------------------------------------------
-Testing pyembed configuration
+Unhandled flag '-Wstrict-prototypes'
+Unhandled flag '-Wdate-time'
+Unhandled flag '-Wformat'
+Unhandled flag '-Werror=format-security'
+
+
+# try again with -L$python_LIBDIR: ['/usr/lib']
+
+------------------------------------------------------
+Checking for library python2.7 in LIBDIR
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_5bdda1e95468dc8ddff68e6bc52c826f/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-g', '-fwrapv', '-O2', '-g', '-fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=.', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5bdda1e95468dc8ddff68e6bc52c826f/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_5bdda1e95468dc8ddff68e6bc52c826f/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5bdda1e95468dc8ddff68e6bc52c826f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
+err: /usr/bin/ld: cannot find -lpython2.7
+collect2: error: ld returned 1 exit status
+
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+    bld.compile()
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
+
+not found
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
+
+
+# try again with -L$python_LIBPL (some systems don't install the python library in $prefix/lib)
+
+------------------------------------------------------
+Checking for library python2.7 in python_LIBPL
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_0c062434a57fba868d9f2daf33f8bf7f/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-g', '-fwrapv', '-O2', '-g', '-fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=.', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_0c062434a57fba868d9f2daf33f8bf7f/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_0c062434a57fba868d9f2daf33f8bf7f/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_0c062434a57fba868d9f2daf33f8bf7f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lpython2.7']
+err: /usr/bin/ld: cannot find -lpython2.7
+collect2: error: ld returned 1 exit status
+
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+    bld.compile()
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
+
+not found
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
+
+
+# try again with -L$prefix/libs, and pythonXY name rather than pythonX.Y (win32)
+
+------------------------------------------------------
+Checking for library python2.7 in $prefix/libs
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_5f9cf334dc2f452dd13c641bb10b3f18/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-g', '-fwrapv', '-O2', '-g', '-fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=.', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5f9cf334dc2f452dd13c641bb10b3f18/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_5f9cf334dc2f452dd13c641bb10b3f18/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5f9cf334dc2f452dd13c641bb10b3f18/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/libs', '-lpython2.7']
+err: /usr/bin/ld: cannot find -lpython2.7
+collect2: error: ld returned 1 exit status
+
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+    bld.compile()
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
+
+not found
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
+
+
+# try again with -L$python_LIBDIR: ['/usr/lib']
+
+------------------------------------------------------
+Checking for library python2.7m in LIBDIR
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_c51afc04d63fc079d98f2513533b8846/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-g', '-fwrapv', '-O2', '-g', '-fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=.', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_c51afc04d63fc079d98f2513533b8846/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_c51afc04d63fc079d98f2513533b8846/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_c51afc04d63fc079d98f2513533b8846/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7m']
+err: /usr/bin/ld: cannot find -lpython2.7m
+collect2: error: ld returned 1 exit status
+
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+    bld.compile()
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
+
+not found
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
+
+
+# try again with -L$python_LIBPL (some systems don't install the python library in $prefix/lib)
+
+------------------------------------------------------
+Checking for library python2.7m in python_LIBPL
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_68731fdf430a372b2d546e1c3e2ce723/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-g', '-fwrapv', '-O2', '-g', '-fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=.', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_68731fdf430a372b2d546e1c3e2ce723/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_68731fdf430a372b2d546e1c3e2ce723/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_68731fdf430a372b2d546e1c3e2ce723/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lpython2.7m']
+err: /usr/bin/ld: cannot find -lpython2.7m
+collect2: error: ld returned 1 exit status
+
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+    bld.compile()
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
+
+not found
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
+
+
+# try again with -L$prefix/libs, and pythonXY name rather than pythonX.Y (win32)
+
+------------------------------------------------------
+Checking for library python2.7m in $prefix/libs
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_0b981cefa7b610c8b9c11ec5264aae24/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-g', '-fwrapv', '-O2', '-g', '-fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=.', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_0b981cefa7b610c8b9c11ec5264aae24/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_0b981cefa7b610c8b9c11ec5264aae24/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_0b981cefa7b610c8b9c11ec5264aae24/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/libs', '-lpython2.7m']
+err: /usr/bin/ld: cannot find -lpython2.7m
+collect2: error: ld returned 1 exit status
+
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+    bld.compile()
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
+
+not found
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
+
+
+# try again with -L$python_LIBDIR: ['/usr/lib']
+
+------------------------------------------------------
+Checking for library python27 in LIBDIR
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_fdc2313e52f3e81ec32b5bccf0810059/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-g', '-fwrapv', '-O2', '-g', '-fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=.', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_fdc2313e52f3e81ec32b5bccf0810059/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_fdc2313e52f3e81ec32b5bccf0810059/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_fdc2313e52f3e81ec32b5bccf0810059/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython27']
+err: /usr/bin/ld: cannot find -lpython27
+collect2: error: ld returned 1 exit status
+
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+    bld.compile()
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
+
+not found
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
+
+
+# try again with -L$python_LIBPL (some systems don't install the python library in $prefix/lib)
+
+------------------------------------------------------
+Checking for library python27 in python_LIBPL
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_8dea1ae7a78811a5d1fdf8ba603f53ae/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-g', '-fwrapv', '-O2', '-g', '-fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=.', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_8dea1ae7a78811a5d1fdf8ba603f53ae/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_8dea1ae7a78811a5d1fdf8ba603f53ae/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_8dea1ae7a78811a5d1fdf8ba603f53ae/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lpython27']
+err: /usr/bin/ld: cannot find -lpython27
+collect2: error: ld returned 1 exit status
+
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+    bld.compile()
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
+
+not found
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
+
+
+# try again with -L$prefix/libs, and pythonXY name rather than pythonX.Y (win32)
+
+------------------------------------------------------
+Checking for library python27 in $prefix/libs
+==>
+
+int main(int argc, char **argv) {
+	(void)argc; (void)argv;
+	return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_753dc4080deffe4a314a7410927b1336/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-g', '-fwrapv', '-O2', '-g', '-fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=.', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_753dc4080deffe4a314a7410927b1336/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_753dc4080deffe4a314a7410927b1336/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_753dc4080deffe4a314a7410927b1336/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/libs', '-lpython27']
+err: /usr/bin/ld: cannot find -lpython27
+collect2: error: ld returned 1 exit status
+
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+    bld.compile()
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+    raise Errors.BuildError(self.producer.error)
+BuildError: Build failed
+ -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
+
+not found
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
+
+
+### LIB NOT FOUND
+
+Include path for Python extensions (found via distutils module): '/usr/include/python2.7'
+
+------------------------------------------------------
+Checking for header Python.h
 ==>
 
 #include <Python.h>
@@ -848,141 +1151,46 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_f593b97dd29c220a62df1e3016421e97/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_9890bc0d02e70030d6f586c529329f9c/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-g', '-fdebug-prefix-map=/build/python3.8-4OrTnN/python3.8-3.8.10=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.8', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f593b97dd29c220a62df1e3016421e97/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_f593b97dd29c220a62df1e3016421e97/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-g', '-fwrapv', '-O2', '-g', '-fdebug-prefix-map=/build/python2.7-gnDdqE/python2.7-2.7.17=.', '-fstack-protector-strong', '-fno-strict-aliasing', '-I/usr/include/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_9890bc0d02e70030d6f586c529329f9c/testbuild/test.cpp.1.o']
+err: ../test.cpp:2:10: fatal error: Python.h: No such file or directory
+ #include <Python.h>
+          ^~~~~~~~~~
+compilation terminated.
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f593b97dd29c220a62df1e3016421e97/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python3.8/config-3.8-x86_64-linux-gnu', '-L/usr/lib', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm']
-err: /usr/bin/ld: test.cpp.1.o: in function `main':
-/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f593b97dd29c220a62df1e3016421e97/testbuild/../test.cpp:14: undefined reference to `Py_Initialize'
-/usr/bin/ld: /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f593b97dd29c220a62df1e3016421e97/testbuild/../test.cpp:15: undefined reference to `Py_Finalize'
-collect2: error: ld returned 1 exit status
-
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
     bld.compile()
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
     raise Errors.BuildError(self.producer.error)
-waflib.Errors.BuildError: Build failed
+BuildError: Build failed
  -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
 
-Could not build a python embedded interpreter
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
-------------------------------------------------------------------
-Testing pyembed configuration
-==>
-
-#include <Python.h>
-#ifdef __cplusplus
-extern "C" {
-#endif
-	void Py_Initialize(void);
-	void Py_Finalize(void);
-#ifdef __cplusplus
-}
-#endif
-int main(int argc, char **argv)
-{
-   (void)argc; (void)argv;
-   Py_Initialize();
-   Py_Finalize();
-   return 0;
-}
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_f593b97dd29c220a62df1e3016421e97/test.cpp[0m
-
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-g', '-fdebug-prefix-map=/build/python3.8-4OrTnN/python3.8-3.8.10=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.8', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f593b97dd29c220a62df1e3016421e97/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_f593b97dd29c220a62df1e3016421e97/testbuild/testprog[0m
-
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f593b97dd29c220a62df1e3016421e97/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python3.8/config-3.8-x86_64-linux-gnu', '-L/usr/lib', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm']
-err: /usr/bin/ld: test.cpp.1.o: in function `main':
-/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f593b97dd29c220a62df1e3016421e97/testbuild/../test.cpp:14: undefined reference to `Py_Initialize'
-/usr/bin/ld: /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f593b97dd29c220a62df1e3016421e97/testbuild/../test.cpp:15: undefined reference to `Py_Finalize'
-collect2: error: ld returned 1 exit status
-
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
-    bld.compile()
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
-    raise Errors.BuildError(self.producer.error)
-waflib.Errors.BuildError: Build failed
- -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Tools/c_config.py", line 387, in check
-    ret=self.run_build(*k,**kw)
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 174, in fun
-    return f(*k,**kw)
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 327, in run_build
-    self.fatal(ret)
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Context.py", line 254, in fatal
-    raise self.errors.ConfigurationError(msg,ex=ex)
-waflib.Errors.ConfigurationError: Test does not build: Traceback (most recent call last):
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
-    bld.compile()
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
-    raise Errors.BuildError(self.producer.error)
-waflib.Errors.BuildError: Build failed
- -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
-
-(complete log in /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/config.log)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Tools/python.py", line 222, in check_python_headers
-    conf.test_pyembed(xx)
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 174, in fun
-    return f(*k,**kw)
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Tools/python.py", line 155, in test_pyembed
-    self.check(header_name='Python.h',define_name='HAVE_PYEMBED',msg=msg,fragment=FRAG,errmsg='Could not build a python embedded interpreter',features='%s %sprogram pyembed'%(mode,mode))
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 174, in fun
-    return f(*k,**kw)
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Tools/c_config.py", line 393, in check
-    self.fatal('The configuration failed')
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Context.py", line 254, in fatal
-    raise self.errors.ConfigurationError(msg,ex=ex)
-waflib.Errors.ConfigurationError: The configuration failed
-(complete log in /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/config.log)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
-    bld.compile()
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
-    raise Errors.BuildError(self.producer.error)
-waflib.Errors.BuildError: Build failed
- -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
-
-Could not build a python embedded interpreter
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
-------------------------------------------------------------------
+Distutils not installed? Broken python installation? Get python-config now!
+from /root/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
+------------------------------------------------------
 Checking boost includes
 headers not found, please provide a --boost-includes argument (see help)
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/src: The configuration failed
-------------------------------------------------------------------
+from /root/NetProject/ns-allinone-3.29/ns-3.29/src: The configuration failed
+------------------------------------------------------
 Checking boost includes
 headers not found, please provide a --boost-includes argument (see help)
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/src: The configuration failed
-------------------------------------------------------------------
+from /root/NetProject/ns-allinone-3.29/ns-3.29/src: The configuration failed
+------------------------------------------------------
 Checking for click location
 not found
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for program 'pkg-config'
 not found
-find program=['pkg-config'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='PKGCONFIG' -> None
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/src/config-store: Could not find the program ['pkg-config']
-------------------------------------------------------------------
+find program=['pkg-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='PKGCONFIG' -> None
+from /root/NetProject/ns-allinone-3.29/ns-3.29/src/config-store: Could not find the program ['pkg-config']
+------------------------------------------------------
 Checking for program 'pkg-config'
 not found
-find program=['pkg-config'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='PKGCONFIG' -> None
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/src/config-store: Could not find the program ['pkg-config']
-------------------------------------------------------------------
+find program=['pkg-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='PKGCONFIG' -> None
+from /root/NetProject/ns-allinone-3.29/ns-3.29/src/config-store: Could not find the program ['pkg-config']
+------------------------------------------------------
 checking for uint128_t
 ==>
 
@@ -996,37 +1204,42 @@ checking for uint128_t
         }
         
 <==
-[1/2] Compiling [32mbuild/.conf_check_4888d62d8a0f73f3ac4611a415887beb/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_570dc5344c4b39dcaa845a0eb75c1011/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_4888d62d8a0f73f3ac4611a415887beb/testbuild/test.cpp.1.o']
-err: ../test.cpp: In function ‘int main(int, char**)’:
-../test.cpp:6:7: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint32_t’?
-    6 |  if ((uint128_t *) 0) return 0;
-      |       ^~~~~~~~~
-      |       uint32_t
-../test.cpp:6:18: error: expected primary-expression before ‘)’ token
-    6 |  if ((uint128_t *) 0) return 0;
-      |                  ^
-../test.cpp:6:19: error: expected ‘)’ before numeric constant
-    6 |  if ((uint128_t *) 0) return 0;
-      |     ~             ^~
-      |                   )
-../test.cpp:7:14: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint32_t’?
-    7 |  if (sizeof (uint128_t)) return 0;
-      |              ^~~~~~~~~
-      |              uint32_t
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_570dc5344c4b39dcaa845a0eb75c1011/testbuild/test.cpp.1.o']
+err: ../test.cpp: In function 'int main(int, char**)':
+../test.cpp:6:7: error: 'uint128_t' was not declared in this scope
+  if ((uint128_t *) 0) return 0;
+       ^~~~~~~~~
+../test.cpp:6:7: note: suggested alternative: 'uint32_t'
+  if ((uint128_t *) 0) return 0;
+       ^~~~~~~~~
+       uint32_t
+../test.cpp:6:18: error: expected primary-expression before ')' token
+  if ((uint128_t *) 0) return 0;
+                  ^
+../test.cpp:6:20: error: expected ')' before numeric constant
+  if ((uint128_t *) 0) return 0;
+                    ^
+../test.cpp:7:14: error: 'uint128_t' was not declared in this scope
+  if (sizeof (uint128_t)) return 0;
+              ^~~~~~~~~
+../test.cpp:7:14: note: suggested alternative: 'uint32_t'
+  if (sizeof (uint128_t)) return 0;
+              ^~~~~~~~~
+              uint32_t
 
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+from /root/NetProject/ns-allinone-3.29/ns-3.29/src/core: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
     bld.compile()
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
     raise Errors.BuildError(self.producer.error)
-waflib.Errors.BuildError: Build failed
+BuildError: Build failed
  -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
 
 not found
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/src/core: The configuration failed
-------------------------------------------------------------------
+from /root/NetProject/ns-allinone-3.29/ns-3.29/src/core: The configuration failed
+------------------------------------------------------
 checking for __uint128_t
 ==>
 
@@ -1040,17 +1253,17 @@ checking for __uint128_t
         }
         
 <==
-[1/2] Compiling [32mbuild/.conf_check_0ac75d244604436b73c7020b5ca49290/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_9bf49de343c52ecf073ab3247253eddb/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_0ac75d244604436b73c7020b5ca49290/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_0ac75d244604436b73c7020b5ca49290/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_9bf49de343c52ecf073ab3247253eddb/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_9bf49de343c52ecf073ab3247253eddb/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_0ac75d244604436b73c7020b5ca49290/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_9bf49de343c52ecf073ab3247253eddb/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking high precision implementation
 128-bit integer (default)
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header stdint.h
 ==>
 #include <stdint.h>
@@ -1061,14 +1274,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_40605c037fee8373daaa7c5471c3d161/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_312cf730022fb9ea5502fef7fe84e31e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_40605c037fee8373daaa7c5471c3d161/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_40605c037fee8373daaa7c5471c3d161/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_312cf730022fb9ea5502fef7fe84e31e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_312cf730022fb9ea5502fef7fe84e31e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_40605c037fee8373daaa7c5471c3d161/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_312cf730022fb9ea5502fef7fe84e31e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header inttypes.h
 ==>
 #include <inttypes.h>
@@ -1079,14 +1292,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_fd62ff6963309345da8c6276db7ebb45/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_3cafb9e6c7e88ca5b2f438ba6728da4e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_fd62ff6963309345da8c6276db7ebb45/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_fd62ff6963309345da8c6276db7ebb45/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3cafb9e6c7e88ca5b2f438ba6728da4e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_3cafb9e6c7e88ca5b2f438ba6728da4e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_fd62ff6963309345da8c6276db7ebb45/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3cafb9e6c7e88ca5b2f438ba6728da4e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header sys/inttypes.h
 ==>
 #include <sys/inttypes.h>
@@ -1097,25 +1310,25 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_4a69aace6ed2fda861ddf1524edd272c/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_4e7d91f23052b64163e6b3374eb9a8c2/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_4a69aace6ed2fda861ddf1524edd272c/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_4e7d91f23052b64163e6b3374eb9a8c2/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:10: fatal error: sys/inttypes.h: No such file or directory
-    1 | #include <sys/inttypes.h>
-      |          ^~~~~~~~~~~~~~~~
+ #include <sys/inttypes.h>
+          ^~~~~~~~~~~~~~~~
 compilation terminated.
 
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+from /root/NetProject/ns-allinone-3.29/ns-3.29/src/core: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
     bld.compile()
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
     raise Errors.BuildError(self.producer.error)
-waflib.Errors.BuildError: Build failed
+BuildError: Build failed
  -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
 
 not found
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/src/core: The configuration failed
-------------------------------------------------------------------
+from /root/NetProject/ns-allinone-3.29/ns-3.29/src/core: The configuration failed
+------------------------------------------------------
 Checking for header sys/types.h
 ==>
 #include <sys/types.h>
@@ -1126,14 +1339,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_fd4e2f5045b0aa45f04cad2cba3ecf05/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_30195ce8cdc85c3431fddbc95404bb7d/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_fd4e2f5045b0aa45f04cad2cba3ecf05/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_fd4e2f5045b0aa45f04cad2cba3ecf05/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_30195ce8cdc85c3431fddbc95404bb7d/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_30195ce8cdc85c3431fddbc95404bb7d/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_fd4e2f5045b0aa45f04cad2cba3ecf05/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_30195ce8cdc85c3431fddbc95404bb7d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header sys/stat.h
 ==>
 #include <sys/stat.h>
@@ -1144,14 +1357,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_a0f2c25421d5ddde6d5b0353c5ad7c85/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_e3817adfbed73430d4f731aec90b0436/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_a0f2c25421d5ddde6d5b0353c5ad7c85/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_a0f2c25421d5ddde6d5b0353c5ad7c85/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_e3817adfbed73430d4f731aec90b0436/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_e3817adfbed73430d4f731aec90b0436/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_a0f2c25421d5ddde6d5b0353c5ad7c85/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_e3817adfbed73430d4f731aec90b0436/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header dirent.h
 ==>
 #include <dirent.h>
@@ -1162,14 +1375,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_a5fb59146c5777997583015bcf02dad8/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_89d17eeed087ca6f7062a4be8125caf0/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_a5fb59146c5777997583015bcf02dad8/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_a5fb59146c5777997583015bcf02dad8/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_89d17eeed087ca6f7062a4be8125caf0/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_89d17eeed087ca6f7062a4be8125caf0/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_a5fb59146c5777997583015bcf02dad8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_89d17eeed087ca6f7062a4be8125caf0/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header stdlib.h
 ==>
 #include <stdlib.h>
@@ -1180,14 +1393,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_b0d262bb567519923f89af55be390298/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_b389415b1cec4ae8e86aaf3903a0d9e3/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_b0d262bb567519923f89af55be390298/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_b0d262bb567519923f89af55be390298/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_b389415b1cec4ae8e86aaf3903a0d9e3/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_b389415b1cec4ae8e86aaf3903a0d9e3/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_b0d262bb567519923f89af55be390298/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_b389415b1cec4ae8e86aaf3903a0d9e3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header signal.h
 ==>
 #include <signal.h>
@@ -1198,14 +1411,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ae79abdb4d93c11a93c0b15bad96260b/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_b1cc2260732387096fc3d996443a468a/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_ae79abdb4d93c11a93c0b15bad96260b/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_ae79abdb4d93c11a93c0b15bad96260b/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_b1cc2260732387096fc3d996443a468a/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_b1cc2260732387096fc3d996443a468a/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_ae79abdb4d93c11a93c0b15bad96260b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_b1cc2260732387096fc3d996443a468a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header pthread.h
 ==>
 
@@ -1218,14 +1431,14 @@ int main ()
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_edcf325d907845d3afde19255f343f85/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_6bedad978c9a89aa7fd7405f6a7d1444/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_edcf325d907845d3afde19255f343f85/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_edcf325d907845d3afde19255f343f85/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_6bedad978c9a89aa7fd7405f6a7d1444/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_6bedad978c9a89aa7fd7405f6a7d1444/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_edcf325d907845d3afde19255f343f85/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_6bedad978c9a89aa7fd7405f6a7d1444/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header stdint.h
 ==>
 #include <stdint.h>
@@ -1236,14 +1449,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_40605c037fee8373daaa7c5471c3d161/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_312cf730022fb9ea5502fef7fe84e31e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_40605c037fee8373daaa7c5471c3d161/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_40605c037fee8373daaa7c5471c3d161/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_312cf730022fb9ea5502fef7fe84e31e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_312cf730022fb9ea5502fef7fe84e31e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_40605c037fee8373daaa7c5471c3d161/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_312cf730022fb9ea5502fef7fe84e31e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header inttypes.h
 ==>
 #include <inttypes.h>
@@ -1254,14 +1467,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_fd62ff6963309345da8c6276db7ebb45/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_3cafb9e6c7e88ca5b2f438ba6728da4e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_fd62ff6963309345da8c6276db7ebb45/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_fd62ff6963309345da8c6276db7ebb45/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3cafb9e6c7e88ca5b2f438ba6728da4e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_3cafb9e6c7e88ca5b2f438ba6728da4e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_fd62ff6963309345da8c6276db7ebb45/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3cafb9e6c7e88ca5b2f438ba6728da4e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header sys/inttypes.h
 ==>
 #include <sys/inttypes.h>
@@ -1272,25 +1485,25 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_4a69aace6ed2fda861ddf1524edd272c/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_4e7d91f23052b64163e6b3374eb9a8c2/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_4a69aace6ed2fda861ddf1524edd272c/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_4e7d91f23052b64163e6b3374eb9a8c2/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:10: fatal error: sys/inttypes.h: No such file or directory
-    1 | #include <sys/inttypes.h>
-      |          ^~~~~~~~~~~~~~~~
+ #include <sys/inttypes.h>
+          ^~~~~~~~~~~~~~~~
 compilation terminated.
 
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
+from /root/NetProject/ns-allinone-3.29/ns-3.29/src/core: Test does not build: Traceback (most recent call last):
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Configure.py", line 324, in run_build
     bld.compile()
-  File "/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/.waf3-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
+  File "/root/NetProject/ns-allinone-3.29/ns-3.29/.waf-2.0.9-897e824215d3dab2b64982d8af27db90/waflib/Build.py", line 176, in compile
     raise Errors.BuildError(self.producer.error)
-waflib.Errors.BuildError: Build failed
+BuildError: Build failed
  -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
 
 not found
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/src/core: The configuration failed
-------------------------------------------------------------------
+from /root/NetProject/ns-allinone-3.29/ns-3.29/src/core: The configuration failed
+------------------------------------------------------
 Checking for library rt
 ==>
 
@@ -1300,14 +1513,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_b06814a1a9f79a76785065cd5ee90ebd/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_f1c8be1546fa4ac5c9097387b6dbed50/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_b06814a1a9f79a76785065cd5ee90ebd/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_b06814a1a9f79a76785065cd5ee90ebd/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f1c8be1546fa4ac5c9097387b6dbed50/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f1c8be1546fa4ac5c9097387b6dbed50/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_b06814a1a9f79a76785065cd5ee90ebd/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f1c8be1546fa4ac5c9097387b6dbed50/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header sys/ioctl.h
 ==>
 #include <sys/ioctl.h>
@@ -1318,14 +1531,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_b2b3eaea26b70ab6ef17d57055a9aca7/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_c35d2f0b762b44a890e5d7efdf09cbf8/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_b2b3eaea26b70ab6ef17d57055a9aca7/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_b2b3eaea26b70ab6ef17d57055a9aca7/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_c35d2f0b762b44a890e5d7efdf09cbf8/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_c35d2f0b762b44a890e5d7efdf09cbf8/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_b2b3eaea26b70ab6ef17d57055a9aca7/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_c35d2f0b762b44a890e5d7efdf09cbf8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header net/if.h
 ==>
 #include <net/if.h>
@@ -1336,14 +1549,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_d56d06a480523771cd14cf61ef8a9cd7/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_0f1c414ca5149580ee825ec7feb49598/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_d56d06a480523771cd14cf61ef8a9cd7/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_d56d06a480523771cd14cf61ef8a9cd7/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_0f1c414ca5149580ee825ec7feb49598/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_0f1c414ca5149580ee825ec7feb49598/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_d56d06a480523771cd14cf61ef8a9cd7/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_0f1c414ca5149580ee825ec7feb49598/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header net/ethernet.h
 ==>
 #include <net/ethernet.h>
@@ -1354,14 +1567,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_d3719b06ee7af8f4cdce9522fd62d237/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_27e3522ad42af79728095a7510c39ce3/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_d3719b06ee7af8f4cdce9522fd62d237/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_d3719b06ee7af8f4cdce9522fd62d237/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_27e3522ad42af79728095a7510c39ce3/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_27e3522ad42af79728095a7510c39ce3/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_d3719b06ee7af8f4cdce9522fd62d237/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_27e3522ad42af79728095a7510c39ce3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header linux/if_tun.h
 ==>
 #include <linux/if_tun.h>
@@ -1372,14 +1585,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_0087b559571c26f53735c984f61a014f/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_8bdafeaa0028a7662a2143e447c33446/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_0087b559571c26f53735c984f61a014f/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_0087b559571c26f53735c984f61a014f/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_8bdafeaa0028a7662a2143e447c33446/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_8bdafeaa0028a7662a2143e447c33446/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_0087b559571c26f53735c984f61a014f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_8bdafeaa0028a7662a2143e447c33446/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for header netpacket/packet.h
 ==>
 #include <netpacket/packet.h>
@@ -1390,22 +1603,22 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_fd680ac8601a1ab4d3fb1b083fc3106d/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_356bcf45d8ba1481d6f4d5a6fd824884/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_fd680ac8601a1ab4d3fb1b083fc3106d/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_fd680ac8601a1ab4d3fb1b083fc3106d/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_356bcf45d8ba1481d6f4d5a6fd824884/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_356bcf45d8ba1481d6f4d5a6fd824884/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_fd680ac8601a1ab4d3fb1b083fc3106d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_356bcf45d8ba1481d6f4d5a6fd824884/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for NSC location
 not found
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for program 'pkg-config'
 not found
-find program=['pkg-config'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='PKGCONFIG' -> None
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/src/stats: Could not find the program ['pkg-config']
-------------------------------------------------------------------
+find program=['pkg-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='PKGCONFIG' -> None
+from /root/NetProject/ns-allinone-3.29/ns-3.29/src/stats: Could not find the program ['pkg-config']
+------------------------------------------------------
 Checking for header linux/if_tun.h
 ==>
 #include <linux/if_tun.h>
@@ -1416,69 +1629,71 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_0087b559571c26f53735c984f61a014f/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_8bdafeaa0028a7662a2143e447c33446/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_0087b559571c26f53735c984f61a014f/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_0087b559571c26f53735c984f61a014f/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_8bdafeaa0028a7662a2143e447c33446/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_8bdafeaa0028a7662a2143e447c33446/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_0087b559571c26f53735c984f61a014f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_8bdafeaa0028a7662a2143e447c33446/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------------------
+------------------------------------------------------
 Checking for program 'sudo'
-/usr/bin/sudo
-find program=['sudo'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='SUDO' -> ['/usr/bin/sudo']
-------------------------------------------------------------------
+not found
+find program=['sudo'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='SUDO' -> None
+from /root/NetProject/ns-allinone-3.29/ns-3.29: Could not find the program ['sudo']
+------------------------------------------------------
 Checking for program 'valgrind'
-/usr/bin/valgrind
-find program=['valgrind'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='VALGRIND' -> ['/usr/bin/valgrind']
-------------------------------------------------------------------
+not found
+find program=['valgrind'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='VALGRIND' -> None
+from /root/NetProject/ns-allinone-3.29/ns-3.29: Could not find the program ['valgrind']
+------------------------------------------------------
 Checking for program 'pkg-config'
 not found
-find program=['pkg-config'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='PKGCONFIG' -> None
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29: Could not find the program ['pkg-config']
-------------------------------------------------------------------
+find program=['pkg-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='PKGCONFIG' -> None
+from /root/NetProject/ns-allinone-3.29/ns-3.29: Could not find the program ['pkg-config']
+------------------------------------------------------
 python-config
 not found
-find program=['libgcrypt-config'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='LIBGCRYPT_CONFIG' -> None
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29: Could not find the program ['libgcrypt-config']
-------------------------------------------------------------------
+find program=['libgcrypt-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='LIBGCRYPT_CONFIG' -> None
+from /root/NetProject/ns-allinone-3.29/ns-3.29: Could not find the program ['libgcrypt-config']
+-------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_da4f132ca373e3ee423c06917a9db520/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_1e52f57ef45600f83f888d18d75c07c6/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_da4f132ca373e3ee423c06917a9db520/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_1e52f57ef45600f83f888d18d75c07c6/testbuild/test.cpp.1.o']
 ok
-------------------------------------------------------------------
+-------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_de92699e852a34eb7bf3f09ac541c108/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_5f5ffc23ae99d5d32bf7d96b12f7b364/test.c[0m
 
-['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_de92699e852a34eb7bf3f09ac541c108/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5f5ffc23ae99d5d32bf7d96b12f7b364/testbuild/test.c.1.o']
 ok
-------------------------------------------------------------------
+-------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_da4f132ca373e3ee423c06917a9db520/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_1e52f57ef45600f83f888d18d75c07c6/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_da4f132ca373e3ee423c06917a9db520/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_1e52f57ef45600f83f888d18d75c07c6/testbuild/test.cpp.1.o']
 ok
-------------------------------------------------------------------
+-------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_de92699e852a34eb7bf3f09ac541c108/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_5f5ffc23ae99d5d32bf7d96b12f7b364/test.c[0m
 
-['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o/home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_de92699e852a34eb7bf3f09ac541c108/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o/root/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5f5ffc23ae99d5d32bf7d96b12f7b364/testbuild/test.c.1.o']
 ok
-------------------------------------------------------------------
+-------------------------------------------------------
 Checking for program 'doxygen'
 not found
-find program=['doxygen'] paths=['/home/brian/bin', '/usr/local/bin', '/home/brian/.vscode-server/bin/da15b6fd3ef856477bf6f4fb29ba1b7af717770d/bin/remote-cli', '/home/brian/bin', '/usr/local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/usr/lib/wsl/lib', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS/', '/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath', '/mnt/c/ProgramData/Oracle/Java/javapath', '/mnt/c/windows/system32', '/mnt/c/windows', '/mnt/c/windows/System32/Wbem', '/mnt/c/windows/System32/WindowsPowerShell/v1.0/', '/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common', '/mnt/c/WINDOWS/system32', '/mnt/c/WINDOWS', '/mnt/c/WINDOWS/System32/Wbem', '/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/', '/mnt/c/WINDOWS/System32/OpenSSH/', '/mnt/c/Program Files/Intel/WiFi/bin/', '/mnt/c/Program Files/Common Files/Intel/WirelessCommon/', '/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL', '/mnt/c/Program Files/Java/jdk-11.0.6/bin', '/mnt/c/Program Files/Git/cmd', '/mnt/c/ProgramData/chocolatey/bin', '/mnt/c/Program Files/Microsoft VS Code/bin', '/mnt/c/MinGW/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/src/flutter/bin', '/mnt/c/Users/user/AppData/Local/atom/bin', '/mnt/c/Users/user/AppData/Local/Microsoft/WindowsApps', '/mnt/c/Program Files/JetBrains/PyCharm 2021.3.3/bin', '/mnt/c/MinGW/bin', '/mnt/c/MinGW/bin'] var='DOXYGEN' -> None
-from /home/brian/netproject/NetProject/ns-allinone-3.29/ns-3.29: Could not find the program ['doxygen']
+find program=['doxygen'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin'] var='DOXYGEN' -> None
+from /root/NetProject/ns-allinone-3.29/ns-3.29: Could not find the program ['doxygen']
