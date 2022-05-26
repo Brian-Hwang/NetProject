@@ -54,6 +54,9 @@ namespace ns3
         std::string m_outFilename;
         std::ifstream m_inFile;
         std::ofstream m_outFile;
+
+        Address m_peerAddress;
+        uint16_t m_peerPort;
         TracedCallback<Ptr<const Packet>> m_rxTrace;
         TracedCallback<Ptr<const Packet>> m_txTrace;
     };

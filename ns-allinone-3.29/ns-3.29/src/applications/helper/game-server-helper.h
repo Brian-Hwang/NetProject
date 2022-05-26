@@ -13,7 +13,7 @@ namespace ns3
     class GameServerHelper
     {
     public:
-        GameServerHelper(Address address, std::string outfile, uint8_t size);
+        GameServerHelper(Address address, uint16_t port, std::string outfile, uint8_t size);
         void SetAttribute(std::string name, const AttributeValue &value);
         ApplicationContainer Install(Ptr<Node> node) const;
         ApplicationContainer Install(std::string nodeName) const;

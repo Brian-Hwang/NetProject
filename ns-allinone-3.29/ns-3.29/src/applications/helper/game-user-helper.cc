@@ -6,10 +6,11 @@
 namespace ns3
 {
 
-    GameUserHelper::GameUserHelper(Address address)
+    GameUserHelper::GameUserHelper(uint16_t port, uint8_t size)
     {
         m_factory.SetTypeId("ns3::GameUser");
-        m_factory.Set("Address", AddressValue(address));
+        m_factory.Set("Port", UintegerValue(port));
+        m_factory.Set("GameSize", UintegerValue(size));
     }
 
     void GameUserHelper::SetAttribute(std::string name, const AttributeValue &value)

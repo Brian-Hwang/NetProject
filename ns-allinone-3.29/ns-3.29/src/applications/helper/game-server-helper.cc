@@ -6,10 +6,11 @@
 namespace ns3
 {
 
-    GameServerHelper::GameServerHelper(Address address, std::string outfile, uint8_t size)
+    GameServerHelper::GameServerHelper(Address address, uint16_t port, std::string outfile, uint8_t size)
     {
         m_factory.SetTypeId("ns3::GameServer");
-        m_factory.Set("Local", AddressValue(address));
+        m_factory.Set("RemoteAddress", AddressValue(address));
+        m_factory.Set("RemotePort", UintegerValue(port));
         m_factory.Set("OutFile", StringValue(outfile));
         m_factory.Set("GameSize", UintegerValue(size));
     }

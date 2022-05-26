@@ -29,6 +29,14 @@ namespace ns3
                                               AddressValue(),
                                               MakeAddressAccessor(&GameServer::m_address),
                                               MakeAddressChecker())
+                                .AddAttribute("RemoteAddress", "The destination Address of the outbound packet.",
+                                              AddressValue(),
+                                              MakeAddressAccessor(&GameServer::m_peerAddress),
+                                              MakeAddressChecker())
+                                .AddAttribute("RemotePort", "The destination Port of the outbound packets.",
+                                              UintegerValue(0),
+                                              MakeUintegerAccessor(&GameServer::m_peerPort),
+                                              MakeUintegerChecker<uint16_t>())
                                 .AddAttribute("InFile", "The name of the input file to get data for calculation from.",
                                               StringValue(),
                                               MakeStringAccessor(&GameServer::m_inFilename),
@@ -85,13 +93,14 @@ namespace ns3
             TypeId tid = TypeId::LookupByName("ns3::UdpSocketFactory");
             m_socket = Socket::CreateSocket(GetNode(), tid);
             m_socket->Bind(m_address);
-            m_socket->Listen();
-            m_socket->ShutdownSend();
+            m_socket->Connect(m_peerAddress);
+            //m_socket->Listen();
+            //m_socket->ShutdownSend();
             m_socket->SetRecvCallback(MakeCallback(&GameServer::HandleRead, this));
         }
 
         m_currPos = (int)(m_fieldSize / 2);
-        m_nextFrame = new char[m_fieldSize * m_fieldSize];
+        //m_nextFrame = new char[m_fieldSize * m_fieldSize];
 
         if (!m_inFile && m_fileIO)
         {
@@ -116,13 +125,21 @@ namespace ns3
     }
 
     void GameServer::SendFrame(void){
+        NS_LOG_FUNCTION(this);
         m_nextFrame = NextFrame(m_fieldSize * m_fieldSize);
 
+        uint8_t *buf = new uint8_t[m_fieldSize * m_fieldSize + 1]; 
+
+        for(uint8_t i = 0; i < strlen(m_nextFrame); i++)
+            buf[i] = (char)m_nextFrame[i];
+
         //Create a packet sending the frame here
-        
+        Ptr<Packet> packet = Create<Packet>(buf, strlen(m_nextFrame));        
         //Send the actual packet here
+        m_txTrace(packet);
+        m_socket->Send(packet);
         
-        //perform any tracing
+        delete[] buf;
     }
 
     void GameServer::ScheduleDisplay(void)

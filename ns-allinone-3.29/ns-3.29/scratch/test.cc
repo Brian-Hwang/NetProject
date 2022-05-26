@@ -50,7 +50,7 @@ int main(int argc, char *argv[]){
     Address destination(InetSocketAddress(interfaces.GetAddress(1), port));
 
     //need to pass full path to sender
-    GameUserHelper user (destination);
+    GameUserHelper user (port,  10);
     user.SetAttribute("NPackets", UintegerValue(1000));
     user.SetAttribute("DataRate", DataRateValue(DataRate("2Mb/s")));
     ApplicationContainer userApp = user.Install(nodes.Get(0));
@@ -58,7 +58,7 @@ int main(int argc, char *argv[]){
     userApp.Start(Seconds(1.0));
     userApp.Stop(Seconds(5.0));
 
-    GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(1), port)), "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
+    GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(1), port)), port, "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
     server.SetAttribute("FileIO", BooleanValue(true));
     server.SetAttribute("InFile", StringValue("/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt"));
     server.SetAttribute("DisplayFreq", TimeValue(Seconds(0.05)));
