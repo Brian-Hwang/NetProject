@@ -23,7 +23,16 @@ int main(int argc, char *argv[]){
 
     LogComponentEnable("GameServer", LOG_LEVEL_ALL);
     LogComponentEnable("GameUser", LOG_LEVEL_ALL);
-
+/*    LogComponentEnable("UdpL4Protocol", LOG_LEVEL_ALL);
+    LogComponentEnable("UdpSocket", LOG_LEVEL_FUNCTION);
+    LogComponentEnable("Socket", LOG_LEVEL_FUNCTION);
+    LogComponentEnable("UdpSocketImpl", LOG_LEVEL_LOGIC);
+    LogComponentEnable("Ipv4Interface", LOG_LEVEL_LOGIC);
+    LogComponentEnable("Ipv4L3Protocol", LOG_LEVEL_LOGIC);
+    LogComponentEnable("TrafficControlLayer", LOG_LEVEL_FUNCTION);
+    LogComponentEnable("PointToPointNetDevice", LOG_LEVEL_FUNCTION);
+    LogComponentEnable("PointToPointChannel", LOG_LEVEL_FUNCTION);
+*/
     std::string dr = "1Kbps";
     std::string delay = "1us";
 
@@ -58,7 +67,7 @@ int main(int argc, char *argv[]){
     userApp.Start(Seconds(1.0));
     userApp.Stop(Seconds(5.0));
 
-    GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(1), port)), port, "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
+    GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(0), port)), port, "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
     server.SetAttribute("FileIO", BooleanValue(true));
     server.SetAttribute("InFile", StringValue("/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt"));
     server.SetAttribute("DisplayFreq", TimeValue(Seconds(0.05)));

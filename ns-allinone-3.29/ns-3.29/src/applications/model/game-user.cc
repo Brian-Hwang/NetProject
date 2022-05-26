@@ -279,7 +279,8 @@ namespace ns3
             // this is udp for now [TODO] decide UDP or TCP
             TypeId tid = TypeId::LookupByName("ns3::UdpSocketFactory");
             m_socket = Socket::CreateSocket(GetNode(), tid);
-            m_socket->Bind(InetSocketAddress(Ipv4Address::GetAny(), m_port));
+            if (m_socket->Bind(InetSocketAddress(Ipv4Address::GetAny(), m_port)) == -1)
+                NS_FATAL_ERROR("Failed to bind socket");
             //m_socket->Connect(m_address);
             m_socket->SetRecvCallback(MakeCallback(&GameUser::computeResponse, this));
         }
