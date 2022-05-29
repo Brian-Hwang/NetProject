@@ -14,11 +14,25 @@
 #include "ns3/game-user.h"
 #include "ns3/string.h"
 
+uint8_t sub_abs_uint8(uint8_t a, uint8_t b) {
+    return a > b ? a - b : b - a;
+}
+
+std::vector<uint8_t> sub_each(std::vector<uint8_t>& v, uint8_t num) {
+    std::vector<uint8_t> v1 {};
+    for (auto& n : v)
+        v1.push_back(sub_abs_uint8(n, num));
+    return std::move(v1);
+}
+
+std::vector<uint8_t> sub_each(std::vector<std::pair<uint8_t, uint8_t>>& v, uint8_t num) {
+    std::vector<uint8_t> v1 {};
+    for (auto& n : v)
+        v1.push_back(sub_abs_uint8(n.first, num));
+    return std::move(v1);
+}
 
 uint8_t moving_algorithm(std::string input_frame, int current_position) {
-	// move right = 2
-	// move left = 1
-	// stay = 0
 	uint8_t move = 0;
     std::string upper0 {};
     if (input_frame.copy(upper0, 10, 80) != 10) {
@@ -32,15 +46,44 @@ uint8_t moving_algorithm(std::string input_frame, int current_position) {
     }
 
     /****
-     * 0110100101
-     * 0001010111
-     * ^8    ^
-     * the character examines two blocks lying right upper him
-     * and find the closest tile that are safe
+     * 1101101011
+     * 0111010101
+     * 1000101011
+     *     8
+     *  aaa a a
+     * b   b b b
+     *   c  c c
+     * the character finds the optimal tiles to move by examine the upper three blocks
      */
 
+    std::vector<uint8_t> upper2_safe {};
+    for (uint8_t i = 0; i != 10; ++i)
+        if (upper2[i] == '0') upper2_safe.push_back(i);
 
+    std::vector<std::pair<uint8_t, uint8_t>> upper0_safe {};
+    for (uint8_t i = 0; i != 10; ++i)
+        if (upper0[i] == '0')
+            upper0_safe.emplace_back(i, 3 * sub_abs_uint8(i, current_pos));
 
+    std::vector<std::pair<uint8_t, uint8_t>> upper1_safe {};
+    for (uint8_t i = 0; i != 10; ++i)
+        if (upper1[i] == '0') {
+            std::vector<uint8_t> temp = sub_each(upper2_safe, i);
+            auto min = std::min_element(std::begin(temp), std::end(temp));
+            upper1_safe.emplace_back(i, *min);
+        }
+
+    std::vector<std::pair<uint8_t, uint8_t>> decision {};
+    for (auto& i : upper0_safe) {
+        std::vector<uint8_t> temp = sub_each(upper1_safe, i.first);
+        auto min = std::min_element(std::begin(temp), std::end(temp));
+        decision.emplace_back(i.first,
+                              i.second + 2 * (*min) + upper1_safe[std::distance(temp.begin(), min)].second);
+    }
+
+    return std::min_element(decision.begin(), decision.end(),
+                                      [](const std::pair<uint8_t, uint8_t>& a, const std::pair<uint8_t, uint8_t>& b)
+                                      { return a.second < b.second; })->first;
 }
 
 namespace ns3
