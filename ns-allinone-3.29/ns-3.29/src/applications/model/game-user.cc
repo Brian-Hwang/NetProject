@@ -14,6 +14,7 @@
 #include "ns3/game-user.h"
 #include "ns3/string.h"
 
+/*
 int moving_algorithm(std::string input_frame, int current_position)  
 {
 
@@ -213,7 +214,35 @@ int moving_algorithm(std::string input_frame, int current_position)
     // if not returned until here, error.
 	return -4;
 }
+*/
 
+uint8_t moving_algorithm(std::string input_frame, int current_position) {
+	// move right = 2
+	// move left = 1
+	// stay = 0
+	uint8_t move = 0;
+    std::string upper0 {};
+    if (input_frame.copy(upper0, 10, 80) != 10) {
+        std::cerr << "error at string copy.0" << std::endl;
+        exit(1);
+    }
+    std::string upper2 {};
+    if (input_frame.copy(upper1, 10, 70) != 10) {
+        std::cerr << "error at string copy.1" << std::endl;
+        exit(1);
+    }
+
+    /****
+     * 0110100101
+     * 0001010111
+     * ^8    ^
+     * the character examines two blocks lying right upper him
+     * and find the closest tile that are safe
+     */
+
+
+
+}
 
 namespace ns3
 {
@@ -319,9 +348,12 @@ namespace ns3
         //[TODO] decide whether user keeps its own information about position or if it should extrcat it from frame
         char *input_frame = new char[m_fieldSize * m_fieldSize];
 
+        /*
         for(uint8_t i = 0; i < m_fieldSize * m_fieldSize; i++){
             input_frame[i] = (char)payload[i];
         }
+        */
+        memcpy(input_frame, payload, m_fieldSize * m_fieldSize);
 
         //Insert AI Movement here
         uint8_t move = moving_algorithm(input_frame, m_currPos);
