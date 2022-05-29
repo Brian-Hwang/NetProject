@@ -60,23 +60,23 @@ int main(int argc, char *argv[]){
 
     //need to pass full path to sender
     GameUserHelper user (port,  10);
-    user.SetAttribute("NPackets", UintegerValue(1000));
+    //user.SetAttribute("NPackets", UintegerValue(1000000000000));
     user.SetAttribute("DataRate", DataRateValue(DataRate("2Mb/s")));
     ApplicationContainer userApp = user.Install(nodes.Get(0));
 
     userApp.Start(Seconds(1.0));
-    userApp.Stop(Seconds(5.0));
+    //userApp.Stop(Seconds(40.0));
 
-    GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(0), port)), port, "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
+    GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(0), port)), port, "/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
     server.SetAttribute("FileIO", BooleanValue(true));
-    server.SetAttribute("InFile", StringValue("/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt"));
+    server.SetAttribute("InFile", StringValue("/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt"));
     server.SetAttribute("DisplayFreq", TimeValue(Seconds(0.05)));
     ApplicationContainer serverApp = server.Install(nodes.Get(1));
     serverApp.Start(Seconds(1.0));
-    serverApp.Stop(Seconds(5.0));
+    //serverApp.Stop(Seconds(40.0));
     serverApp.Get(0)->TraceConnect("Rx", "Arrived", MakeCallback(&Rxcontent));    
 
     Simulator::Run();
-    Simulator::Stop(Seconds(8.0));
+    Simulator::Stop(Seconds(400.0));
     Simulator::Destroy();
 }

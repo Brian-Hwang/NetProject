@@ -22,14 +22,14 @@ std::vector<uint8_t> sub_each(std::vector<uint8_t>& v, uint8_t num) {
     std::vector<uint8_t> v1 {};
     for (auto& n : v)
         v1.push_back(sub_abs_uint8(n, num));
-    return std::move(v1);
+    return v1;
 }
 
 std::vector<uint8_t> sub_each(std::vector<std::pair<uint8_t, uint8_t>>& v, uint8_t num) {
     std::vector<uint8_t> v1 {};
     for (auto& n : v)
         v1.push_back(sub_abs_uint8(n.first, num));
-    return std::move(v1);
+    return v1;
 }
 
 std::vector<uint8_t>::iterator min_element(std::vector<uint8_t>::iterator begin,
@@ -50,18 +50,23 @@ min_element(std::vector<std::pair<uint8_t, uint8_t>>::iterator begin,
     return min;
 }
 
-uint8_t moving_algorithm(std::string input_frame, int current_position) {
-	uint8_t move = 0;
-    std::string upper0 {};
+uint8_t moving_algorithm(std::string& input_frame, int current_pos) {
+    char upper0[11] {};
     if (input_frame.copy(upper0, 10, 80) != 10) {
         std::cerr << "error at string copy.0" << std::endl;
         exit(1);
     }
-    std::string upper2 {};
+    char upper1[11] {};
     if (input_frame.copy(upper1, 10, 70) != 10) {
         std::cerr << "error at string copy.1" << std::endl;
         exit(1);
     }
+    char upper2[11] {};
+    if (input_frame.copy(upper2, 10, 60) != 10) {
+        std::cerr << "error at string copy.1" << std::endl;
+        exit(1);
+    }
+    std::cout << "yes\n" << upper0 << "\n" << upper1 << "\n" << upper2 << "\n";
 
     /****
      * 1101101011
@@ -100,7 +105,10 @@ uint8_t moving_algorithm(std::string input_frame, int current_position) {
                               i.second + 2 * (*min) + upper1_safe[std::distance(temp.begin(), min)].second);
     }
 
-    return min_element(decision.begin(), decision.end())->first;
+    uint8_t dec = min_element(decision.begin(), decision.end())->first; 
+    std::cout << "decision: " << static_cast<int>(dec) << std::endl;
+    //return min_element(decision.begin(), decision.end())->first;
+    return dec;
 }
 
 namespace ns3
@@ -205,17 +213,21 @@ namespace ns3
         }
 
         //[TODO] decide whether user keeps its own information about position or if it should extrcat it from frame
-        char *input_frame = new char[m_fieldSize * m_fieldSize];
+        //char *input_frame = new char[m_fieldSize * m_fieldSize];
 
         /*
         for(uint8_t i = 0; i < m_fieldSize * m_fieldSize; i++){
             input_frame[i] = (char)payload[i];
         }
-        */
         memcpy(input_frame, payload, m_fieldSize * m_fieldSize);
+        */
+
+        std::string input_frame = (char*) payload;
 
         //Insert AI Movement here
-        uint8_t move = moving_algorithm(input_frame, m_currPos);
+        int8_t move = moving_algorithm(input_frame, m_currPos);
+        m_currPos = move;
+        /*
         if (move == 1){
             //left
             m_currPos = (m_currPos > 0)? m_currPos - 1
@@ -225,6 +237,7 @@ namespace ns3
             m_currPos = (m_currPos == (m_fieldSize - 1))? m_currPos
                                                         : m_currPos + 1;
         }
+        */
         //assuming that a variable 'move' is set, which is 0 when no movement is required
         if(move){
             char *buf = new char[2];
@@ -235,7 +248,7 @@ namespace ns3
 
         if(payload != NULL)
             delete[] payload;
-        delete[] input_frame;
+        //delete[] input_frame;
     }
 
     void GameUser::SendPacket(Address from, char *payload)

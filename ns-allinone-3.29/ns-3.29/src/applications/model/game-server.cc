@@ -182,7 +182,8 @@ namespace ns3
         NS_LOG_DEBUG("Next Frame is " << m_nextFrame);
 
         // place player based on m_currPos
-        m_nextFrame[dim - m_fieldSize + m_currPos] = '2';
+        m_nextFrame[dim - m_fieldSize + static_cast<int>(m_currPos)] = '2';
+        std::cout << "Received: " << static_cast<int>(m_currPos) << std::endl;
 
         // write to outFile
         m_outFile << m_nextFrame;
@@ -190,7 +191,7 @@ namespace ns3
         if (!m_fileIO || !m_inFile.eof())
         {
             SendFrame();
-            ScheduleDisplay();
+            //ScheduleDisplay();
         }
     }
 
@@ -208,7 +209,11 @@ namespace ns3
                 uint8_t *payload = new uint8_t[packet->GetSize()];
                 packet->CopyData(payload, packet->GetSize());
                 NS_LOG_DEBUG("Received " << static_cast<int>(payload[0]) << " from sender.");
+                std::cout << "Received " << static_cast<int>(payload[0]) << " from sender." << std::endl;
 
+                m_currPos = static_cast<int>(payload[0]);
+
+                /*
                 if (static_cast<int>(payload[0]) == 1)
                 {
                     m_currPos = (m_currPos + 1 > m_fieldSize - 1) ? m_fieldSize - 1
@@ -219,10 +224,12 @@ namespace ns3
                     m_currPos = (m_currPos - 1 < 0) ? 0
                                                     : m_currPos - 1;
                 }
+                */
 
                 delete[] payload;
             }
         }
+        Display(); 
     }
 
     void GameServer::StopApplication()

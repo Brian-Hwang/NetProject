@@ -1,0 +1,968 @@
+Test
+GameUser:GameUser(0x55acbc358660)
+GameServer:GameServer(0x55acbc3ac210)
+GameUser:StartApplication(0x55acbc358660)
+GameServer:StartApplication(0x55acbc3ac210)
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+GameServer:ScheduleDisplay(0x55acbc3ac210)
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 1100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 1100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0010001101110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0010001101110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000001000110111000000000000000000000000000000000000000000000000000000000000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000001000110111000000000000000000000000000000000000000000000000000000000000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000000000000100011011100000000000000000000000000000000000000000000000000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000000000000100011011100000000000000000000000000000000000000000000000000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0001000000000000000000000000000010001101110000000000000000000000000000000000000000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0001000000000000000000000000000010001101110000000000000000000000000000000000000000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000100000100000000000000000000000000001000110111000000000000000000000000000000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000100000100000000000000000000000000001000110111000000000000000000000000000000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 1000000000000000010000010000000000000000000000000000100011011100000000000000000000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 1000000000000000010000010000000000000000000000000000100011011100000000000000000000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000001100000000000000001000001000000000000000000000000000010001101110000000000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000001100000000000000001000001000000000000000000000000000010001101110000000000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to š7¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000000000110000000000000000100000100000000000000000000000000001000110111000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000000000110000000000000000100000100000000000000000000000000001000110111000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000000000000000000011000000000000000010000010000000000000000000000000000100011011100000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000000000000000000011000000000000000010000010000000000000000000000000000100011011100000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to |<¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000101000000000000000000000000000000001100000000000000001000001000000000000000000000000000010001101
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000101000000000000000000000000000000001100000000000000001000001000000000000000000000000000010001101 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to |<¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000010001000010100000000000000000000000000000000110000000000000000100000100000000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000010001000010100000000000000000000000000000000110000000000000000100000100000000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to |<¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0010000000000001000100001010000000000000000000000000000000011000000000000000010000010000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0010000000000001000100001010000000000000000000000000000000011000000000000000010000010000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to |<¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000001000001000000000000100010000101000000000000000000000000000000001100000000000000001000001000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000001000001000000000000100010000101000000000000000000000000000000001100000000000000001000001000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to |<¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0100000000000000100000100000000000010001000010100000000000000000000000000000000110000000000000000100
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0100000000000000100000100000000000010001000010100000000000000000000000000000000110000000000000000100 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to |<¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000010000000000000010000010000000000001000100001010000000000000000000000000000000011000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000010000000000000010000010000000000001000100001010000000000000000000000000000000011000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to |<¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0001010100000000000001000000000000001000001000000000000100010000101000000000000000000000000000000001
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0001010100000000000001000000000000001000001000000000000100010000101000000000000000000000000000000001 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000010000101010000000000000100000000000000100000100000000000010001000010100000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000010000101010000000000000100000000000000100000100000000000010001000010100000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 1000010001000000001000010101000000000000010000000000000010000010000000000001000100001010000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 1000010001000000001000010101000000000000010000000000000010000010000000000001000100001010000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to š7¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 5
+Received 5 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000001000100001000100000000100001010100000000000001000000000000001000001000000000000100010000101000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000001000100001000100000000100001010100000000000001000000000000001000001000000000000100010000101000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000001000000000100010000100010000000010000101010000000000000100000000000000100000100000000000010001
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000001000000000100010000100010000000010000101010000000000000100000000000000100000100000000000010001 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000000100000000010001000010001000000001000010101000000000000010000000000000010000010000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000000100000000010001000010001000000001000010101000000000000010000000000000010000010000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000000000000000010000000001000100001000100000000100001010100000000000001000000000000001000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000000000000000010000000001000100001000100000000100001010100000000000001000000000000001000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to  ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000000000000000000000000001000000000100010000100010000000010000101010000000000000100000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000000000000000000000000001000000000100010000100010000000010000101010000000000000100000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to  ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0001010100000000000000000000000000000000000000100000000010001000010001000000001000010101000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0001010100000000000000000000000000000000000000100000000010001000010001000000001000010101000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to |<¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 1100000000000101010000000000000000000000000000000000000010000000001000100001000100000000100001010100
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 1100000000000101010000000000000000000000000000000000000010000000001000100001000100000000100001010100 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000110000000000010101000000000000000000000000000000000000001000000000100010000100010000000010
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000110000000000010101000000000000000000000000000000000000001000000000100010000100010000000010 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000100000000000000011000000000001010100000000000000000000000000000000000000100000000010001000010001
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000100000000000000011000000000001010100000000000000000000000000000000000000100000000010001000010001 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000011000010000000000000001100000000000101010000000000000000000000000000000000000010000000001000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000011000010000000000000001100000000000101010000000000000000000000000000000000000010000000001000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0110100000000000001100001000000000000000110000000000010101000000000000000000000000000000000000001000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0110100000000000001100001000000000000000110000000000010101000000000000000000000000000000000000001000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000011010000000000000110000100000000000000011000000000001010100000000000000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000011010000000000000110000100000000000000011000000000001010100000000000000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0101001110000000000001101000000000000011000010000000000000001100000000000101010000000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0101001110000000000001101000000000000011000010000000000000001100000000000101010000000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000010100111000000000000110100000000000001100001000000000000000110000000000010101000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000010100111000000000000110100000000000001100001000000000000000110000000000010101000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to |<¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 1100000000000000000001010011100000000000011010000000000000110000100000000000000011000000000001010100
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 1100000000000000000001010011100000000000011010000000000000110000100000000000000011000000000001010100 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to h=¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0011000001110000000000000000000101001110000000000001101000000000000011000010000000000000001100000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0011000001110000000000000000000101001110000000000001101000000000000011000010000000000000001100000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 4
+Received 4 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000100000001100000111000000000000000000010100111000000000000110100000000000001100001000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000100000001100000111000000000000000000010100111000000000000110100000000000001100001000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to h=¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 3
+Received 3 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000010000000110000011100000000000000000001010011100000000000011010000000000000110000100000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000010000000110000011100000000000000000001010011100000000000011010000000000000110000100000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to  ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 3
+Received 3 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0010000000000000000000001000000011000001110000000000000000000101001110000000000001101000000000000011
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0010000000000000000000001000000011000001110000000000000000000101001110000000000001101000000000000011 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to h=¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 3
+Received 3 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000010000001000000000000000000000100000001100000111000000000000000000010100111000000000000110100000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000010000001000000000000000000000100000001100000111000000000000000000010100111000000000000110100000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to h=¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 3
+Received 3 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000100000000001000000100000000000000000000010000000110000011100000000000000000001010011100000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000100000000001000000100000000000000000000010000000110000011100000000000000000001010011100000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 2
+Received 2 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000001100000010000000000100000010000000000000000000001000000011000001110000000000000000000101001110
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000001100000010000000000100000010000000000000000000001000000011000001110000000000000000000101001110 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 2
+Received 2 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0001000000000000110000001000000000010000001000000000000000000000100000001100000111000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0001000000000000110000001000000000010000001000000000000000000000100000001100000111000000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 2
+Received 2 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000100000000000011000000100000000001000000100000000000000000000010000000110000011100000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000100000000000011000000100000000001000000100000000000000000000010000000110000011100000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 1
+Received 1 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0100000000000000000000010000000000001100000010000000000100000010000000000000000000001000000011000001
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0100000000000000000000010000000000001100000010000000000100000010000000000000000000001000000011000001 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 1
+Received 1 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000010000000000000000000001000000000000110000001000000000010000001000000000000000000000100000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000010000000000000000000001000000000000110000001000000000010000001000000000000000000000100000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 1
+Received 1 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000110000000000000001000000000000000000000100000000000011000000100000000001000000100000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000110000000000000001000000000000000000000100000000000011000000100000000001000000100000000000000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 1
+Received 1 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000011000000000000000100000000000000000000010000000000001100000010000000000100000010000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000011000000000000000100000000000000000000010000000000001100000010000000000100000010000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to ";¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 1
+Received 1 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000000000000001100000000000000010000000000000000000001000000000000110000001000000000010000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000000000000001100000000000000010000000000000000000001000000000000110000001000000000010000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to  ;¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 1
+Received 1 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000000000000000000000000110000000000000001000000000000000000000100000000000011000000100000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000000000000000000000000110000000000000001000000000000000000000100000000000011000000100000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to š7¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 1
+Received 1 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000000000000000000000000000000000000011000000000000000100000000000000000000010000000000001100
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000000000000000000000000000000000000011000000000000000100000000000000000000010000000000001100 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to š7¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 1
+Received 1 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0101010000000000000000000000000000000000000000000000001100000000000000010000000000000000000001000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0101010000000000000000000000000000000000000000000000001100000000000000010000000000000000000001000000 from server.
+GameUser:SendPacket(0x55acbc358660)
+Converted char to š7¼¬U
+GameServer:HandleRead(0x55acbc3ac210)
+Received Packet! Contents: 1
+Received 1 from sender.
+GameServer:Display(0x55acbc3ac210)
+Next Frame is 0000000000010101000000000000000000000000000000000000000000000000110000000000000001000000000000000000
+GameServer:SendFrame(0x55acbc3ac210)
+GameServer:NextFrame(0x55acbc3ac210)
+Frame Dimension: 100
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000000010101000000000000000000000000000000000000000000000000110000000000000001000000000000000000 from server.
+Huh?!?
+GameUser:computeResponse(0x55acbc358660)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 0000000001000000000001010100000000000000000000000000000000000000000000000011000000000000000100000000 from server.
+GameServer:~GameServer(0x55acbc3ac210)
+GameUser:~GameUser(0x55acbc358660)
