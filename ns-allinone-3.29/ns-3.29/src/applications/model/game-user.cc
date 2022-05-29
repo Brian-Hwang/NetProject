@@ -32,6 +32,24 @@ std::vector<uint8_t> sub_each(std::vector<std::pair<uint8_t, uint8_t>>& v, uint8
     return std::move(v1);
 }
 
+std::vector<uint8_t>::iterator min_element(std::vector<uint8_t>::iterator begin,
+                                           std::vector<uint8_t>::iterator end) {
+    auto min = begin;
+    for (auto it = begin + 1; it != end; ++it)
+        if (*min > *it) min = it;
+    return min;
+}
+
+std::vector<std::pair<uint8_t, uint8_t>>::iterator
+min_element(std::vector<std::pair<uint8_t, uint8_t>>::iterator begin,
+            std::vector<std::pair<uint8_t, uint8_t>>::iterator end) {
+    auto min = begin;
+    for (auto it = begin + 1; it != end; ++it) {
+        if (min->second > it->second) min = it;
+    }
+    return min;
+}
+
 uint8_t moving_algorithm(std::string input_frame, int current_position) {
 	uint8_t move = 0;
     std::string upper0 {};
@@ -54,6 +72,7 @@ uint8_t moving_algorithm(std::string input_frame, int current_position) {
      * b   b b b
      *   c  c c
      * the character finds the optimal tiles to move by examine the upper three blocks
+     * "safe" tile means that when we are on it, we will survive at the next "tic"
      */
 
     std::vector<uint8_t> upper2_safe {};
@@ -69,21 +88,19 @@ uint8_t moving_algorithm(std::string input_frame, int current_position) {
     for (uint8_t i = 0; i != 10; ++i)
         if (upper1[i] == '0') {
             std::vector<uint8_t> temp = sub_each(upper2_safe, i);
-            auto min = std::min_element(std::begin(temp), std::end(temp));
+            auto min = min_element(std::begin(temp), std::end(temp));
             upper1_safe.emplace_back(i, *min);
         }
 
     std::vector<std::pair<uint8_t, uint8_t>> decision {};
     for (auto& i : upper0_safe) {
         std::vector<uint8_t> temp = sub_each(upper1_safe, i.first);
-        auto min = std::min_element(std::begin(temp), std::end(temp));
+        auto min = min_element(std::begin(temp), std::end(temp));
         decision.emplace_back(i.first,
                               i.second + 2 * (*min) + upper1_safe[std::distance(temp.begin(), min)].second);
     }
 
-    return std::min_element(decision.begin(), decision.end(),
-                                      [](const std::pair<uint8_t, uint8_t>& a, const std::pair<uint8_t, uint8_t>& b)
-                                      { return a.second < b.second; })->first;
+    return min_element(decision.begin(), decision.end())->first;
 }
 
 namespace ns3
