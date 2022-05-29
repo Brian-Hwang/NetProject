@@ -207,14 +207,14 @@ namespace ns3
                 m_rxTrace(packet);
                 uint8_t *payload = new uint8_t[packet->GetSize()];
                 packet->CopyData(payload, packet->GetSize());
-                NS_LOG_DEBUG("Received " << payload << " from sender.");
+                NS_LOG_DEBUG("Received " << static_cast<int>(payload[0]) << "|" << static_cast<int>(payload[1]) << " from sender.");
 
-                if (payload[0] == '1')
+                if (static_cast<int>(payload[0]) == 1)
                 {
                     m_currPos = (m_currPos + 1 > m_fieldSize - 1) ? m_fieldSize - 1
                                                                   : m_currPos + 1;
                 }
-                else if (payload[0] == '2')
+                else if (static_cast<int>(payload[0]) == 2)
                 {
                     m_currPos = (m_currPos - 1 < 0) ? 0
                                                     : m_currPos - 1;

@@ -13,211 +13,9 @@
 #include "ns3/udp-socket-factory.h"
 #include "ns3/game-user.h"
 #include "ns3/string.h"
-#include "ns3/vector.h"
+#include <vector>
 #include <cmath>
 #include <utility>
-
-/*
-int moving_algorithm(std::string input_frame, int current_position)  
-{
-
-	// move right = 2
-	// move left = 1
-	// stay = 0
-	int move = 0;
-    std::string oneline = "3333333333";
-
-	int number_of_obstacles_in_left = 0;
-	int number_of_obstacles_in_right = 0;
-	int number_of_obstacles_on_current_position = 0;
-
-	for (int i = 9; i >= 0; i--) {
-
-		for (int j = 0; j < 10; j++) {
-
-			oneline[j] = input_frame[i * 10 + j];
-			if (input_frame[i * 10 + j] == '1') {
-				if (j < current_position) {
-					number_of_obstacles_in_left += 1;
-				}
-				else if (j > current_position) {
-					number_of_obstacles_in_right += 1;
-
-				}
-				else {
-					number_of_obstacles_on_current_position += 1;
-				}
-
-			}
-
-		}
-
-		// if current position is same as the wall.
-		// and obstacle is on top of the characters head
-		// -> MOVE LEFT OR RIGHT
-		// 
-		//        100000000
-		//        8
-
-		//        100000101
-		//                8
-
-		if (i == 9) {
-			if (current_position == 9) {
-				if (oneline[current_position] == '1') {
-					move = 1;
-                    std::cout << "moved left. position = wall. obstacle - on top of head";
-                    std::cout << std::endl;
-					return move;
-				}
-
-			}
-			else if (current_position == 0) {
-				if (oneline[current_position] == '1') {
-					move = 2;
-                    std::cout << "moved right. position = wall. obstacle - on top of head";
-                    std::cout << std::endl;
-					return move;
-				}
-			}
-		}
-
-		// if current position is same as the wall.
-		// and moving results death
-		// -> STAY
-		// 
-		//        011000000
-		//        8
-
-		//        100000110
-		//                8
-
-		if (i == 9) {
-			if (current_position == 9) {
-				if (oneline[current_position - 1] == '1') {
-					move = 0;
-                    std::cout << "stayed . position = wall. obstacle - next to the character";
-                    std::cout << std::endl;
-					return move;
-				}
-
-			}
-			else if (current_position == 0) {
-				if (oneline[current_position + 1] == '1') {
-					move = 0;
-                    std::cout << "stayed . position = wall. obstacle - next to the character";
-                    std::cout << std::endl;
-					return move;
-				}
-			}
-		}
-		// if two obstacles exist in the side 
-		// -> STAY
-
-		//        100010101
-		//             8
-		if (i == 9) {
-
-			if (current_position > 0 && current_position < 9) {
-				if (oneline[current_position - 1] == '1' && oneline[current_position + 1] == '1') {
-					move = 0;
-                    std::cout << "stayed . position = not wall. two obstacles side by side ";
-                    std::cout << std::endl;
-					return move;
-				}
-			}
-		}
-
-		// if obstacle is on top of the characters head
-		// if choosing wrong direction may cause death
-		// -> MOVE LEFT OR RIGHT
-
-		//        100011001
-		//             8
-
-		//        100001101
-		//             8
-		if (i == 9) {
-			if (current_position > 0 && current_position < 9) {
-				if (oneline[current_position] == '1') {
-					if (oneline[current_position + 1] == '1') {
-						move = 2;
-                        std::cout << "move right . position = not wall. obstacle left to the character";
-                        std::cout << std::endl;
-						return move;
-					}
-					else if (oneline[current_position - 1] == '1') {
-						move = 1;
-                        std::cout << "move left . position = not wall. obstacle right to the character";
-                        std::cout << std::endl;
-						return move;
-					}
-				}
-
-			}
-		}
-
-        std::cout << oneline;
-        std::cout << std::endl;
-	}
-    std::cout << "number_of_obstacles_in_left: ";
-    std::cout << number_of_obstacles_in_left;
-    std::cout << std::endl;
-    std::cout << "number_of_obstacles_in_right: ";
-    std::cout << number_of_obstacles_in_right;
-    std::cout << std::endl;
-
-	// else, determine direction by counting number of obstacles in each side.
-
-	// 
-	// if 	number_of_obstacles_in_left < number_of_obstacles_in_right 
-	// move left
-	// 
-	//        11~~~~~~~~
-	//        ~111~~~~~~   when total obstacles in left side is bigger
-	//        1000000111
-	//           8  
-
-
-	// if 	number_of_obstacles_in_left > number_of_obstacles_in_right 
-	// move right
-	// 
-	//        00~~~~1~11
-	//        ~100~~11~1   when total obstacles in right side is bigger
-	//        1000010111
-	//           8  
-	// 
-	// 
-	// if 	number_of_obstacles_in_left = number_of_obstacles_in_right 
-	// stay
-	//        1~~~~~~~~~
-	//        ~1~~~~~~~~   when total obstacles in left == total obstacles in right
-	//        1000000111
-	//             8  
-	// 
-	if (number_of_obstacles_in_left < number_of_obstacles_in_right) {
-		move = 1;
-        std::cout << "move left . position = not wall. more obstacles in right side";
-        std::cout << std::endl;
-		return move;
-	}
-	if (number_of_obstacles_in_left > number_of_obstacles_in_right) {
-		move = 2;
-        std::cout << "move right . position = not wall. more obstacles in left side";
-        std::cout << std::endl;
-		return move;
-	}
-	if (number_of_obstacles_in_left == number_of_obstacles_in_right) {
-		move = 0;
-        std::cout << "stay . position = not wall. same number of obstacles in both sides";
-        std::cout << std::endl;
-		return move;
-	}
-
-    // if not returned until here, error.
-	return -4;
-}
-*/
 
 uint8_t sub_abs_uint8(uint8_t a, uint8_t b) {
     return a > b ? a - b : b - a;
@@ -227,18 +25,17 @@ std::vector<uint8_t> sub_each(std::vector<uint8_t>& v, uint8_t num) {
     std::vector<uint8_t> result {};
     for (auto& n : v) 
         result.push_back(sub_abs_uint8(n, num));
-    return std::move(result);
+    return result;
 }
 
 std::vector<uint8_t> sub_each(std::vector<std::pair<uint8_t, uint8_t>>& v, uint8_t num) {
     std::vector<uint8_t> v1 {};
     for (auto& n : v)
         v1.push_back(sub_abs_uint8(n.first, num));
-    return std::move(v1);
+    return v1;
 }
 
-std::Compare
-
+/*
 uint8_t moving_algorithm(std::string input_frame, int current_pos) {
 	// move right = 2
 	// move left = 1
@@ -272,7 +69,6 @@ uint8_t moving_algorithm(std::string input_frame, int current_pos) {
         std::cout << upper2 << std::endl;
     }
 
-     /******
      * 1111111011
      * 0111010101
      * 1000101011
@@ -296,7 +92,6 @@ uint8_t moving_algorithm(std::string input_frame, int current_pos) {
      * the it will definitely choose the a4
      * what if there are multiple minimum tiles?
      * then choose the closest tile at upper0 + leftmost
-     *******/
     
     std::vector<uint8_t> upper2_safe {};
     for (uint8_t i = 0; i != 10; ++i)
@@ -305,7 +100,7 @@ uint8_t moving_algorithm(std::string input_frame, int current_pos) {
 
     std::vector<std::pair<uint8_t, uint8_t>> upper0_safe {};
     for (uint8_t i = 0; i != 10; ++i)
-        if (upper0[i] == '0') upper0_safe.emplace_back(std::make_pair(i, 3 * sub_abs_uint8(i, current_pos));
+        if (upper0[i] == '0') upper0_safe.emplace_back(std::make_pair(i, 3 * sub_abs_uint8(i, current_pos)));
 
     std::vector<std::pair<uint8_t, uint8_t>> upper1_safe {};
     for (uint8_t i = 0; i != 10; ++i) {
@@ -328,6 +123,7 @@ uint8_t moving_algorithm(std::string input_frame, int current_pos) {
                                       [](const std::pair<uint8_t, uint8_t>& a, const std::pair<uint8_t, uint8_t>& b)
                                       { return a.second < b.second; })->first;
 }
+*/
 
 namespace ns3
 {
@@ -441,7 +237,8 @@ namespace ns3
         memcpy(input_frame, payload, m_fieldSize * m_fieldSize);
 
         //Insert AI Movement here
-        uint8_t move = moving_algorithm(input_frame, m_currPos);
+ //       uint8_t move = moving_algorithm(input_frame, m_currPos);
+        uint8_t move = 1;
         if (move == 1){
             //left
             m_currPos = (m_currPos > 0)? m_currPos - 1
