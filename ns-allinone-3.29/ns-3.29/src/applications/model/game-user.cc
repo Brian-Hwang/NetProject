@@ -18,6 +18,21 @@ uint8_t sub_abs_uint8(uint8_t a, uint8_t b) {
     return a > b ? a - b : b - a;
 }
 
+uint8_t sub_abs_uint8(uint8_t a, uint8_t b, uint8_t& direction) {
+    if (a > b) {
+        direction = 2;
+        return a - b;
+    }
+    else if (a < b) {
+        direction = 1;
+        return b - a;
+    }
+    else {
+        direction = 0;
+        return 0;
+    }
+}
+
 std::vector<uint8_t> sub_each(std::vector<uint8_t>& v, uint8_t num) {
     std::vector<uint8_t> v1 {};
     for (auto& n : v)
@@ -178,14 +193,14 @@ namespace ns3
             if (m_socket->Bind(InetSocketAddress(Ipv4Address::GetAny(), m_port)) == -1)
                 NS_FATAL_ERROR("Failed to bind socket");
             //m_socket->Connect(m_address);
-            m_socket->SetRecvCallback(MakeCallback(&GameUser::computeResponse, this));
+            m_socket->SetRecvCallback(MakeCallback(&GameUser::SendResponse, this));
         }
         m_currPos = (int)(m_fieldSize/2);
         // indicate that application is running now
         m_running = true;
     }
 
-    void GameUser::computeResponse(Ptr<Socket> socket){
+    void GameUser::SendResponse(Ptr<Socket> socket) {
         NS_LOG_DEBUG("Huh?!?");
         NS_LOG_FUNCTION(this);
         NS_LOG_DEBUG("Huh?!?");
@@ -213,42 +228,30 @@ namespace ns3
         }
 
         //[TODO] decide whether user keeps its own information about position or if it should extrcat it from frame
-        //char *input_frame = new char[m_fieldSize * m_fieldSize];
-
-        /*
-        for(uint8_t i = 0; i < m_fieldSize * m_fieldSize; i++){
-            input_frame[i] = (char)payload[i];
-        }
-        memcpy(input_frame, payload, m_fieldSize * m_fieldSize);
-        */
-
         std::string input_frame = (char*) payload;
-
-        //Insert AI Movement here
+        
+        // calculate the desired position to move on
         int8_t move = moving_algorithm(input_frame, m_currPos);
-        m_currPos = move;
-        /*
-        if (move == 1){
-            //left
-            m_currPos = (m_currPos > 0)? m_currPos - 1
-                                       : 0;
-        }else if (move == 2){
-            //right
-            m_currPos = (m_currPos == (m_fieldSize - 1))? m_currPos
-                                                        : m_currPos + 1;
-        }
-        */
-        //assuming that a variable 'move' is set, which is 0 when no movement is required
-        if(move){
+
+        // number of packet == number of movement 
+        // yeah the character will move one tile at a time
+        // direction -> left = 1, right = 2
+        uint8_t direction = 0;
+        int num_of_packet = sub_abs_uint8(move, m_currPos, direction);
+        for (int i = 0; i < num_of_packet; ++i) {
+            std::cout << "YEAH! SENDING " << static_cast<int>(direction) << std::endl;
             char *buf = new char[2];
-            buf[0] = (char) move;
+            buf[0] = (char) direction;
             buf[1] = '\0';
             SendPacket(from, buf);
+            delete[] buf;
         }
+
+        // User assumes that the character moved exactly what he has ordered
+        m_currPos = move;
 
         if(payload != NULL)
             delete[] payload;
-        //delete[] input_frame;
     }
 
     void GameUser::SendPacket(Address from, char *payload)

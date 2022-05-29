@@ -173,6 +173,8 @@ namespace ns3
         return frame;
     }
 
+    // this is the problem
+    // the bricks and the character should not move at the same time
     void GameServer::Display(void)
     {
         NS_LOG_FUNCTION(this);
@@ -211,9 +213,8 @@ namespace ns3
                 NS_LOG_DEBUG("Received " << static_cast<int>(payload[0]) << " from sender.");
                 std::cout << "Received " << static_cast<int>(payload[0]) << " from sender." << std::endl;
 
-                m_currPos = static_cast<int>(payload[0]);
+                //m_currPos = static_cast<int>(payload[0]);
 
-                /*
                 if (static_cast<int>(payload[0]) == 1)
                 {
                     m_currPos = (m_currPos + 1 > m_fieldSize - 1) ? m_fieldSize - 1
@@ -224,7 +225,6 @@ namespace ns3
                     m_currPos = (m_currPos - 1 < 0) ? 0
                                                     : m_currPos - 1;
                 }
-                */
 
                 delete[] payload;
             }
