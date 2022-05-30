@@ -142,7 +142,7 @@ namespace ns3
         NS_LOG_FUNCTION(this);
 
         char buf[31];
-        size_t nread = m_lastFrame.copy(buf, 30, 70);
+        size_t nread = m_lastFrame.copy(buf, 30, 60);
         while (nread < 30) {
             buf[nread++] = '0'; 
         }
