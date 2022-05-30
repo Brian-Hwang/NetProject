@@ -66,7 +66,7 @@ min_element(std::vector<std::pair<uint8_t, uint8_t>>::iterator begin,
 }
 
 uint8_t moving_algorithm(std::string& input_frame, int current_pos) {
-    std::cout << "input frame len: " << input_frame.size() << std::endl;
+    //std::cout << "input frame len: " << input_frame.size() << std::endl;
     //std::cout << "hello i'm algorithm.\n";
     char upper0[11] {};
     if (input_frame.copy(upper0, 10, 0) != 10) {
@@ -85,9 +85,9 @@ uint8_t moving_algorithm(std::string& input_frame, int current_pos) {
         std::cerr << "error at string copy.1" << std::endl;
         exit(1);
     }
-    std::cout << "Succeed2: " << upper2 << std::endl;
-    std::cout << "Succeed1: " << upper1 << std::endl;
-    std::cout << "Succeed0: " << upper0 << std::endl;
+    //std::cout << "Succeed2: " << upper2 << std::endl;
+    //std::cout << "Succeed1: " << upper1 << std::endl;
+    //std::cout << "Succeed0: " << upper0 << std::endl;
 
     /****
      * 1101101011
@@ -129,7 +129,7 @@ uint8_t moving_algorithm(std::string& input_frame, int current_pos) {
     uint8_t dec = min_element(decision.begin(), decision.end())->first; 
     std::string for_display {"0000000000"};
     for_display.replace(static_cast<int>(dec), 1, "8");
-    std::cout << "decision: " << for_display << std::endl;
+    //std::cout << "decision: " << for_display << std::endl;
     //return min_element(decision.begin(), decision.end())->first;
     return dec;
 }
@@ -250,7 +250,7 @@ namespace ns3
         int num_of_packet = 0;
         //std::cout << "num of packet to send: " << num_of_packet << std::endl;
         if ((num_of_packet = sub_abs_uint8(move, m_currPos, direction)) > 0) {
-            std::cout << "dir: " << static_cast<int>(direction) << std::endl;
+            //std::cout << "dir: " << static_cast<int>(direction) << std::endl;
             for (int i = 0; i < num_of_packet; ++i) {
                 //std::cout << "YEAH! SENDING " << static_cast<int>(direction) << std::endl;
                 char *buf = new char[2];

@@ -1,23 +1,1387 @@
 Test
-GameUser:GameUser(0x55ba211ba660)
-GameServer:GameServer(0x55ba2120de70)
-GameUser:StartApplication(0x55ba211ba660)
-GameServer:StartApplication(0x55ba2120de70)
-GameServer:ScheduleTransmit(0x55ba2120de70, +0.0ns)
-GameServer:SendFrame(0x55ba2120de70)
-GameServer:NextFrame(0x55ba2120de70)
-Frame Dimension: 30
-GameServer:StopApplication(0x55ba2120de70)
-GameServer:Display(0x55ba2120de70)
-Next Frame is 000000000000000000000000000000
-GameServer:ScheduleTransmit(0x55ba2120de70, +1000000000.0ns)
-GameServer:SendFrame(0x55ba2120de70)
-GameServer:NextFrame(0x55ba2120de70)
-Frame Dimension: 30
-GameServer:StopApplication(0x55ba2120de70)
-GameServer:Display(0x55ba2120de70)
-Next Frame is 
-GameServer:~GameServer(0x55ba2120de70)
-GameUser:~GameUser(0x55ba211ba660)
-free(): invalid next size (fast)
+GameUser:GameUser(0x56104efd1a90)
+GameServer:GameServer(0x56104f025cc0)
+GameUser:StartApplication(0x56104efd1a90)
+GameServer:StartApplication(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 0|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:ScheduleTransmit(0x56104f025cc0, +0.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 100|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 200|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 300|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 400|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 500|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 600|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 700|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 800|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 900|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 110000000000000000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 1000|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 1100|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 001000110111000000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000100011011100000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 1200|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 1300|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000010001101 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000100000000000000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 1400|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 1500|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000010000010000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 100000000000000001000001000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 1600|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 1700|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000110000000000000000100 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000011000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 1800|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 1900|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000000001 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000010100000000000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 2000|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 2100|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000001000100001010000000000000 from server.
+GameUser:SendPacket(0x56104efd1a90)
+Converted char to ëþNV
+GameServer:HandleRead(0x56104f025cc0)
+Received Packet! Contents: 1
+Received 1 from user.
+GameServer:Display(0x56104f025cc0)
+Next Frame is 2200|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 001000000000000100010000101000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 2200|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 2300|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000100000100000000000010001 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 2400|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 010000000000000010000010000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000001000000000000001000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 2500|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 2600|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000101010000000000000100000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 2700|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000001000010101000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 100001000100000000100001010100 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 2800|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 2900|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000100010000100010000000010 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 3000|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000100000000010001000010001 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000010000000001000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 3100|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 3200|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000001000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 3300|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000101010000000000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 3400|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 3500|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 110000000000010101000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 3600|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000011000000000001010100 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000010000000000000001100000000 from server.
+GameUser:SendPacket(0x56104efd1a90)
+Converted char to ÂOV
+GameServer:HandleRead(0x56104f025cc0)
+Received Packet! Contents: 1
+Received 1 from user.
+GameServer:Display(0x56104f025cc0)
+Next Frame is 3700|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 3700|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 3800|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000001100001000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 3900|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 011010000000000000110000100000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000001101000000000000011 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 4000|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 010100111000000000000110100000 from server.
+GameUser:SendPacket(0x56104efd1a90)
+Converted char to OV
+GameServer:HandleRead(0x56104f025cc0)
+Received Packet! Contents: 1
+Received 1 from user.
+GameServer:Display(0x56104f025cc0)
+Next Frame is 4100|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 4100|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 4200|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000001010011100000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 4300|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 110000000000000000000101001110 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 001100000111000000000000000000 from server.
+GameUser:SendPacket(0x56104efd1a90)
+Converted char to ÌþNV
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 4400|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:HandleRead(0x56104f025cc0)
+Received Packet! Contents: 1
+Received 1 from user.
+GameServer:Display(0x56104f025cc0)
+Next Frame is 4500|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000010000000110000011100000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 4500|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000001000000011000001 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 4600|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 4700|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 001000000000000000000000100000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 4800|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000001000000100000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000010000000000100000010000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 4900|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 5000|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000110000001000000000010000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 5100|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000100000000000011000000100000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000010000000000001100 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 5200|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 5300|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 010000000000000000000001000000 from server.
+GameUser:SendPacket(0x56104efd1a90)
+Converted char to ÌþNV
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 5400|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:HandleRead(0x56104f025cc0)
+Received Packet! Contents: 1
+Received 1 from user.
+GameServer:Display(0x56104f025cc0)
+Next Frame is 5500|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000001000000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000011000000000000000100000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 5500|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 5600|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000001100000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 5700|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000110000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 5800|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 5900|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 6000|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 6100|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 010101000000000000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000001010100000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 6200|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 6300|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000100000000000101010000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000010000100000000010000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 6400|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000010000000001000010000000001 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000010000000001000000000100001 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 6500|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 6600|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 010000000100001000000000100000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 6700|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 6800|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 010000000001000000010000100000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000010001000000000100000001 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 6900|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 7000|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000001000100000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 100010000100000000000000000100 from server.
+GameUser:SendPacket(0x56104efd1a90)
+Converted char to OV
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 7100|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:HandleRead(0x56104f025cc0)
+Received Packet! Contents: 2
+Received 2 from user.
+GameServer:Display(0x56104f025cc0)
+Next Frame is 7200|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000100010001000010000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000010001000100001 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 7200|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 7300|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000001100000000000000000001000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 7400|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 7500|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000110000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 001000000000000000000000011000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 7600|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 7700|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000100000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000101000000000000000010000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 7800|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 7900|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000010100000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000001000000000000000001010000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000100010000000100000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8000|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8100|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 001000000000010001000000010000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8200|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8300|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 010000000000100000000001000100 from server.
+GameUser:SendPacket(0x56104efd1a90)
+Converted char to OOV
+GameServer:HandleRead(0x56104f025cc0)
+Received Packet! Contents: 1
+Received 1 from user.
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8400|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 100000000001000000000010000000 from server.
+GameUser:SendPacket(0x56104efd1a90)
+Converted char to ÌþNV
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8400|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8500|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:HandleRead(0x56104f025cc0)
+Received Packet! Contents: 2
+Received 2 from user.
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8600|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000010000000000100000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 100000000000000000001000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8600|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8700|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000010000000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 010000000000000000001000000000 from server.
+GameUser:SendPacket(0x56104efd1a90)
+Converted char to ÌþNV
+GameServer:HandleRead(0x56104f025cc0)
+Received Packet! Contents: 2
+Received 2 from user.
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8800|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000100000001000000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8800|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 8900|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 100000000000010000000100000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 9000|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 9100|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000010000000000001000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 9200|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000001000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 9300|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 9400|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 9500|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000010000000000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000100000000001000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 9600|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 9700|10100
+
+GameServer:ScheduleTransmit(0x56104f025cc0, +50000000.0ns)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000100000010000000000100 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000010000000000000010000001000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 9800|10100
+
+GameServer:StopApplication(0x56104f025cc0)
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000001000000000000001 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000000000000000000000000100000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000010000000000000000000000000 from server.
+Huh?!?
+GameUser:SendResponse(0x56104efd1a90)
+Huh?!?
+It is the creation of the payload array...
+Created payload array...
+Tried to receive data...
+Successfully Received Data on user
+Received 000001000000001000000000000000 from server.
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 9900|10100
+
+GameServer:StopApplication(0x56104f025cc0)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 10000|10100
+
+GameServer:StopApplication(0x56104f025cc0)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 10100|10100
+
+GameServer:StopApplication(0x56104f025cc0)
+GameServer:SendFrame(0x56104f025cc0)
+GameServer:Display(0x56104f025cc0)
+Next Frame is 10200|10100
+
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  basic_string::copy: __pos (which is 10200) > this->size() (which is 10100)
 Command ['/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/scratch/test'] terminated with signal SIGIOT. Run it under a debugger to get more information (./waf --run <program> --command-template="gdb --args %s <args>").

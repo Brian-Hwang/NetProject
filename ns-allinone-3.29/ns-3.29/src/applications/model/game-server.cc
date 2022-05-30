@@ -133,6 +133,7 @@ namespace ns3
 
         //Schedule Display first frame
         //ScheduleDisplay();
+        Display(true);
         m_socket->SetRecvCallback(MakeCallback(&GameServer::HandleRead, this));
         ScheduleTransmit(Seconds(0.));
     }
@@ -141,7 +142,7 @@ namespace ns3
         NS_LOG_FUNCTION(this);
 
         char buf[31];
-        size_t nread = m_entireMap.copy(buf, 30, m_send_start);
+        size_t nread = m_lastFrame.copy(buf, 30, 70);
         while (nread < 30) {
             buf[nread++] = '0'; 
         }
@@ -196,17 +197,17 @@ namespace ns3
                 m_lastFrame += fill_str;
             }
             display_frame = m_lastFrame;
-            m_display_start += 10;
+            m_display_start += 100;
         }
         else {
             display_frame = m_lastFrame;
             display_frame[dim - m_fieldSize + 9] = '9';
         }
         
-        std::cout << "DISPLAY FRAME: " << display_frame.substr(90, 99) << std::endl;
+        //std::cout << "DISPLAY FRAME: " << display_frame.substr(90, 99) << std::endl;
         
         // write to outFile
-        std::reverse(display_frame.begin(), display_frame.end());
+        //std::reverse(display_frame.begin(), display_frame.end());
         display_frame[dim - m_fieldSize + static_cast<int>(m_currPos)] = '2';
         m_outFile << display_frame.c_str();
 
@@ -215,7 +216,7 @@ namespace ns3
             ScheduleTransmit(m_interval);
         }
         else {
-            std::cout << "WTF " << m_entireMap.size() << std::endl;
+            //std::cout << "WTF " << m_entireMap.size() << std::endl;
             StopApplication();
         }
         //std::cout << "hummm\n";
@@ -235,7 +236,7 @@ namespace ns3
                 uint8_t *payload = new uint8_t[packet->GetSize()];
                 packet->CopyData(payload, packet->GetSize());
                 NS_LOG_DEBUG("Received " << static_cast<int>(payload[0]) << " from user.");
-                std::cout << "Received " << static_cast<int>(payload[0]) << " from user." << std::endl;
+                //std::cout << "Received " << static_cast<int>(payload[0]) << " from user." << std::endl;
 
                 //m_currPos = static_cast<int>(payload[0]);
 
@@ -249,7 +250,7 @@ namespace ns3
                     m_currPos = (m_currPos - 1 < 0) ? 0
                                                     : m_currPos - 1;
                 }
-                std::cout << "im handleread, current pos is: " << static_cast<int>(m_currPos) << std::endl;
+                //std::cout << "im handleread, current pos is: " << static_cast<int>(m_currPos) << std::endl;
 
                 delete[] payload;
             }
