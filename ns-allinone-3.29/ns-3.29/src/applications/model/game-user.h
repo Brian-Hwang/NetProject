@@ -31,7 +31,7 @@ namespace ns3
 
         // function for actually sending a packet
         void SendPacket(Address from, char *payload);
-        void computeResponse(Ptr<Socket> socket);
+        void SendResponse(Ptr<Socket> socket);
         Address m_address;
         uint32_t m_nPackets;
         DataRate m_dataRate;

@@ -33,7 +33,7 @@ int main(int argc, char *argv[]){
     LogComponentEnable("PointToPointNetDevice", LOG_LEVEL_FUNCTION);
     LogComponentEnable("PointToPointChannel", LOG_LEVEL_FUNCTION);
 */
-    std::string dr = "1Kbps";
+    std::string dr = "100Mbps";
     std::string delay = "1us";
 
     NS_LOG_UNCOND("Test");
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]){
     //need to pass full path to sender
     GameUserHelper user (port,  10);
     //user.SetAttribute("NPackets", UintegerValue(1000000000000));
-    user.SetAttribute("DataRate", DataRateValue(DataRate("2Mb/s")));
+    user.SetAttribute("DataRate", DataRateValue(DataRate("20Mb/s")));
     ApplicationContainer userApp = user.Install(nodes.Get(0));
 
     userApp.Start(Seconds(1.0));

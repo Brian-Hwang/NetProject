@@ -18,17 +18,17 @@ uint8_t sub_abs_uint8(uint8_t a, uint8_t b) {
     return a > b ? a - b : b - a;
 }
 
-uint8_t sub_abs_uint8(uint8_t a, uint8_t b, uint8_t& direction) {
+int sub_abs_uint8(uint8_t a, uint8_t b, uint8_t& direction) {
     if (a > b) {
-        direction = 2;
-        return a - b;
+        direction = (uint8_t) 2;
+        return static_cast<int>(a - b);
     }
     else if (a < b) {
-        direction = 1;
-        return b - a;
+        direction = (uint8_t) 1;
+        return static_cast<int>(b - a);
     }
     else {
-        direction = 0;
+        direction = (uint8_t) 0;
         return 0;
     }
 }
@@ -66,22 +66,27 @@ min_element(std::vector<std::pair<uint8_t, uint8_t>>::iterator begin,
 }
 
 uint8_t moving_algorithm(std::string& input_frame, int current_pos) {
+    //std::cout << "hello i'm algorithm.\n";
     char upper0[11] {};
     if (input_frame.copy(upper0, 10, 80) != 10) {
         std::cerr << "error at string copy.0" << std::endl;
         exit(1);
     }
+    
     char upper1[11] {};
     if (input_frame.copy(upper1, 10, 70) != 10) {
         std::cerr << "error at string copy.1" << std::endl;
         exit(1);
     }
+
     char upper2[11] {};
     if (input_frame.copy(upper2, 10, 60) != 10) {
         std::cerr << "error at string copy.1" << std::endl;
         exit(1);
     }
-    std::cout << "yes\n" << upper0 << "\n" << upper1 << "\n" << upper2 << "\n";
+    std::cout << "Succeed0: " << upper0 << std::endl;
+    std::cout << "Succeed1: " << upper1 << std::endl;
+    std::cout << "Succeed2: " << upper2 << std::endl;
 
     /****
      * 1101101011
@@ -121,7 +126,9 @@ uint8_t moving_algorithm(std::string& input_frame, int current_pos) {
     }
 
     uint8_t dec = min_element(decision.begin(), decision.end())->first; 
-    std::cout << "decision: " << static_cast<int>(dec) << std::endl;
+    std::string for_display {"0000000000"};
+    for_display.replace(static_cast<int>(dec), 1, "8");
+    std::cout << "decision: " << for_display << std::endl;
     //return min_element(decision.begin(), decision.end())->first;
     return dec;
 }
@@ -228,23 +235,38 @@ namespace ns3
         }
 
         //[TODO] decide whether user keeps its own information about position or if it should extrcat it from frame
+        //std::cout << "coke\n";
         std::string input_frame = (char*) payload;
         
         // calculate the desired position to move on
+        //std::cout << "algo input frame len: " << input_frame.size() << std::endl;
         int8_t move = moving_algorithm(input_frame, m_currPos);
 
         // number of packet == number of movement 
         // yeah the character will move one tile at a time
         // direction -> left = 1, right = 2
         uint8_t direction = 0;
-        int num_of_packet = sub_abs_uint8(move, m_currPos, direction);
-        for (int i = 0; i < num_of_packet; ++i) {
-            std::cout << "YEAH! SENDING " << static_cast<int>(direction) << std::endl;
-            char *buf = new char[2];
-            buf[0] = (char) direction;
-            buf[1] = '\0';
-            SendPacket(from, buf);
-            delete[] buf;
+        int num_of_packet = 0;
+        //std::cout << "num of packet to send: " << num_of_packet << std::endl;
+        if ((num_of_packet = sub_abs_uint8(move, m_currPos, direction)) > 0) {
+            std::cout << "dir: " << static_cast<int>(direction) << std::endl;
+            for (int i = 0; i < num_of_packet; ++i) {
+                //std::cout << "YEAH! SENDING " << static_cast<int>(direction) << std::endl;
+                char *buf = new char[2];
+                buf[0] = direction;
+                buf[1] = '\0';
+                SendPacket(from, buf);
+                delete[] buf;
+            }
+        }
+        else {
+                //std::cout << "YEAH! SENDING " << static_cast<int>(direction) << std::endl;
+                std::cout << "dir: " << static_cast<int>(direction) << std::endl;
+                char *buf = new char[2];
+                buf[0] = direction;
+                buf[1] = '\0';
+                SendPacket(from, buf);
+                delete[] buf;
         }
 
         // User assumes that the character moved exactly what he has ordered
@@ -272,7 +294,7 @@ namespace ns3
         //send packet over socket (this is fully abstracted, no need to change based in TCP/UDP)
         m_socket->SendTo(packet, 0, from);
 
-        delete[] payload;
+        //delete[] payload;
         delete[] buf;
     }
 

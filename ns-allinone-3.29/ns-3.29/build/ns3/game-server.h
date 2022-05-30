@@ -35,6 +35,7 @@ namespace ns3
 
         void HandleRead(Ptr<Socket> socket);
         void ScheduleDisplay(void);
+        void ScheduleTransmit(Time dt);
         void Display(void);
         char *NextFrame(uint16_t);
         void SendFrame(void);
@@ -49,7 +50,9 @@ namespace ns3
         uint8_t m_currPos;
         char *m_nextFrame;
         Time m_dispFreq;
+        Time m_interval;
         EventId m_displayEvent;
+        EventId m_sendEvent;
         std::string m_inFilename;
         std::string m_outFilename;
         std::ifstream m_inFile;

@@ -12,6 +12,7 @@
 #include "ns3/trace-source-accessor.h"
 #include "ns3/udp-socket-factory.h"
 #include "ns3/game-server.h"
+#include <thread>
 
 namespace ns3
 {
@@ -37,6 +38,10 @@ namespace ns3
                                               UintegerValue(0),
                                               MakeUintegerAccessor(&GameServer::m_peerPort),
                                               MakeUintegerChecker<uint16_t>())
+                                .AddAttribute("Interval", "The time to wait between packets",
+                                              TimeValue (Seconds(1)),
+                                              MakeTimeAccessor (&GameServer::m_interval),
+                                              MakeTimeChecker())
                                 .AddAttribute("InFile", "The name of the input file to get data for calculation from.",
                                               StringValue(),
                                               MakeStringAccessor(&GameServer::m_inFilename),
@@ -73,6 +78,7 @@ namespace ns3
           m_inFile(NULL),
           m_outFile(NULL)
     {
+        m_sendEvent = EventId();
         NS_LOG_FUNCTION(this);
     }
 
@@ -96,7 +102,6 @@ namespace ns3
             m_socket->Connect(m_peerAddress);
             //m_socket->Listen();
             //m_socket->ShutdownSend();
-            m_socket->SetRecvCallback(MakeCallback(&GameServer::HandleRead, this));
         }
 
         m_currPos = (int)(m_fieldSize / 2);
@@ -118,26 +123,33 @@ namespace ns3
         m_running = true;
 
         //send first frame
-        SendFrame();
+        //SendFrame();
 
         //Schedule Display first frame
-        ScheduleDisplay();
+        //ScheduleDisplay();
+        m_socket->SetRecvCallback(MakeCallback(&GameServer::HandleRead, this));
+        ScheduleTransmit(Seconds(0.));
     }
 
     void GameServer::SendFrame(void){
         NS_LOG_FUNCTION(this);
-        m_nextFrame = NextFrame(m_fieldSize * m_fieldSize);
+        m_nextFrame = NextFrame(m_fieldSize * 3);
 
         uint8_t *buf = new uint8_t[m_fieldSize * m_fieldSize + 1]; 
 
         for(uint8_t i = 0; i < strlen(m_nextFrame); i++)
             buf[i] = (char)m_nextFrame[i];
+        buf[strlen(m_nextFrame)] = '\0';
+        //std::cout << "SEND: " << (char*) buf << std::endl;
 
         //Create a packet sending the frame here
+        if (strlen(m_nextFrame) < 100) StopApplication();
         Ptr<Packet> packet = Create<Packet>(buf, strlen(m_nextFrame));        
         //Send the actual packet here
         m_txTrace(packet);
         m_socket->Send(packet);
+
+        Display();
         
         delete[] buf;
     }
@@ -149,6 +161,13 @@ namespace ns3
         {
             m_displayEvent = Simulator::Schedule(m_dispFreq, &GameServer::Display, this);
         }
+    }
+
+    void 
+    GameServer::ScheduleTransmit (Time dt)
+    {
+      NS_LOG_FUNCTION (this << dt);
+      m_sendEvent = Simulator::Schedule (dt, &GameServer::SendFrame, this);
     }
 
     char *GameServer::NextFrame(uint16_t dim)
@@ -173,8 +192,9 @@ namespace ns3
         return frame;
     }
 
-    // this is the problem
-    // the bricks and the character should not move at the same time
+    // There are two events which trigger the Display
+    // First is the packet receipt
+    // Second is the Brick wall time out -> the brick will fall down immediately
     void GameServer::Display(void)
     {
         NS_LOG_FUNCTION(this);
@@ -185,16 +205,19 @@ namespace ns3
 
         // place player based on m_currPos
         m_nextFrame[dim - m_fieldSize + static_cast<int>(m_currPos)] = '2';
-        std::cout << "Received: " << static_cast<int>(m_currPos) << std::endl;
+        //std::cout << "Received: " << static_cast<int>(m_currPos) << std::endl;
 
         // write to outFile
         m_outFile << m_nextFrame;
 
         if (!m_fileIO || !m_inFile.eof())
         {
-            SendFrame();
+            //SendFrame();
             //ScheduleDisplay();
+            //std::cout << "hmmm\n";
+            ScheduleTransmit(m_interval);
         }
+        //std::cout << "hummm\n";
     }
 
     void GameServer::HandleRead(Ptr<Socket> socket)
@@ -210,21 +233,22 @@ namespace ns3
                 m_rxTrace(packet);
                 uint8_t *payload = new uint8_t[packet->GetSize()];
                 packet->CopyData(payload, packet->GetSize());
-                NS_LOG_DEBUG("Received " << static_cast<int>(payload[0]) << " from sender.");
-                std::cout << "Received " << static_cast<int>(payload[0]) << " from sender." << std::endl;
+                NS_LOG_DEBUG("Received " << static_cast<int>(payload[0]) << " from user.");
+                std::cout << "Received " << static_cast<int>(payload[0]) << " from user." << std::endl;
 
                 //m_currPos = static_cast<int>(payload[0]);
 
-                if (static_cast<int>(payload[0]) == 1)
+                if (static_cast<int>(payload[0]) == 2)
                 {
                     m_currPos = (m_currPos + 1 > m_fieldSize - 1) ? m_fieldSize - 1
                                                                   : m_currPos + 1;
                 }
-                else if (static_cast<int>(payload[0]) == 2)
+                else if (static_cast<int>(payload[0]) == 1)
                 {
                     m_currPos = (m_currPos - 1 < 0) ? 0
                                                     : m_currPos - 1;
                 }
+                std::cout << "im handleread, current pos is: " << static_cast<int>(m_currPos) << std::endl;
 
                 delete[] payload;
             }
@@ -238,7 +262,7 @@ namespace ns3
         m_running = false;
         if (m_displayEvent.IsRunning())
         {
-
+            Simulator::Cancel (m_sendEvent);
             Simulator::Cancel(m_displayEvent);
         }
         if (m_socket)
