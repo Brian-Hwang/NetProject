@@ -1,8 +1,8 @@
 
-#include "ns3/tp-sender.h"
-#include "ns3/tp-sender-helper.h"
-#include "ns3/tp-receiver.h"
-#include "ns3/tp-receiver-helper.h"
+#include "ns3/game-user.h"
+#include "ns3/game-user-helper.h"
+#include "ns3/game-server.h"
+#include "ns3/game-server-helper.h"
 #include "ns3/core-module.h"
 #include "ns3/network-module.h"
 #include "ns3/applications-module.h"
@@ -21,10 +21,21 @@ NS_LOG_COMPONENT_DEFINE("TestTeamProject");
 
 int main(int argc, char *argv[]){
 
-    LogComponentEnable("TPReceiver", LOG_LEVEL_ALL);
-    LogComponentEnable("TPSender", LOG_LEVEL_ALL);
-
-    std::string dr = "1Kbps";
+    LogComponentEnable("GameServer", LOG_LEVEL_ALL);
+    LogComponentEnable("GameUser", LOG_LEVEL_ALL);
+/*    LogComponentEnable("UdpL4Protocol", LOG_LEVEL_ALL);
+    LogComponentEnable("UdpSocket", LOG_LEVEL_FUNCTION);
+    LogComponentEnable("Socket", LOG_LEVEL_FUNCTION);
+    LogComponentEnable("UdpSocketImpl", LOG_LEVEL_LOGIC);
+    LogComponentEnable("Ipv4Interface", LOG_LEVEL_LOGIC);
+    LogComponentEnable("Ipv4L3Protocol", LOG_LEVEL_LOGIC);
+    LogComponentEnable("TrafficControlLayer", LOG_LEVEL_FUNCTION);
+    LogComponentEnable("PointToPointNetDevice", LOG_LEVEL_FUNCTION);
+    LogComponentEnable("PointToPointChannel", LOG_LEVEL_FUNCTION);
+*/
+      GlobalValue::Bind ("SimulatorImplementationType", 
+                     StringValue ("ns3::RealtimeSimulatorImpl"));
+    std::string dr = "100Mbps";
     std::string delay = "1us";
 
     NS_LOG_UNCOND("Test");
@@ -50,24 +61,24 @@ int main(int argc, char *argv[]){
     Address destination(InetSocketAddress(interfaces.GetAddress(1), port));
 
     //need to pass full path to sender
-    TPSenderHelper sender (destination);
-    sender.SetAttribute("NPackets", UintegerValue(1000));
-    sender.SetAttribute("DataRate", DataRateValue(DataRate("2Mb/s")));
-    ApplicationContainer senderApp = sender.Install(nodes.Get(0));
+    GameUserHelper user (port,  10);
+    //user.SetAttribute("NPackets", UintegerValue(1000000000000));
+    user.SetAttribute("DataRate", DataRateValue(DataRate("20Mb/s")));
+    ApplicationContainer userApp = user.Install(nodes.Get(0));
 
-    senderApp.Start(Seconds(1.0));
-    senderApp.Stop(Seconds(5.0));
+    userApp.Start(Seconds(1.0));
+    //userApp.Stop(Seconds(40.0));
 
-    TPReceiverHelper receiver(Address(InetSocketAddress(interfaces.GetAddress(1), port)), "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
-    receiver.SetAttribute("FileIO", BooleanValue(true));
-    receiver.SetAttribute("InFile", StringValue("/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt"));
-    receiver.SetAttribute("DisplayFreq", TimeValue(Seconds(0.05)));
-    ApplicationContainer receiverApp = receiver.Install(nodes.Get(1));
-    receiverApp.Start(Seconds(1.0));
-    receiverApp.Stop(Seconds(5.0));
-    receiverApp.Get(0)->TraceConnect("Rx", "Arrived", MakeCallback(&Rxcontent));    
+    GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(0), port)), port, "/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
+    server.SetAttribute("FileIO", BooleanValue(true));
+    server.SetAttribute("InFile", StringValue("/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt"));
+    server.SetAttribute("DisplayFreq", TimeValue(Seconds(0.05)));
+    ApplicationContainer serverApp = server.Install(nodes.Get(1));
+    serverApp.Start(Seconds(1.0));
+    //serverApp.Stop(Seconds(40.0));
+    serverApp.Get(0)->TraceConnect("Rx", "Arrived", MakeCallback(&Rxcontent));    
 
     Simulator::Run();
-    Simulator::Stop(Seconds(8.0));
+    Simulator::Stop(Seconds(400.0));
     Simulator::Destroy();
 }
