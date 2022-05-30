@@ -15,6 +15,8 @@
 #include "ns3/nstime.h"
 #include <iostream>
 #include <fstream>
+#include <sstream>
+#include <string>
 
 namespace ns3
 {
@@ -34,9 +36,9 @@ namespace ns3
         virtual void StopApplication(void);
 
         void HandleRead(Ptr<Socket> socket);
-        void ScheduleDisplay(void);
+//        void ScheduleDisplay(void);
         void ScheduleTransmit(Time dt);
-        void Display(void);
+        void Display(bool falldown);
         char *NextFrame(uint16_t);
         void SendFrame(void);
 
@@ -48,6 +50,11 @@ namespace ns3
         uint8_t m_fieldSize;
         bool m_fileIO;
         uint8_t m_currPos;
+        std::stringstream m_entireMapStream;
+        std::string m_entireMap;
+        std::string m_lastFrame;
+        size_t m_send_start = 10;
+        size_t m_display_start = 0;
         char *m_nextFrame;
         Time m_dispFreq;
         Time m_interval;

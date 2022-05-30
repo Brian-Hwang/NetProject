@@ -12,7 +12,7 @@
 #include "ns3/trace-source-accessor.h"
 #include "ns3/udp-socket-factory.h"
 #include "ns3/game-server.h"
-#include <thread>
+#include <algorithm>
 
 namespace ns3
 {
@@ -39,7 +39,7 @@ namespace ns3
                                               MakeUintegerAccessor(&GameServer::m_peerPort),
                                               MakeUintegerChecker<uint16_t>())
                                 .AddAttribute("Interval", "The time to wait between packets",
-                                              TimeValue (Seconds(1)),
+                                              TimeValue (MilliSeconds(50)),
                                               MakeTimeAccessor (&GameServer::m_interval),
                                               MakeTimeChecker())
                                 .AddAttribute("InFile", "The name of the input file to get data for calculation from.",
@@ -78,6 +78,7 @@ namespace ns3
           m_inFile(NULL),
           m_outFile(NULL)
     {
+        m_lastFrame = "";
         m_sendEvent = EventId();
         NS_LOG_FUNCTION(this);
     }
@@ -112,6 +113,11 @@ namespace ns3
             m_inFile.open(m_inFilename);
 
             NS_ASSERT_MSG(m_inFile, "Unable to open Input File.");
+
+            m_entireMapStream << m_inFile.rdbuf();
+            m_entireMapStream >> m_entireMap;
+
+            m_inFile.close();
         }
 
         if (!m_outFile)
@@ -133,27 +139,25 @@ namespace ns3
 
     void GameServer::SendFrame(void){
         NS_LOG_FUNCTION(this);
-        m_nextFrame = NextFrame(m_fieldSize * 3);
 
-        uint8_t *buf = new uint8_t[m_fieldSize * m_fieldSize + 1]; 
-
-        for(uint8_t i = 0; i < strlen(m_nextFrame); i++)
-            buf[i] = (char)m_nextFrame[i];
-        buf[strlen(m_nextFrame)] = '\0';
-        //std::cout << "SEND: " << (char*) buf << std::endl;
+        char buf[31];
+        size_t nread = m_entireMap.copy(buf, 30, m_send_start);
+        while (nread < 30) {
+            buf[nread++] = '0'; 
+        }
+        buf[nread] = '\0';
+        m_send_start += 10;
 
         //Create a packet sending the frame here
-        if (strlen(m_nextFrame) < 100) StopApplication();
-        Ptr<Packet> packet = Create<Packet>(buf, strlen(m_nextFrame));        
+        uint8_t* p = reinterpret_cast<uint8_t*> (&buf);
+        Ptr<Packet> packet = Create<Packet>(p, 31);        
         //Send the actual packet here
         m_txTrace(packet);
         m_socket->Send(packet);
 
-        Display();
-        
-        delete[] buf;
+        Display(true);
     }
-
+/*
     void GameServer::ScheduleDisplay(void)
     {
         NS_LOG_FUNCTION(this);
@@ -162,60 +166,57 @@ namespace ns3
             m_displayEvent = Simulator::Schedule(m_dispFreq, &GameServer::Display, this);
         }
     }
+    */
 
     void 
     GameServer::ScheduleTransmit (Time dt)
     {
       NS_LOG_FUNCTION (this << dt);
-      m_sendEvent = Simulator::Schedule (dt, &GameServer::SendFrame, this);
+      if (m_running)
+          m_sendEvent = Simulator::Schedule (dt, &GameServer::SendFrame, this);
     }
 
-    char *GameServer::NextFrame(uint16_t dim)
-    {
-        NS_LOG_FUNCTION(this);
 
-        NS_LOG_DEBUG("Frame Dimension: " << dim);
-        char *frame = new char[dim + 1];
-
-        if (m_fileIO)
-        {
-
-            // read frame from input file
-            m_inFile.read(frame, dim);
-            frame[dim] = '\0';
-        }
-        else
-        {
-            /* Insert game's frame generation logic here*/
-        }
-
-        return frame;
-    }
-
-    // There are two events which trigger the Display
-    // First is the packet receipt
-    // Second is the Brick wall time out -> the brick will fall down immediately
-    void GameServer::Display(void)
+    void GameServer::Display(bool falldown)
     {
         NS_LOG_FUNCTION(this);
 
         uint16_t dim = m_fieldSize * m_fieldSize;
 
-        NS_LOG_DEBUG("Next Frame is " << m_nextFrame);
+        NS_LOG_DEBUG("Next Frame is " << m_display_start << "|" << m_entireMap.size() << std::endl);
 
-        // place player based on m_currPos
-        m_nextFrame[dim - m_fieldSize + static_cast<int>(m_currPos)] = '2';
-        //std::cout << "Received: " << static_cast<int>(m_currPos) << std::endl;
-
+        std::string display_frame {};
+        if (falldown) {
+            char buf[101];
+            size_t nread = m_entireMap.copy(buf, 100, m_display_start);
+            buf[nread] = '\0';
+            m_lastFrame = buf;
+            if (nread < 100) {
+                std::string fill_str (100-nread, '0');
+                m_lastFrame += fill_str;
+            }
+            display_frame = m_lastFrame;
+            m_display_start += 10;
+        }
+        else {
+            display_frame = m_lastFrame;
+            display_frame[dim - m_fieldSize + 9] = '9';
+        }
+        
+        std::cout << "DISPLAY FRAME: " << display_frame.substr(90, 99) << std::endl;
+        
         // write to outFile
-        m_outFile << m_nextFrame;
+        std::reverse(display_frame.begin(), display_frame.end());
+        display_frame[dim - m_fieldSize + static_cast<int>(m_currPos)] = '2';
+        m_outFile << display_frame.c_str();
 
-        if (!m_fileIO || !m_inFile.eof())
+        if (m_display_start + 200 < m_entireMap.size())
         {
-            //SendFrame();
-            //ScheduleDisplay();
-            //std::cout << "hmmm\n";
             ScheduleTransmit(m_interval);
+        }
+        else {
+            std::cout << "WTF " << m_entireMap.size() << std::endl;
+            StopApplication();
         }
         //std::cout << "hummm\n";
     }
@@ -238,12 +239,12 @@ namespace ns3
 
                 //m_currPos = static_cast<int>(payload[0]);
 
-                if (static_cast<int>(payload[0]) == 2)
+                if (static_cast<int>(payload[0]) == 1)
                 {
                     m_currPos = (m_currPos + 1 > m_fieldSize - 1) ? m_fieldSize - 1
                                                                   : m_currPos + 1;
                 }
-                else if (static_cast<int>(payload[0]) == 1)
+                else if (static_cast<int>(payload[0]) == 2)
                 {
                     m_currPos = (m_currPos - 1 < 0) ? 0
                                                     : m_currPos - 1;
@@ -253,7 +254,7 @@ namespace ns3
                 delete[] payload;
             }
         }
-        Display(); 
+        Display(false); 
     }
 
     void GameServer::StopApplication()

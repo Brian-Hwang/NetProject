@@ -9,5 +9,4 @@
 // Module headers:
 #include "config-store.h"
 #include "file-config.h"
-#include "gtk-config-store.h"
 #endif

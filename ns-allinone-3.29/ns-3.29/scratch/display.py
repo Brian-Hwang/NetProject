@@ -41,7 +41,7 @@ f = open("output.txt", "r")
 
 #initialPos = (int)(size/2)
 
-while(n != 100):
+while(n != 10000):
     os.system('clear')
     nextFrame = readNextFrame(size, f)
     print(nextFrame)

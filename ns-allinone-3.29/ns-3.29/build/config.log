@@ -1,4 +1,4 @@
-# project ns (3.29) configured on Sun May 29 21:45:36 2022 by
+# project ns (3.29) configured on Mon May 30 17:05:37 2022 by
 # waf 2.0.9 (abi 20, python 3080af0 on linux)
 # using ./waf configure --build-profile=debug --enable-examples --enable-tests
 #
@@ -10,7 +10,7 @@ Setting out to
 /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build
 ----------------------------------------
 Checking for 'gcc' (C compiler)
-find program=['gcc', 'cc'] paths=['/home/woodong/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CC' -> ['/usr/bin/gcc']
+find program=['gcc', 'cc'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CC' -> ['/usr/bin/gcc']
 ['/usr/bin/gcc', '-dM', '-E', '-']
 out: #define __SSP_STRONG__ 3
 #define __DBL_MIN_EXP__ (-1021)
@@ -361,14 +361,14 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
 
-find program=['ar'] paths=['/home/woodong/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
+find program=['ar'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
 /usr/bin/gcc
 ----------------------------------------
 Checking for cc version
 9.4.0
 ----------------------------------------
 Checking for 'g++' (C++ compiler)
-find program=['g++', 'c++'] paths=['/home/woodong/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CXX' -> ['/usr/bin/g++']
+find program=['g++', 'c++'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CXX' -> ['/usr/bin/g++']
 ['/usr/bin/g++', '-dM', '-E', '-']
 out: #define __SSP_STRONG__ 3
 #define __DBL_MIN_EXP__ (-1021)
@@ -719,48 +719,48 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
 
-find program=['ar'] paths=['/home/woodong/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
+find program=['ar'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
 /usr/bin/g++
 ------------------------------------------------------
 Checking for compilation flag -Wl,--soname=foo support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_9b1e70c1db0aa9772ccdbe901bdcee09/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_5f6f441784dd389c4562c1148b1a4b23/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_9b1e70c1db0aa9772ccdbe901bdcee09/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5f6f441784dd389c4562c1148b1a4b23/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for compilation flag -std=c++11 support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_9b1e70c1db0aa9772ccdbe901bdcee09/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_5f6f441784dd389c4562c1148b1a4b23/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_9b1e70c1db0aa9772ccdbe901bdcee09/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5f6f441784dd389c4562c1148b1a4b23/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for program 'python'
-/usr/bin/python
-find program=['python'] paths=['/home/woodong/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON' -> ['/usr/bin/python']
-['/usr/bin/python', '-c', 'import imp;print(imp.get_tag())']
+/usr/bin/python3
+find program=['python'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON' -> ['/usr/bin/python3']
+['/usr/bin/python3', '-c', 'import imp;print(imp.get_tag())']
 out: cpython-38
 
 err: <string>:1: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
 
-['/usr/bin/python', '-c', 'import sys\nfor x in sys.version_info: print(str(x))']
+['/usr/bin/python3', '-c', 'import sys\nfor x in sys.version_info: print(str(x))']
 out: 3
 8
 10
 final
 0
 
-['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(standard_lib=0, prefix='/usr/local') or ''))"]
+['/usr/bin/python3', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(standard_lib=0, prefix='/usr/local') or ''))"]
 out: '/usr/local/lib/python3/dist-packages'
 
 '/usr/local/lib/python3/dist-packages'
 
-['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(plat_specific=1, standard_lib=0, prefix='/usr/local') or ''))"]
+['/usr/bin/python3', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_python_lib(plat_specific=1, standard_lib=0, prefix='/usr/local') or ''))"]
 out: '/usr/local/lib/python3/dist-packages'
 
 '/usr/local/lib/python3/dist-packages'
@@ -768,7 +768,7 @@ out: '/usr/local/lib/python3/dist-packages'
 ------------------------------------------------------
 Checking for python version >= 2.3
 3.8.10
-['/usr/bin/python', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_config_var('prefix') or ''))\nprint(repr(get_config_var('SO') or ''))\nprint(repr(get_config_var('LDFLAGS') or ''))\nprint(repr(get_config_var('LIBDIR') or ''))\nprint(repr(get_config_var('LIBPL') or ''))\nprint(repr(get_config_var('INCLUDEPY') or ''))\nprint(repr(get_config_var('Py_ENABLE_SHARED') or ''))\nprint(repr(get_config_var('MACOSX_DEPLOYMENT_TARGET') or ''))\nprint(repr(get_config_var('LDSHARED') or ''))\nprint(repr(get_config_var('CFLAGS') or ''))\nprint(repr(get_config_var('LDVERSION') or ''))"]
+['/usr/bin/python3', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_config_var('prefix') or ''))\nprint(repr(get_config_var('SO') or ''))\nprint(repr(get_config_var('LDFLAGS') or ''))\nprint(repr(get_config_var('LIBDIR') or ''))\nprint(repr(get_config_var('LIBPL') or ''))\nprint(repr(get_config_var('INCLUDEPY') or ''))\nprint(repr(get_config_var('Py_ENABLE_SHARED') or ''))\nprint(repr(get_config_var('MACOSX_DEPLOYMENT_TARGET') or ''))\nprint(repr(get_config_var('LDSHARED') or ''))\nprint(repr(get_config_var('CFLAGS') or ''))\nprint(repr(get_config_var('LDVERSION') or ''))"]
 out: '/usr'
 '.cpython-38-x86_64-linux-gnu.so'
 '-Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
@@ -795,7 +795,7 @@ err: <string>:4: DeprecationWarning: SO is deprecated, use EXT_SUFFIX
 '-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g   -fstack-protector-strong -Wformat -Werror=format-security  -g -fwrapv -O2   '
 '3.8'
 
-Configuration returned from ['/usr/bin/python']:
+Configuration returned from ['/usr/bin/python3']:
 prefix = '/usr'
 SO = '.cpython-38-x86_64-linux-gnu.so'
 LDFLAGS = '-Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
@@ -810,11 +810,11 @@ LDVERSION = '3.8'
 
 ------------------------------------------------------
 python-config
-/usr/bin/python3.8-config
-find program=['/usr/bin/python-config', 'python3.8-config', 'python-config-3.8', 'python3.8m-config'] paths=['/home/woodong/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> ['/usr/bin/python3.8-config']
+/usr/bin/python3-config
+find program=['/usr/bin/python3-config', 'python3.8-config', 'python-config-3.8', 'python3.8m-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> ['/usr/bin/python3-config']
 ------------------------------------------------------------------
 Asking python-config for pyembed '--cflags --libs --ldflags' flags
-['/usr/bin/python3.8-config', '--cflags', '--libs', '--ldflags']
+['/usr/bin/python3-config', '--cflags', '--libs', '--ldflags']
 out: -I/usr/include/python3.8 -I/usr/include/python3.8  -Wno-unused-result -Wsign-compare -g -fdebug-prefix-map=/build/python3.8-4wuY7n/python3.8-3.8.10=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O3 -Wall
  -lcrypt -lpthread -ldl  -lutil -lm -lm 
 -L/usr/lib/python3.8/config-3.8-x86_64-linux-gnu -L/usr/lib  -lcrypt -lpthread -ldl  -lutil -lm -lm 
@@ -848,15 +848,15 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_de69fbb50187f6d64b6bbfe9afe2d29e/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_3b53682e662b3f2d37caa15f7105b27f/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-g', '-fdebug-prefix-map=/build/python3.8-4wuY7n/python3.8-3.8.10=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.8', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_de69fbb50187f6d64b6bbfe9afe2d29e/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_de69fbb50187f6d64b6bbfe9afe2d29e/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-g', '-fdebug-prefix-map=/build/python3.8-4wuY7n/python3.8-3.8.10=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.8', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3b53682e662b3f2d37caa15f7105b27f/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_3b53682e662b3f2d37caa15f7105b27f/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_de69fbb50187f6d64b6bbfe9afe2d29e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python3.8/config-3.8-x86_64-linux-gnu', '-L/usr/lib', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3b53682e662b3f2d37caa15f7105b27f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python3.8/config-3.8-x86_64-linux-gnu', '-L/usr/lib', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm']
 err: /usr/bin/ld: test.cpp.1.o: in function `main':
-/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_de69fbb50187f6d64b6bbfe9afe2d29e/testbuild/../test.cpp:14: undefined reference to `Py_Initialize'
-/usr/bin/ld: /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_de69fbb50187f6d64b6bbfe9afe2d29e/testbuild/../test.cpp:15: undefined reference to `Py_Finalize'
+/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3b53682e662b3f2d37caa15f7105b27f/testbuild/../test.cpp:14: undefined reference to `Py_Initialize'
+/usr/bin/ld: /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3b53682e662b3f2d37caa15f7105b27f/testbuild/../test.cpp:15: undefined reference to `Py_Finalize'
 collect2: error: ld returned 1 exit status
 
 from /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
@@ -891,15 +891,15 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_de69fbb50187f6d64b6bbfe9afe2d29e/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_3b53682e662b3f2d37caa15f7105b27f/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-g', '-fdebug-prefix-map=/build/python3.8-4wuY7n/python3.8-3.8.10=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.8', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_de69fbb50187f6d64b6bbfe9afe2d29e/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_de69fbb50187f6d64b6bbfe9afe2d29e/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-g', '-fdebug-prefix-map=/build/python3.8-4wuY7n/python3.8-3.8.10=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.8', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3b53682e662b3f2d37caa15f7105b27f/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_3b53682e662b3f2d37caa15f7105b27f/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_de69fbb50187f6d64b6bbfe9afe2d29e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python3.8/config-3.8-x86_64-linux-gnu', '-L/usr/lib', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3b53682e662b3f2d37caa15f7105b27f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python3.8/config-3.8-x86_64-linux-gnu', '-L/usr/lib', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm']
 err: /usr/bin/ld: test.cpp.1.o: in function `main':
-/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_de69fbb50187f6d64b6bbfe9afe2d29e/testbuild/../test.cpp:14: undefined reference to `Py_Initialize'
-/usr/bin/ld: /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_de69fbb50187f6d64b6bbfe9afe2d29e/testbuild/../test.cpp:15: undefined reference to `Py_Finalize'
+/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3b53682e662b3f2d37caa15f7105b27f/testbuild/../test.cpp:14: undefined reference to `Py_Initialize'
+/usr/bin/ld: /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3b53682e662b3f2d37caa15f7105b27f/testbuild/../test.cpp:15: undefined reference to `Py_Finalize'
 collect2: error: ld returned 1 exit status
 
 from /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: Test does not build: Traceback (most recent call last):
@@ -963,285 +963,11 @@ Could not build a python embedded interpreter
 from /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/bindings/python: The configuration failed
 ------------------------------------------------------------------
 Checking boost includes
-1_71
-------------------------------------------------------------------
-Checking boost libs
-Found the boost path in /usr/lib/x86_64-linux-gnu with the libraries:
-    /usr/lib/x86_64-linux-gnu/libboost_atomic.a
-    /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-    /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_chrono.a
-    /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-    /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_container.a
-    /usr/lib/x86_64-linux-gnu/libboost_container.so
-    /usr/lib/x86_64-linux-gnu/libboost_container.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_context.a
-    /usr/lib/x86_64-linux-gnu/libboost_context.so
-    /usr/lib/x86_64-linux-gnu/libboost_context.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_coroutine.a
-    /usr/lib/x86_64-linux-gnu/libboost_coroutine.so
-    /usr/lib/x86_64-linux-gnu/libboost_coroutine.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_date_time.a
-    /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-    /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_exception.a
-    /usr/lib/x86_64-linux-gnu/libboost_fiber.a
-    /usr/lib/x86_64-linux-gnu/libboost_fiber.so
-    /usr/lib/x86_64-linux-gnu/libboost_fiber.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_filesystem.a
-    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_graph.a
-    /usr/lib/x86_64-linux-gnu/libboost_graph.so
-    /usr/lib/x86_64-linux-gnu/libboost_graph.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.a
-    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.so
-    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_iostreams.a
-    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_locale.a
-    /usr/lib/x86_64-linux-gnu/libboost_locale.so
-    /usr/lib/x86_64-linux-gnu/libboost_locale.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_log.a
-    /usr/lib/x86_64-linux-gnu/libboost_log.so
-    /usr/lib/x86_64-linux-gnu/libboost_log.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_log_setup.a
-    /usr/lib/x86_64-linux-gnu/libboost_log_setup.so
-    /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_mpi.a
-    /usr/lib/x86_64-linux-gnu/libboost_mpi.so
-    /usr/lib/x86_64-linux-gnu/libboost_mpi.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_mpi_python38.a
-    /usr/lib/x86_64-linux-gnu/libboost_mpi_python38.so
-    /usr/lib/x86_64-linux-gnu/libboost_mpi_python38.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_numpy38.a
-    /usr/lib/x86_64-linux-gnu/libboost_numpy38.so
-    /usr/lib/x86_64-linux-gnu/libboost_numpy38.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.a
-    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.so
-    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_program_options.a
-    /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-    /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_python38.a
-    /usr/lib/x86_64-linux-gnu/libboost_python38.so
-    /usr/lib/x86_64-linux-gnu/libboost_python38.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_random.a
-    /usr/lib/x86_64-linux-gnu/libboost_random.so
-    /usr/lib/x86_64-linux-gnu/libboost_random.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_regex.a
-    /usr/lib/x86_64-linux-gnu/libboost_regex.so
-    /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_serialization.a
-    /usr/lib/x86_64-linux-gnu/libboost_serialization.so
-    /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_addr2line.a
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_addr2line.so
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_addr2line.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_backtrace.a
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_backtrace.so
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_backtrace.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_basic.a
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_basic.so
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_basic.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_noop.a
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_noop.so
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_noop.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_system.a
-    /usr/lib/x86_64-linux-gnu/libboost_system.so
-    /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_test_exec_monitor.a
-    /usr/lib/x86_64-linux-gnu/libboost_thread.a
-    /usr/lib/x86_64-linux-gnu/libboost_thread.so
-    /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_timer.a
-    /usr/lib/x86_64-linux-gnu/libboost_timer.so
-    /usr/lib/x86_64-linux-gnu/libboost_timer.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_type_erasure.a
-    /usr/lib/x86_64-linux-gnu/libboost_type_erasure.so
-    /usr/lib/x86_64-linux-gnu/libboost_type_erasure.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a
-    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so
-    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_wave.a
-    /usr/lib/x86_64-linux-gnu/libboost_wave.so
-    /usr/lib/x86_64-linux-gnu/libboost_wave.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_wserialization.a
-    /usr/lib/x86_64-linux-gnu/libboost_wserialization.so
-    /usr/lib/x86_64-linux-gnu/libboost_wserialization.so.1.71.0
-Trying pattern boost_system(-gcc[0-9]{0,3})-1_71.so$
-Trying pattern boost_system-1_71.so$
-Trying pattern boost_system(-gcc[0-9]{0,3}).so$
-Trying pattern boost_system.so$
-Found boost lib /usr/lib/x86_64-linux-gnu/libboost_system.so
-Trying pattern boost_signals(-gcc[0-9]{0,3})-1_71.so$
-Trying pattern boost_signals-1_71.so$
-Trying pattern boost_signals(-gcc[0-9]{0,3}).so$
-Trying pattern boost_signals.so$
-Trying pattern boost_signals.so$
-Trying pattern boost_signals
-lib signals not found in /usr/lib/x86_64-linux-gnu
+headers not found, please provide a --boost-includes argument (see help)
 from /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/src: The configuration failed
 ------------------------------------------------------------------
 Checking boost includes
-1_71
-------------------------------------------------------------------
-Checking boost libs
-Found the boost path in /usr/lib/x86_64-linux-gnu with the libraries:
-    /usr/lib/x86_64-linux-gnu/libboost_atomic.a
-    /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-    /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_chrono.a
-    /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-    /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_container.a
-    /usr/lib/x86_64-linux-gnu/libboost_container.so
-    /usr/lib/x86_64-linux-gnu/libboost_container.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_context.a
-    /usr/lib/x86_64-linux-gnu/libboost_context.so
-    /usr/lib/x86_64-linux-gnu/libboost_context.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_coroutine.a
-    /usr/lib/x86_64-linux-gnu/libboost_coroutine.so
-    /usr/lib/x86_64-linux-gnu/libboost_coroutine.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_date_time.a
-    /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-    /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_exception.a
-    /usr/lib/x86_64-linux-gnu/libboost_fiber.a
-    /usr/lib/x86_64-linux-gnu/libboost_fiber.so
-    /usr/lib/x86_64-linux-gnu/libboost_fiber.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_filesystem.a
-    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_graph.a
-    /usr/lib/x86_64-linux-gnu/libboost_graph.so
-    /usr/lib/x86_64-linux-gnu/libboost_graph.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.a
-    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.so
-    /usr/lib/x86_64-linux-gnu/libboost_graph_parallel.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_iostreams.a
-    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_locale.a
-    /usr/lib/x86_64-linux-gnu/libboost_locale.so
-    /usr/lib/x86_64-linux-gnu/libboost_locale.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_log.a
-    /usr/lib/x86_64-linux-gnu/libboost_log.so
-    /usr/lib/x86_64-linux-gnu/libboost_log.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_log_setup.a
-    /usr/lib/x86_64-linux-gnu/libboost_log_setup.so
-    /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99f.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_c99l.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1f.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.a
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.so
-    /usr/lib/x86_64-linux-gnu/libboost_math_tr1l.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_mpi.a
-    /usr/lib/x86_64-linux-gnu/libboost_mpi.so
-    /usr/lib/x86_64-linux-gnu/libboost_mpi.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_mpi_python38.a
-    /usr/lib/x86_64-linux-gnu/libboost_mpi_python38.so
-    /usr/lib/x86_64-linux-gnu/libboost_mpi_python38.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_numpy38.a
-    /usr/lib/x86_64-linux-gnu/libboost_numpy38.so
-    /usr/lib/x86_64-linux-gnu/libboost_numpy38.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.a
-    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.so
-    /usr/lib/x86_64-linux-gnu/libboost_prg_exec_monitor.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_program_options.a
-    /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-    /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_python38.a
-    /usr/lib/x86_64-linux-gnu/libboost_python38.so
-    /usr/lib/x86_64-linux-gnu/libboost_python38.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_random.a
-    /usr/lib/x86_64-linux-gnu/libboost_random.so
-    /usr/lib/x86_64-linux-gnu/libboost_random.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_regex.a
-    /usr/lib/x86_64-linux-gnu/libboost_regex.so
-    /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_serialization.a
-    /usr/lib/x86_64-linux-gnu/libboost_serialization.so
-    /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_addr2line.a
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_addr2line.so
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_addr2line.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_backtrace.a
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_backtrace.so
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_backtrace.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_basic.a
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_basic.so
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_basic.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_noop.a
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_noop.so
-    /usr/lib/x86_64-linux-gnu/libboost_stacktrace_noop.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_system.a
-    /usr/lib/x86_64-linux-gnu/libboost_system.so
-    /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_test_exec_monitor.a
-    /usr/lib/x86_64-linux-gnu/libboost_thread.a
-    /usr/lib/x86_64-linux-gnu/libboost_thread.so
-    /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_timer.a
-    /usr/lib/x86_64-linux-gnu/libboost_timer.so
-    /usr/lib/x86_64-linux-gnu/libboost_timer.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_type_erasure.a
-    /usr/lib/x86_64-linux-gnu/libboost_type_erasure.so
-    /usr/lib/x86_64-linux-gnu/libboost_type_erasure.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.a
-    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so
-    /usr/lib/x86_64-linux-gnu/libboost_unit_test_framework.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_wave.a
-    /usr/lib/x86_64-linux-gnu/libboost_wave.so
-    /usr/lib/x86_64-linux-gnu/libboost_wave.so.1.71.0
-    /usr/lib/x86_64-linux-gnu/libboost_wserialization.a
-    /usr/lib/x86_64-linux-gnu/libboost_wserialization.so
-    /usr/lib/x86_64-linux-gnu/libboost_wserialization.so.1.71.0
-Trying pattern boost_system(-gcc[0-9]{0,3})-1_71.so$
-Trying pattern boost_system-1_71.so$
-Trying pattern boost_system(-gcc[0-9]{0,3}).so$
-Trying pattern boost_system.so$
-Found boost lib /usr/lib/x86_64-linux-gnu/libboost_system.so
-Trying pattern boost_signals(-gcc[0-9]{0,3})-1_71.so$
-Trying pattern boost_signals-1_71.so$
-Trying pattern boost_signals(-gcc[0-9]{0,3}).so$
-Trying pattern boost_signals.so$
-Trying pattern boost_signals.so$
-Trying pattern boost_signals
-lib signals not found in /usr/lib/x86_64-linux-gnu
+headers not found, please provide a --boost-includes argument (see help)
 from /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/src: The configuration failed
 ------------------------------------------------------------------
 Checking for click location
@@ -1249,13 +975,17 @@ not found
 ------------------------------------------------------------------
 Checking for program 'pkg-config'
 /usr/bin/pkg-config
-find program=['pkg-config'] paths=['/home/woodong/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKGCONFIG' -> ['/usr/bin/pkg-config']
+find program=['pkg-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKGCONFIG' -> ['/usr/bin/pkg-config']
 ------------------------------------------------------------------
 Checking for 'gtk+-3.0'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'gtk+-3.0']
-out: -pthread -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+err: Package gtk+-3.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `gtk+-3.0.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'gtk+-3.0' found
 
-yes
+not found
+from /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/src/config-store: The configuration failed
 ------------------------------------------------------------------
 Checking for 'libxml-2.0'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'libxml-2.0']
@@ -1280,9 +1010,9 @@ checking for uint128_t
         }
         
 <==
-[1/2] Compiling [32mbuild/.conf_check_aded8a76f3f6c853466b31418d49df0c/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_85c9722cf731ebde4998e586b9c193b0/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_aded8a76f3f6c853466b31418d49df0c/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_85c9722cf731ebde4998e586b9c193b0/testbuild/test.cpp.1.o']
 err: ../test.cpp: In function ‘int main(int, char**)’:
 ../test.cpp:6:7: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint32_t’?
     6 |  if ((uint128_t *) 0) return 0;
@@ -1324,12 +1054,12 @@ checking for __uint128_t
         }
         
 <==
-[1/2] Compiling [32mbuild/.conf_check_a0e763b08e3f6f844996780424d5c49e/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_aa1723c998c08e21807a6f7c35278cd6/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_a0e763b08e3f6f844996780424d5c49e/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_a0e763b08e3f6f844996780424d5c49e/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_aa1723c998c08e21807a6f7c35278cd6/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_aa1723c998c08e21807a6f7c35278cd6/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_a0e763b08e3f6f844996780424d5c49e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_aa1723c998c08e21807a6f7c35278cd6/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking high precision implementation
@@ -1345,12 +1075,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_acbf9fd12d3ec8ba0dcdb8488c09b1c3/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_d8e02ba3f69ed1f0a5520dfc3c75b03d/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_acbf9fd12d3ec8ba0dcdb8488c09b1c3/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_acbf9fd12d3ec8ba0dcdb8488c09b1c3/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_d8e02ba3f69ed1f0a5520dfc3c75b03d/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_d8e02ba3f69ed1f0a5520dfc3c75b03d/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_acbf9fd12d3ec8ba0dcdb8488c09b1c3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_d8e02ba3f69ed1f0a5520dfc3c75b03d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header inttypes.h
@@ -1363,12 +1093,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_7113200eaac322a970ebd0f0b0adca5d/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_c0b43b2920425c600a4c4f0b96f85440/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_7113200eaac322a970ebd0f0b0adca5d/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_7113200eaac322a970ebd0f0b0adca5d/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_c0b43b2920425c600a4c4f0b96f85440/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_c0b43b2920425c600a4c4f0b96f85440/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_7113200eaac322a970ebd0f0b0adca5d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_c0b43b2920425c600a4c4f0b96f85440/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1381,9 +1111,9 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_3b80651a16bae7704ba8dea3e89fea59/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_bb39503664b5ac5ba2fdd15594aa069a/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3b80651a16bae7704ba8dea3e89fea59/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_bb39503664b5ac5ba2fdd15594aa069a/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:10: fatal error: sys/inttypes.h: No such file or directory
     1 | #include <sys/inttypes.h>
       |          ^~~~~~~~~~~~~~~~
@@ -1410,12 +1140,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_d3d2696f4fe80c8cb7f254fd9de5ca0a/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_2fee8a9df4cc4b275605a31ebfc04eaf/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_d3d2696f4fe80c8cb7f254fd9de5ca0a/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_d3d2696f4fe80c8cb7f254fd9de5ca0a/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_2fee8a9df4cc4b275605a31ebfc04eaf/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_2fee8a9df4cc4b275605a31ebfc04eaf/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_d3d2696f4fe80c8cb7f254fd9de5ca0a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_2fee8a9df4cc4b275605a31ebfc04eaf/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/stat.h
@@ -1428,12 +1158,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_db2885be436d2ea64488ad63588781d6/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_f0fa463d3a9e465e14860cc9119a88c4/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_db2885be436d2ea64488ad63588781d6/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_db2885be436d2ea64488ad63588781d6/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f0fa463d3a9e465e14860cc9119a88c4/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f0fa463d3a9e465e14860cc9119a88c4/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_db2885be436d2ea64488ad63588781d6/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f0fa463d3a9e465e14860cc9119a88c4/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header dirent.h
@@ -1446,12 +1176,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_52c67dc36107e8cac915199683b217d5/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_68087a4a94491fa78183f09a29d78e60/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_52c67dc36107e8cac915199683b217d5/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_52c67dc36107e8cac915199683b217d5/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_68087a4a94491fa78183f09a29d78e60/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_68087a4a94491fa78183f09a29d78e60/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_52c67dc36107e8cac915199683b217d5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_68087a4a94491fa78183f09a29d78e60/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header stdlib.h
@@ -1464,12 +1194,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_5e0183ac199c7e4f19229b43dd82bb98/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_3db9a85006831c46188b9e2dd6d99f0c/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5e0183ac199c7e4f19229b43dd82bb98/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_5e0183ac199c7e4f19229b43dd82bb98/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3db9a85006831c46188b9e2dd6d99f0c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_3db9a85006831c46188b9e2dd6d99f0c/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5e0183ac199c7e4f19229b43dd82bb98/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3db9a85006831c46188b9e2dd6d99f0c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header signal.h
@@ -1482,12 +1212,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_8e9a471fc160e57818e2a1f985f8a6e4/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_cd5bf735c3f35f22a0130ed281bebb22/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_8e9a471fc160e57818e2a1f985f8a6e4/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_8e9a471fc160e57818e2a1f985f8a6e4/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_cd5bf735c3f35f22a0130ed281bebb22/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_cd5bf735c3f35f22a0130ed281bebb22/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_8e9a471fc160e57818e2a1f985f8a6e4/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_cd5bf735c3f35f22a0130ed281bebb22/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header pthread.h
@@ -1502,12 +1232,12 @@ int main ()
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_f1f0378e0f7f228f573afc984a67c9da/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_80551118a131f11f1ddf53d11a9046de/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f1f0378e0f7f228f573afc984a67c9da/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_f1f0378e0f7f228f573afc984a67c9da/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_80551118a131f11f1ddf53d11a9046de/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_80551118a131f11f1ddf53d11a9046de/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f1f0378e0f7f228f573afc984a67c9da/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_80551118a131f11f1ddf53d11a9046de/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header stdint.h
@@ -1520,12 +1250,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_acbf9fd12d3ec8ba0dcdb8488c09b1c3/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_d8e02ba3f69ed1f0a5520dfc3c75b03d/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_acbf9fd12d3ec8ba0dcdb8488c09b1c3/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_acbf9fd12d3ec8ba0dcdb8488c09b1c3/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_d8e02ba3f69ed1f0a5520dfc3c75b03d/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_d8e02ba3f69ed1f0a5520dfc3c75b03d/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_acbf9fd12d3ec8ba0dcdb8488c09b1c3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_d8e02ba3f69ed1f0a5520dfc3c75b03d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header inttypes.h
@@ -1538,12 +1268,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_7113200eaac322a970ebd0f0b0adca5d/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_c0b43b2920425c600a4c4f0b96f85440/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_7113200eaac322a970ebd0f0b0adca5d/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_7113200eaac322a970ebd0f0b0adca5d/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_c0b43b2920425c600a4c4f0b96f85440/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_c0b43b2920425c600a4c4f0b96f85440/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_7113200eaac322a970ebd0f0b0adca5d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_c0b43b2920425c600a4c4f0b96f85440/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1556,9 +1286,9 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_3b80651a16bae7704ba8dea3e89fea59/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_bb39503664b5ac5ba2fdd15594aa069a/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_3b80651a16bae7704ba8dea3e89fea59/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_bb39503664b5ac5ba2fdd15594aa069a/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:10: fatal error: sys/inttypes.h: No such file or directory
     1 | #include <sys/inttypes.h>
       |          ^~~~~~~~~~~~~~~~
@@ -1584,12 +1314,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_676ba3daae12182f5852e9ca1d54e8d0/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_c0110f76608b4bdacd30ec0eab25135b/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_676ba3daae12182f5852e9ca1d54e8d0/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_676ba3daae12182f5852e9ca1d54e8d0/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_c0110f76608b4bdacd30ec0eab25135b/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_c0110f76608b4bdacd30ec0eab25135b/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_676ba3daae12182f5852e9ca1d54e8d0/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_c0110f76608b4bdacd30ec0eab25135b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
 yes
 ------------------------------------------------------------------
 Checking for header sys/ioctl.h
@@ -1602,12 +1332,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_fafd46454095960fea0893e643927e20/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_115a8cbebc1e9fcefd72e4abef496c08/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_fafd46454095960fea0893e643927e20/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_fafd46454095960fea0893e643927e20/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_115a8cbebc1e9fcefd72e4abef496c08/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_115a8cbebc1e9fcefd72e4abef496c08/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_fafd46454095960fea0893e643927e20/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_115a8cbebc1e9fcefd72e4abef496c08/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header net/if.h
@@ -1620,12 +1350,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ed807f61a3f33b26965ec2d9af049a66/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_5358de98a32275852bb1ea178fed4b8c/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_ed807f61a3f33b26965ec2d9af049a66/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_ed807f61a3f33b26965ec2d9af049a66/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5358de98a32275852bb1ea178fed4b8c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_5358de98a32275852bb1ea178fed4b8c/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_ed807f61a3f33b26965ec2d9af049a66/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5358de98a32275852bb1ea178fed4b8c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header net/ethernet.h
@@ -1638,12 +1368,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_f9741950122d6343431974e5fd12c16b/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_919ffdc9b2e990653c6b27d2dce18be5/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f9741950122d6343431974e5fd12c16b/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_f9741950122d6343431974e5fd12c16b/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_919ffdc9b2e990653c6b27d2dce18be5/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_919ffdc9b2e990653c6b27d2dce18be5/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_f9741950122d6343431974e5fd12c16b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_919ffdc9b2e990653c6b27d2dce18be5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header linux/if_tun.h
@@ -1656,12 +1386,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_cf8da42128a61ee80700ec0da7af23a3/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_cd80ab99e9d4420a059f665a60ecaf7c/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_cf8da42128a61ee80700ec0da7af23a3/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_cf8da42128a61ee80700ec0da7af23a3/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_cd80ab99e9d4420a059f665a60ecaf7c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_cd80ab99e9d4420a059f665a60ecaf7c/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_cf8da42128a61ee80700ec0da7af23a3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_cd80ab99e9d4420a059f665a60ecaf7c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header netpacket/packet.h
@@ -1674,12 +1404,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_13bab1cee029a2d0a4e7244a1ab34aae/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_acfb0c4ce5bfa80aff42492e50c4703e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_13bab1cee029a2d0a4e7244a1ab34aae/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_13bab1cee029a2d0a4e7244a1ab34aae/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_acfb0c4ce5bfa80aff42492e50c4703e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_acfb0c4ce5bfa80aff42492e50c4703e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_13bab1cee029a2d0a4e7244a1ab34aae/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_acfb0c4ce5bfa80aff42492e50c4703e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for NSC location
@@ -1705,21 +1435,21 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_cf8da42128a61ee80700ec0da7af23a3/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_cd80ab99e9d4420a059f665a60ecaf7c/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_cf8da42128a61ee80700ec0da7af23a3/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_cf8da42128a61ee80700ec0da7af23a3/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_cd80ab99e9d4420a059f665a60ecaf7c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_cd80ab99e9d4420a059f665a60ecaf7c/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_cf8da42128a61ee80700ec0da7af23a3/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_cd80ab99e9d4420a059f665a60ecaf7c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for program 'sudo'
 /usr/bin/sudo
-find program=['sudo'] paths=['/home/woodong/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='SUDO' -> ['/usr/bin/sudo']
+find program=['sudo'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='SUDO' -> ['/usr/bin/sudo']
 ------------------------------------------------------------------
 Checking for program 'valgrind'
 not found
-find program=['valgrind'] paths=['/home/woodong/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='VALGRIND' -> None
+find program=['valgrind'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='VALGRIND' -> None
 from /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29: Could not find the program ['valgrind']
 ------------------------------------------------------------------
 Checking for 'gsl'
@@ -1734,46 +1464,46 @@ from /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29: The configuration 
 ------------------------------------------------------------------
 python-config
 not found
-find program=['libgcrypt-config'] paths=['/home/woodong/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='LIBGCRYPT_CONFIG' -> None
+find program=['libgcrypt-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='LIBGCRYPT_CONFIG' -> None
 from /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29: Could not find the program ['libgcrypt-config']
 ------------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_9b1e70c1db0aa9772ccdbe901bdcee09/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_5f6f441784dd389c4562c1148b1a4b23/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_9b1e70c1db0aa9772ccdbe901bdcee09/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5f6f441784dd389c4562c1148b1a4b23/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_e86536f1e328cd4a27cf9dc6717c2f53/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_b79e3a8081ef84c0d97e377fd7343941/test.c[0m
 
-['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_e86536f1e328cd4a27cf9dc6717c2f53/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_b79e3a8081ef84c0d97e377fd7343941/testbuild/test.c.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_9b1e70c1db0aa9772ccdbe901bdcee09/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_5f6f441784dd389c4562c1148b1a4b23/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_9b1e70c1db0aa9772ccdbe901bdcee09/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_5f6f441784dd389c4562c1148b1a4b23/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_e86536f1e328cd4a27cf9dc6717c2f53/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_b79e3a8081ef84c0d97e377fd7343941/test.c[0m
 
-['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_e86536f1e328cd4a27cf9dc6717c2f53/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build/.conf_check_b79e3a8081ef84c0d97e377fd7343941/testbuild/test.c.1.o']
 ok
 ------------------------------------------------------------------
 Checking for program 'doxygen'
 not found
-find program=['doxygen'] paths=['/home/woodong/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='DOXYGEN' -> None
+find program=['doxygen'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='DOXYGEN' -> None
 from /home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29: Could not find the program ['doxygen']

@@ -1,158 +1,6442 @@
 Waf: Entering directory `/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build'
-[1316/2622] Compiling src/applications/model/game-server.cc
-[2437/2622] Linking build/lib/libns3.29-applications-debug.so
-[2471/2622] Linking build/lib/libns3.29-lte-debug.so
-[2472/2622] Linking build/lib/libns3.29-applications-test-debug.so
-[2473/2622] Linking build/src/applications/examples/ns3.29-three-gpp-http-example-debug
-[2474/2622] Linking build/src/bridge/examples/ns3.29-csma-bridge-debug
-[2475/2622] Linking build/src/bridge/examples/ns3.29-csma-bridge-one-hop-debug
-[2476/2622] Linking build/src/csma/examples/ns3.29-csma-one-subnet-debug
-[2477/2622] Linking build/src/csma/examples/ns3.29-csma-broadcast-debug
-[2478/2622] Linking build/src/csma/examples/ns3.29-csma-packet-socket-debug
-[2479/2622] Linking build/src/csma/examples/ns3.29-csma-multicast-debug
-[2480/2622] Linking build/src/csma/examples/ns3.29-csma-raw-ip-socket-debug
-[2481/2622] Linking build/src/csma/examples/ns3.29-csma-ping-debug
-[2482/2622] Linking build/src/csma-layout/examples/ns3.29-csma-star-debug
-[2483/2622] Linking build/src/dsdv/examples/ns3.29-dsdv-manet-debug
-[2484/2622] Linking build/src/dsr/examples/ns3.29-dsr-debug
-[2485/2622] Linking build/src/fd-net-device/examples/ns3.29-fd2fd-onoff-debug
-[2486/2622] Linking build/src/fd-net-device/examples/ns3.29-realtime-fd2fd-onoff-debug
-[2487/2622] Linking build/src/fd-net-device/examples/ns3.29-fd-emu-udp-echo-debug
-[2488/2622] Linking build/src/fd-net-device/examples/ns3.29-fd-emu-onoff-debug
-[2489/2622] Linking build/src/internet/examples/ns3.29-main-simple-debug
-[2490/2622] Linking build/src/internet-apps/examples/ns3.29-dhcp-example-debug
-[2491/2622] Linking build/src/mesh/examples/ns3.29-mesh-debug
-[2492/2622] Linking build/src/mpi/examples/ns3.29-simple-distributed-debug
-[2493/2622] Linking build/src/mpi/examples/ns3.29-third-distributed-debug
-[2494/2622] Linking build/src/mpi/examples/ns3.29-nms-p2p-nix-distributed-debug
-[2495/2622] Linking build/src/mpi/examples/ns3.29-simple-distributed-empty-node-debug
-[2496/2622] Linking build/src/nix-vector-routing/examples/ns3.29-nix-simple-debug
-[2497/2622] Linking build/src/nix-vector-routing/examples/ns3.29-nms-p2p-nix-debug
-[2498/2622] Linking build/src/olsr/examples/ns3.29-simple-point-to-point-olsr-debug
-[2499/2622] Linking build/src/spectrum/examples/ns3.29-adhoc-aloha-ideal-phy-debug
-[2500/2622] Linking build/src/spectrum/examples/ns3.29-adhoc-aloha-ideal-phy-matrix-propagation-loss-model-debug
-[2501/2622] Linking build/src/spectrum/examples/ns3.29-adhoc-aloha-ideal-phy-with-microwave-oven-debug
-[2502/2622] Linking build/src/tap-bridge/examples/ns3.29-tap-wifi-dumbbell-debug
-[2503/2622] Linking build/src/topology-read/examples/ns3.29-topology-example-sim-debug
-[2504/2622] Linking build/src/traffic-control/examples/ns3.29-red-tests-debug
-[2505/2622] Linking build/src/traffic-control/examples/ns3.29-red-vs-ared-debug
-[2506/2622] Linking build/src/traffic-control/examples/ns3.29-adaptive-red-tests-debug
-[2507/2622] Linking build/src/traffic-control/examples/ns3.29-pfifo-vs-red-debug
-[2508/2622] Linking build/src/traffic-control/examples/ns3.29-codel-vs-pfifo-basic-test-debug
-[2509/2622] Linking build/src/traffic-control/examples/ns3.29-codel-vs-pfifo-asymmetric-debug
-[2510/2622] Linking build/src/traffic-control/examples/ns3.29-pie-example-debug
-[2511/2622] Linking build/src/uan/examples/ns3.29-uan-cw-example-debug
-[2512/2622] Linking build/src/uan/examples/ns3.29-uan-rc-example-debug
-[2513/2622] Linking build/src/virtual-net-device/examples/ns3.29-virtual-net-device-debug
-[2514/2622] Linking build/src/wave/examples/ns3.29-wave-simple-80211p-debug
-[2515/2622] Linking build/src/wave/examples/ns3.29-wave-simple-device-debug
-[2516/2622] Linking build/src/wave/examples/ns3.29-vanet-routing-compare-debug
-[2517/2622] Linking build/src/wimax/examples/ns3.29-wimax-ipv4-debug
-[2518/2622] Linking build/src/wimax/examples/ns3.29-wimax-multicast-debug
-[2519/2622] Linking build/src/wimax/examples/ns3.29-wimax-simple-debug
-[2520/2622] Linking build/examples/routing/ns3.29-dynamic-global-routing-debug
-[2521/2622] Linking build/examples/routing/ns3.29-static-routing-slash32-debug
-[2522/2622] Linking build/examples/routing/ns3.29-global-routing-slash32-debug
-[2523/2622] Linking build/examples/routing/ns3.29-global-injection-slash32-debug
-[2524/2622] Linking build/examples/routing/ns3.29-simple-global-routing-debug
-[2525/2622] Linking build/examples/routing/ns3.29-simple-alternate-routing-debug
-[2526/2622] Linking build/examples/routing/ns3.29-mixed-global-routing-debug
-[2527/2622] Linking build/examples/routing/ns3.29-manet-routing-compare-debug
-[2528/2622] Linking build/examples/routing/ns3.29-global-routing-multi-switch-plus-router-debug
-[2529/2622] Linking build/examples/error-model/ns3.29-simple-error-model-debug
-[2530/2622] Linking build/examples/tutorial/ns3.29-first-debug
-[2531/2622] Linking build/examples/tutorial/ns3.29-second-debug
-[2532/2622] Linking build/examples/tutorial/ns3.29-third-debug
-[2533/2622] Linking build/examples/tutorial/ns3.29-fifth-debug
-[2534/2622] Linking build/examples/tutorial/ns3.29-sixth-debug
-[2535/2622] Linking build/examples/tutorial/ns3.29-seventh-debug
-[2536/2622] Linking build/examples/realtime/ns3.29-realtime-udp-echo-debug
-[2537/2622] Linking build/examples/udp/ns3.29-udp-echo-debug
-[2538/2622] Linking build/examples/traffic-control/ns3.29-traffic-control-debug
-[2539/2622] Linking build/examples/traffic-control/ns3.29-queue-discs-benchmark-debug
-[2540/2622] Linking build/examples/traffic-control/ns3.29-red-vs-fengadaptive-debug
-[2541/2622] Linking build/examples/traffic-control/ns3.29-red-vs-nlred-debug
-[2542/2622] Linking build/examples/traffic-control/ns3.29-tbf-example-debug
-[2543/2622] Linking build/examples/udp-client-server/ns3.29-udp-client-server-debug
-[2544/2622] Linking build/examples/udp-client-server/ns3.29-udp-trace-client-server-debug
-[2545/2622] Linking build/examples/tcp/ns3.29-tcp-large-transfer-debug
-[2546/2622] Linking build/examples/tcp/ns3.29-tcp-nsc-lfn-debug
-[2547/2622] Linking build/examples/tcp/ns3.29-tcp-nsc-zoo-debug
-[2548/2622] Linking build/examples/tcp/ns3.29-tcp-star-server-debug
-[2549/2622] Linking build/examples/tcp/ns3.29-tcp-bulk-send-debug
-[2550/2622] Linking build/examples/tcp/ns3.29-tcp-pcap-nanosec-example-debug
-[2551/2622] Linking build/examples/tcp/ns3.29-tcp-nsc-comparison-debug
-[2552/2622] Linking build/examples/tcp/ns3.29-tcp-variants-comparison-debug
-[2553/2622] Linking build/examples/tcp/ns3.29-tcp-pacing-debug
-[2554/2622] Linking build/examples/wireless/ns3.29-wifi-adhoc-debug
-[2555/2622] Linking build/examples/wireless/ns3.29-wifi-ap-debug
-[2556/2622] Linking build/examples/wireless/ns3.29-wifi-wired-bridging-debug
-[2557/2622] Linking build/examples/wireless/ns3.29-multirate-debug
-[2558/2622] Linking build/examples/wireless/ns3.29-wifi-blockack-debug
-[2559/2622] Linking build/examples/wireless/ns3.29-wifi-hidden-terminal-debug
-[2560/2622] Linking build/examples/wireless/ns3.29-ht-wifi-network-debug
-[2561/2622] Linking build/examples/wireless/ns3.29-vht-wifi-network-debug
-[2562/2622] Linking build/examples/wireless/ns3.29-wifi-timing-attributes-debug
-[2563/2622] Linking build/examples/wireless/ns3.29-wifi-sleep-debug
-[2564/2622] Linking build/examples/wireless/ns3.29-power-adaptation-distance-debug
-[2565/2622] Linking build/examples/wireless/ns3.29-power-adaptation-interference-debug
-[2566/2622] Linking build/examples/wireless/ns3.29-rate-adaptation-distance-debug
-[2567/2622] Linking build/examples/wireless/ns3.29-wifi-aggregation-debug
-[2568/2622] Linking build/examples/wireless/ns3.29-simple-ht-hidden-stations-debug
-[2569/2622] Linking build/examples/wireless/ns3.29-80211n-mimo-debug
-[2570/2622] Linking build/examples/wireless/ns3.29-mixed-network-debug
-[2571/2622] Linking build/examples/wireless/ns3.29-wifi-tcp-debug
-[2572/2622] Linking build/examples/wireless/ns3.29-80211e-txop-debug
-[2573/2622] Linking build/examples/wireless/ns3.29-wifi-spectrum-per-example-debug
-[2574/2622] Linking build/examples/wireless/ns3.29-wifi-spectrum-per-interference-debug
-[2575/2622] Linking build/examples/wireless/ns3.29-wifi-spectrum-saturation-example-debug
-[2576/2622] Linking build/examples/wireless/ns3.29-he-wifi-network-debug
-[2577/2622] Linking build/examples/wireless/ns3.29-wifi-multi-tos-debug
-[2578/2622] Linking build/examples/wireless/ns3.29-wifi-backward-compatibility-debug
-[2579/2622] Linking build/examples/wireless/ns3.29-wifi-pcf-debug
-[2580/2622] Linking build/examples/socket/ns3.29-socket-bound-tcp-static-routing-debug
-[2581/2622] Linking build/examples/naming/ns3.29-object-names-debug
-[2582/2622] Linking build/lib/libns3.29-netanim-debug.so
-[2583/2622] Linking build/lib/libns3.29-test-debug.so
-[2584/2622] Linking build/lib/libns3.29-lte-test-debug.so
-[2585/2622] Linking build/src/lte/examples/ns3.29-lena-cqi-threshold-debug
-[2586/2622] Linking build/src/lte/examples/ns3.29-lena-dual-stripe-debug
-[2587/2622] Linking build/src/lte/examples/ns3.29-lena-fading-debug
-[2588/2622] Linking build/src/lte/examples/ns3.29-lena-intercell-interference-debug
-[2589/2622] Linking build/src/lte/examples/ns3.29-lena-ipv6-addr-conf-debug
-[2590/2622] Linking build/src/lte/examples/ns3.29-lena-ipv6-ue-rh-debug
-[2591/2622] Linking build/src/lte/examples/ns3.29-lena-ipv6-ue-ue-debug
-[2592/2622] Linking build/lib/libns3.29-test-test-debug.so
-[2593/2622] Linking build/src/lte/examples/ns3.29-lena-pathloss-traces-debug
-[2594/2622] Linking build/src/lte/examples/ns3.29-lena-profiling-debug
-[2595/2622] Linking build/src/lte/examples/ns3.29-lena-rem-debug
-[2596/2622] Linking build/src/lte/examples/ns3.29-lena-rem-sector-antenna-debug
-[2597/2622] Linking build/src/lte/examples/ns3.29-lena-rlc-traces-debug
-[2598/2622] Linking build/src/lte/examples/ns3.29-lena-simple-debug
-[2599/2622] Linking build/src/lte/examples/ns3.29-lena-simple-epc-debug
-[2600/2622] Linking build/src/lte/examples/ns3.29-lena-deactivate-bearer-debug
-[2601/2622] Linking build/src/lte/examples/ns3.29-lena-x2-handover-debug
-[2602/2622] Linking build/src/lte/examples/ns3.29-lena-x2-handover-measures-debug
-[2603/2622] Linking build/lib/libns3.29-netanim-test-debug.so
-[2604/2622] Linking build/src/lte/examples/ns3.29-lena-frequency-reuse-debug
-[2605/2622] Linking build/src/lte/examples/ns3.29-lena-distributed-ffr-debug
-[2606/2622] Linking build/src/lte/examples/ns3.29-lena-uplink-power-control-debug
-[2607/2622] Linking build/src/lte/examples/ns3.29-lena-simple-epc-emu-debug
-[2608/2622] Linking build/src/netanim/examples/ns3.29-dumbbell-animation-debug
-[2609/2622] Linking build/src/netanim/examples/ns3.29-grid-animation-debug
-[2610/2622] Linking build/src/netanim/examples/ns3.29-star-animation-debug
-[2611/2622] Linking build/src/netanim/examples/ns3.29-wireless-animation-debug
-[2612/2622] Linking build/src/netanim/examples/ns3.29-uan-animation-debug
-[2613/2622] Linking build/src/netanim/examples/ns3.29-colors-link-description-debug
-[2614/2622] Linking build/src/netanim/examples/ns3.29-resources-counters-debug
-[2615/2622] Linking build/examples/matrix-topology/ns3.29-matrix-topology-debug
-[2616/2622] Linking build/examples/tcp/ns3.29-star-debug
-[2617/2622] Linking build/examples/wireless/ns3.29-mixed-wired-wireless-debug
-[2618/2622] Linking build/scratch/subdir/subdir
-[2619/2622] Linking build/scratch/scratch-simulator
-[2620/2622] Linking build/scratch/test
-[2621/2622] Linking build/utils/ns3.29-test-runner-debug
-[2622/2622] Linking build/utils/ns3.29-print-introspected-doxygen-debug
+[1302/2617] Compiling src/applications/model/game-server.cc
+[2430/2617] Linking build/lib/libns3.29-applications-debug.so
+[2466/2617] Linking build/lib/libns3.29-lte-debug.so
+[2467/2617] Linking build/lib/libns3.29-applications-test-debug.so
+[2468/2617] Linking build/src/applications/examples/ns3.29-three-gpp-http-example-debug
+[2469/2617] Linking build/src/bridge/examples/ns3.29-csma-bridge-debug
+[2470/2617] Linking build/src/bridge/examples/ns3.29-csma-bridge-one-hop-debug
+[2471/2617] Linking build/src/csma/examples/ns3.29-csma-one-subnet-debug
+[2472/2617] Linking build/src/csma/examples/ns3.29-csma-broadcast-debug
+[2473/2617] Linking build/src/csma/examples/ns3.29-csma-packet-socket-debug
+[2474/2617] Linking build/src/csma/examples/ns3.29-csma-multicast-debug
+[2475/2617] Linking build/src/csma/examples/ns3.29-csma-raw-ip-socket-debug
+[2476/2617] Linking build/src/csma/examples/ns3.29-csma-ping-debug
+[2477/2617] Linking build/src/csma-layout/examples/ns3.29-csma-star-debug
+[2478/2617] Linking build/src/dsdv/examples/ns3.29-dsdv-manet-debug
+[2479/2617] Linking build/src/dsr/examples/ns3.29-dsr-debug
+[2480/2617] Linking build/src/fd-net-device/examples/ns3.29-fd2fd-onoff-debug
+[2481/2617] Linking build/src/fd-net-device/examples/ns3.29-realtime-fd2fd-onoff-debug
+[2482/2617] Linking build/src/fd-net-device/examples/ns3.29-fd-emu-udp-echo-debug
+[2483/2617] Linking build/src/fd-net-device/examples/ns3.29-fd-emu-onoff-debug
+[2484/2617] Linking build/src/internet/examples/ns3.29-main-simple-debug
+[2485/2617] Linking build/src/internet-apps/examples/ns3.29-dhcp-example-debug
+[2486/2617] Linking build/src/mesh/examples/ns3.29-mesh-debug
+[2487/2617] Linking build/src/mpi/examples/ns3.29-simple-distributed-debug
+[2488/2617] Linking build/src/mpi/examples/ns3.29-third-distributed-debug
+[2489/2617] Linking build/src/mpi/examples/ns3.29-nms-p2p-nix-distributed-debug
+[2490/2617] Linking build/src/mpi/examples/ns3.29-simple-distributed-empty-node-debug
+[2491/2617] Linking build/src/nix-vector-routing/examples/ns3.29-nix-simple-debug
+[2492/2617] Linking build/src/nix-vector-routing/examples/ns3.29-nms-p2p-nix-debug
+[2493/2617] Linking build/src/olsr/examples/ns3.29-simple-point-to-point-olsr-debug
+[2494/2617] Linking build/src/spectrum/examples/ns3.29-adhoc-aloha-ideal-phy-debug
+[2495/2617] Linking build/src/spectrum/examples/ns3.29-adhoc-aloha-ideal-phy-matrix-propagation-loss-model-debug
+[2496/2617] Linking build/src/spectrum/examples/ns3.29-adhoc-aloha-ideal-phy-with-microwave-oven-debug
+[2497/2617] Linking build/src/tap-bridge/examples/ns3.29-tap-wifi-dumbbell-debug
+[2498/2617] Linking build/src/topology-read/examples/ns3.29-topology-example-sim-debug
+[2499/2617] Linking build/src/traffic-control/examples/ns3.29-red-tests-debug
+[2500/2617] Linking build/src/traffic-control/examples/ns3.29-red-vs-ared-debug
+[2501/2617] Linking build/src/traffic-control/examples/ns3.29-adaptive-red-tests-debug
+[2502/2617] Linking build/src/traffic-control/examples/ns3.29-pfifo-vs-red-debug
+[2503/2617] Linking build/src/traffic-control/examples/ns3.29-codel-vs-pfifo-basic-test-debug
+[2504/2617] Linking build/src/traffic-control/examples/ns3.29-codel-vs-pfifo-asymmetric-debug
+[2505/2617] Linking build/src/traffic-control/examples/ns3.29-pie-example-debug
+[2506/2617] Linking build/src/uan/examples/ns3.29-uan-cw-example-debug
+[2507/2617] Linking build/src/uan/examples/ns3.29-uan-rc-example-debug
+[2508/2617] Linking build/src/virtual-net-device/examples/ns3.29-virtual-net-device-debug
+[2509/2617] Linking build/src/wave/examples/ns3.29-wave-simple-80211p-debug
+[2510/2617] Linking build/src/wave/examples/ns3.29-wave-simple-device-debug
+[2511/2617] Linking build/src/wave/examples/ns3.29-vanet-routing-compare-debug
+[2512/2617] Linking build/src/wimax/examples/ns3.29-wimax-ipv4-debug
+[2513/2617] Linking build/src/wimax/examples/ns3.29-wimax-multicast-debug
+[2514/2617] Linking build/src/wimax/examples/ns3.29-wimax-simple-debug
+[2515/2617] Linking build/examples/tutorial/ns3.29-first-debug
+[2516/2617] Linking build/examples/tutorial/ns3.29-second-debug
+[2517/2617] Linking build/examples/tutorial/ns3.29-third-debug
+[2518/2617] Linking build/examples/tutorial/ns3.29-fifth-debug
+[2519/2617] Linking build/examples/tutorial/ns3.29-sixth-debug
+[2520/2617] Linking build/examples/tutorial/ns3.29-seventh-debug
+[2521/2617] Linking build/examples/routing/ns3.29-dynamic-global-routing-debug
+[2522/2617] Linking build/examples/routing/ns3.29-static-routing-slash32-debug
+[2523/2617] Linking build/examples/routing/ns3.29-global-routing-slash32-debug
+[2524/2617] Linking build/examples/routing/ns3.29-global-injection-slash32-debug
+[2525/2617] Linking build/examples/routing/ns3.29-simple-global-routing-debug
+[2526/2617] Linking build/examples/routing/ns3.29-simple-alternate-routing-debug
+[2527/2617] Linking build/examples/routing/ns3.29-mixed-global-routing-debug
+[2528/2617] Linking build/examples/routing/ns3.29-manet-routing-compare-debug
+[2529/2617] Linking build/examples/routing/ns3.29-global-routing-multi-switch-plus-router-debug
+[2530/2617] Linking build/examples/socket/ns3.29-socket-bound-tcp-static-routing-debug
+[2531/2617] Linking build/examples/tcp/ns3.29-tcp-large-transfer-debug
+[2532/2617] Linking build/examples/tcp/ns3.29-tcp-nsc-lfn-debug
+[2533/2617] Linking build/examples/tcp/ns3.29-tcp-nsc-zoo-debug
+[2534/2617] Linking build/examples/tcp/ns3.29-tcp-star-server-debug
+[2535/2617] Linking build/examples/tcp/ns3.29-tcp-bulk-send-debug
+[2536/2617] Linking build/examples/tcp/ns3.29-tcp-pcap-nanosec-example-debug
+[2537/2617] Linking build/examples/tcp/ns3.29-tcp-nsc-comparison-debug
+[2538/2617] Linking build/examples/tcp/ns3.29-tcp-variants-comparison-debug
+[2539/2617] Linking build/examples/tcp/ns3.29-tcp-pacing-debug
+[2540/2617] Linking build/examples/wireless/ns3.29-wifi-adhoc-debug
+[2541/2617] Linking build/examples/wireless/ns3.29-wifi-ap-debug
+[2542/2617] Linking build/examples/wireless/ns3.29-wifi-wired-bridging-debug
+[2543/2617] Linking build/examples/wireless/ns3.29-multirate-debug
+[2544/2617] Linking build/examples/wireless/ns3.29-wifi-blockack-debug
+[2545/2617] Linking build/examples/wireless/ns3.29-wifi-hidden-terminal-debug
+[2546/2617] Linking build/examples/wireless/ns3.29-ht-wifi-network-debug
+[2547/2617] Linking build/examples/wireless/ns3.29-vht-wifi-network-debug
+[2548/2617] Linking build/examples/wireless/ns3.29-wifi-timing-attributes-debug
+[2549/2617] Linking build/examples/wireless/ns3.29-wifi-sleep-debug
+[2550/2617] Linking build/examples/wireless/ns3.29-power-adaptation-distance-debug
+[2551/2617] Linking build/examples/wireless/ns3.29-power-adaptation-interference-debug
+[2552/2617] Linking build/examples/wireless/ns3.29-rate-adaptation-distance-debug
+[2553/2617] Linking build/examples/wireless/ns3.29-wifi-aggregation-debug
+[2554/2617] Linking build/examples/wireless/ns3.29-simple-ht-hidden-stations-debug
+[2555/2617] Linking build/examples/wireless/ns3.29-80211n-mimo-debug
+[2556/2617] Linking build/examples/wireless/ns3.29-mixed-network-debug
+[2557/2617] Linking build/examples/wireless/ns3.29-wifi-tcp-debug
+[2558/2617] Linking build/examples/wireless/ns3.29-80211e-txop-debug
+[2559/2617] Linking build/examples/wireless/ns3.29-wifi-spectrum-per-example-debug
+[2560/2617] Linking build/examples/wireless/ns3.29-wifi-spectrum-per-interference-debug
+[2561/2617] Linking build/examples/wireless/ns3.29-wifi-spectrum-saturation-example-debug
+[2562/2617] Linking build/examples/wireless/ns3.29-he-wifi-network-debug
+[2563/2617] Linking build/examples/wireless/ns3.29-wifi-multi-tos-debug
+[2564/2617] Linking build/examples/wireless/ns3.29-wifi-backward-compatibility-debug
+[2565/2617] Linking build/examples/wireless/ns3.29-wifi-pcf-debug
+[2566/2617] Linking build/examples/naming/ns3.29-object-names-debug
+[2567/2617] Linking build/examples/traffic-control/ns3.29-traffic-control-debug
+[2568/2617] Linking build/examples/traffic-control/ns3.29-queue-discs-benchmark-debug
+[2569/2617] Linking build/examples/traffic-control/ns3.29-red-vs-fengadaptive-debug
+[2570/2617] Linking build/examples/traffic-control/ns3.29-red-vs-nlred-debug
+[2571/2617] Linking build/examples/traffic-control/ns3.29-tbf-example-debug
+[2572/2617] Linking build/examples/udp/ns3.29-udp-echo-debug
+[2573/2617] Linking build/examples/realtime/ns3.29-realtime-udp-echo-debug
+[2574/2617] Linking build/examples/udp-client-server/ns3.29-udp-client-server-debug
+[2575/2617] Linking build/examples/udp-client-server/ns3.29-udp-trace-client-server-debug
+[2576/2617] Linking build/examples/error-model/ns3.29-simple-error-model-debug
+[2577/2617] Linking build/lib/libns3.29-netanim-debug.so
+[2578/2617] Linking build/lib/libns3.29-test-debug.so
+[2579/2617] Linking build/lib/libns3.29-lte-test-debug.so
+[2580/2617] Linking build/src/lte/examples/ns3.29-lena-cqi-threshold-debug
+[2581/2617] Linking build/src/lte/examples/ns3.29-lena-dual-stripe-debug
+[2582/2617] Linking build/src/lte/examples/ns3.29-lena-fading-debug
+[2583/2617] Linking build/src/lte/examples/ns3.29-lena-intercell-interference-debug
+[2584/2617] Linking build/src/lte/examples/ns3.29-lena-ipv6-addr-conf-debug
+[2585/2617] Linking build/src/lte/examples/ns3.29-lena-ipv6-ue-rh-debug
+[2586/2617] Linking build/src/lte/examples/ns3.29-lena-ipv6-ue-ue-debug
+[2587/2617] Linking build/lib/libns3.29-test-test-debug.so
+[2588/2617] Linking build/src/lte/examples/ns3.29-lena-pathloss-traces-debug
+[2589/2617] Linking build/src/lte/examples/ns3.29-lena-profiling-debug
+[2590/2617] Linking build/src/lte/examples/ns3.29-lena-rem-debug
+[2591/2617] Linking build/src/lte/examples/ns3.29-lena-rem-sector-antenna-debug
+[2592/2617] Linking build/src/lte/examples/ns3.29-lena-rlc-traces-debug
+[2593/2617] Linking build/src/lte/examples/ns3.29-lena-simple-debug
+[2594/2617] Linking build/src/lte/examples/ns3.29-lena-simple-epc-debug
+[2595/2617] Linking build/lib/libns3.29-netanim-test-debug.so
+[2596/2617] Linking build/src/lte/examples/ns3.29-lena-deactivate-bearer-debug
+[2597/2617] Linking build/src/lte/examples/ns3.29-lena-x2-handover-debug
+[2598/2617] Linking build/src/lte/examples/ns3.29-lena-x2-handover-measures-debug
+[2599/2617] Linking build/src/lte/examples/ns3.29-lena-frequency-reuse-debug
+[2600/2617] Linking build/src/lte/examples/ns3.29-lena-distributed-ffr-debug
+[2601/2617] Linking build/src/lte/examples/ns3.29-lena-uplink-power-control-debug
+[2602/2617] Linking build/src/lte/examples/ns3.29-lena-simple-epc-emu-debug
+[2603/2617] Linking build/src/netanim/examples/ns3.29-dumbbell-animation-debug
+[2604/2617] Linking build/src/netanim/examples/ns3.29-grid-animation-debug
+[2605/2617] Linking build/src/netanim/examples/ns3.29-star-animation-debug
+[2606/2617] Linking build/src/netanim/examples/ns3.29-wireless-animation-debug
+[2607/2617] Linking build/src/netanim/examples/ns3.29-uan-animation-debug
+[2608/2617] Linking build/src/netanim/examples/ns3.29-colors-link-description-debug
+[2609/2617] Linking build/src/netanim/examples/ns3.29-resources-counters-debug
+[2610/2617] Linking build/examples/tcp/ns3.29-star-debug
+[2611/2617] Linking build/examples/wireless/ns3.29-mixed-wired-wireless-debug
+[2612/2617] Linking build/examples/matrix-topology/ns3.29-matrix-topology-debug
+[2613/2617] Linking build/scratch/scratch-simulator
+[2614/2617] Linking build/scratch/subdir/subdir
+[2615/2617] Linking build/scratch/test
+[2616/2617] Linking build/utils/ns3.29-print-introspected-doxygen-debug
+[2617/2617] Linking build/utils/ns3.29-test-runner-debug
 Waf: Leaving directory `/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/build'
 Build commands will be stored in build/compile_commands.json
-'build' finished successfully (19.330s)
+'build' finished successfully (19.736s)
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0010001101
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0010001101
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0010001101
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0010001101
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0010001101
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0010001101
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0010001101
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0010001101
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0010001101
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0010001101
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0010001101
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0010001101
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0010001101
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0010001101
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0010001101
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0010001101
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0010001101
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000100
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001000000
+Succeed0: 0000000100
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001000000
+decision: 0000080000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0010001101
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0010001101
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0010001101
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0010001101
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000100
+Succeed0: 1000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001000000
+Succeed0: 0000000100
+decision: 0000080000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001000000
+decision: 0000080000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0010001101
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0010001101
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0010001101
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0010001101
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000001
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 1000000000
+Succeed0: 0000000001
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000100
+Succeed0: 1000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001000000
+Succeed0: 0000000100
+decision: 0000080000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001000000
+decision: 0000080000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0010001101
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0010001101
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0010001101
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0010001101
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000001
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 1000000000
+Succeed0: 0000000001
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000100
+Succeed0: 1000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001000000
+Succeed0: 0000000100
+decision: 0000080000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001000000
+decision: 0000080000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0010001101
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0010001101
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0010001101
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0010001101
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000001
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000101000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 1000000000
+Succeed0: 0000000001
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000100
+Succeed0: 1000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001000000
+Succeed0: 0000000100
+decision: 0000080000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001000000
+decision: 0000080000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0010001101
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0010001101
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000101000
+Succeed1: 1100000000
+Succeed0: 0010001101
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000101000
+Succeed0: 1100000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000101000
+decision: 0000080000
+DISPLAY FRAME: 0010001101
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000010001
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000001
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000101000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 1000000000
+Succeed0: 0000000001
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000100
+Succeed0: 1000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001000000
+Succeed0: 0000000100
+decision: 0000080000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001000000
+decision: 0000080000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0010001101
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 0000010001
+Succeed1: 0010001101
+Succeed0: 0000000000
+decision: 0000080000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000101000
+Succeed1: 0000010001
+Succeed0: 0010001101
+decision: 0000080000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000101000
+Succeed0: 0000010001
+decision: 0000800000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0000000009
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000101000
+decision: 0008000000
+dir: 1
+DISPLAY FRAME: 0010000000
+Received 1 from user.
+im handleread, current pos is: 7
+DISPLAY FRAME: 0010000009
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0008000000
+DISPLAY FRAME: 0000010001
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000001
+Succeed0: 0000000000
+decision: 0008000000
+DISPLAY FRAME: 0000101000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 1000000000
+Succeed0: 0000000001
+decision: 0008000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000100
+Succeed0: 1000000000
+decision: 0008000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001000000
+Succeed0: 0000000100
+decision: 0008000000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001000000
+decision: 0080000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 1000000009
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 0000010001
+Succeed1: 0010000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0001000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000101000
+Succeed1: 0000010001
+Succeed0: 0010000000
+decision: 0800000000
+dir: 1
+DISPLAY FRAME: 0000001000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000001009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000101000
+Succeed0: 0000010001
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000101000
+decision: 0800000000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000010001
+DISPLAY FRAME: 0000101000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000001
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 1000000000
+Succeed0: 0000000001
+decision: 0800000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000100
+Succeed0: 1000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001000000
+Succeed0: 0000000100
+decision: 0800000000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0001000000
+decision: 0800000000
+DISPLAY FRAME: 1000000000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0001000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000010001
+Succeed1: 0010000000
+Succeed0: 0000001000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000101000
+Succeed1: 0000010001
+Succeed0: 0010000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000101000
+Succeed0: 0000010001
+decision: 0800000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000101000
+decision: 0800000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000010001
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000101000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000001
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 1000000000
+Succeed0: 0000000001
+decision: 0800000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000100
+Succeed0: 1000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0001000000
+Succeed0: 0000000100
+decision: 0800000000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0100000000
+Succeed0: 0001000000
+decision: 0800000000
+DISPLAY FRAME: 0000000100
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000001000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000010001
+Succeed1: 0010000000
+Succeed0: 0000001000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000101000
+Succeed1: 0000010001
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000101000
+Succeed0: 0000010001
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000101000
+decision: 8000000000
+DISPLAY FRAME: 0000010001
+DISPLAY FRAME: 0000101000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000001
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 1000000000
+Succeed0: 0000000001
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000100
+Succeed0: 1000000000
+decision: 0800000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000000009
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000000100
+decision: 0800000000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0001010100
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000001000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 0100000000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0100000009
+input frame len: 30
+Succeed2: 0000010001
+Succeed1: 0010000000
+Succeed0: 0000001000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000101000
+Succeed1: 0000010001
+Succeed0: 0010000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000101000
+Succeed0: 0000010001
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000101000
+decision: 8000000000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000010001
+DISPLAY FRAME: 0000101000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000001
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 1000000000
+Succeed0: 0000000001
+decision: 8000000000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 0000000010
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 1000000000
+decision: 0800000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000000019
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0001010100
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000001000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0001010109
+input frame len: 30
+Succeed2: 0000010001
+Succeed1: 0010000000
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000101000
+Succeed1: 0000010001
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000101000
+Succeed0: 0000010001
+decision: 8000000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000010001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000101000
+decision: 8000000000
+DISPLAY FRAME: 0000101000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000010
+Succeed1: 0000000001
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 0000000010
+Succeed0: 0000000001
+decision: 8000000000
+DISPLAY FRAME: 1000010001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 0000000010
+decision: 8000000000
+DISPLAY FRAME: 0000000010
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000001000
+Succeed0: 0100000000
+decision: 8000000000
+DISPLAY FRAME: 0001010100
+input frame len: 30
+Succeed2: 0000010001
+Succeed1: 0010000000
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000101000
+Succeed1: 0000010001
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000101000
+Succeed0: 0000010001
+decision: 8000000000
+DISPLAY FRAME: 0000010001
+DISPLAY FRAME: 0000101000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000101000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1000010001
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000010
+Succeed1: 1000010001
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 0000000010
+Succeed0: 1000010001
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 1000010001
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 1000010009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 0000000010
+decision: 0800000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000010
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000001000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 0001010100
+DISPLAY FRAME: 0000000000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000010001
+Succeed1: 0010000000
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000101000
+Succeed1: 0000010001
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000010001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000101000
+Succeed0: 0000010001
+decision: 8000000000
+DISPLAY FRAME: 0000101000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000101000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000010001
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000000010
+Succeed1: 1000010001
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 1000010001
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 0000000010
+Succeed0: 1000010001
+decision: 0800000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 1000010009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 0000000010
+decision: 0800000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000010
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000001000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 0001010100
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0100000000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0100000009
+input frame len: 30
+Succeed2: 0000010001
+Succeed1: 0010000000
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000101000
+Succeed1: 0000010001
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0000010001
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000101000
+Succeed0: 0000010001
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000001000
+Succeed0: 0000101000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000010001
+Succeed1: 0000001000
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000000010
+Succeed1: 1000010001
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 1000010001
+DISPLAY FRAME: 0000000010
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 0000000010
+Succeed0: 1000010001
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0001010100
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0001010109
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 0000000010
+decision: 0800000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000001000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0001010109
+input frame len: 30
+Succeed2: 0000010001
+Succeed1: 0010000000
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000010001
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000010001
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 1000010001
+input frame len: 30
+Succeed2: 1000010001
+Succeed1: 0000001000
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000000010
+input frame len: 30
+Succeed2: 0000000010
+Succeed1: 1000010001
+Succeed0: 0000001000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 0000000010
+Succeed0: 1000010001
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0001010100
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0001010109
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 0000000010
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0800000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000001000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000001000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000010001
+Succeed1: 0000001000
+Succeed0: 0000001000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000010
+Succeed1: 1000010001
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 0000000010
+Succeed0: 1000010001
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 1000010001
+DISPLAY FRAME: 0000000010
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000000019
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 0000000010
+decision: 0800000000
+DISPLAY FRAME: 0001010100
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0800000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0001010100
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000001000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 1000010001
+DISPLAY FRAME: 0000000010
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000010001
+Succeed1: 0000001000
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0001010100
+input frame len: 30
+Succeed2: 0000000010
+Succeed1: 1000010001
+Succeed0: 0000001000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 0000000010
+Succeed0: 1000010001
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0000000000
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 0000000010
+decision: 0800000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0800000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0001010100
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 1000010001
+input frame len: 30
+Succeed2: 1000010001
+Succeed1: 0000001000
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000000010
+DISPLAY FRAME: 0001010100
+input frame len: 30
+Succeed2: 0000000010
+Succeed1: 1000010001
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 0000000010
+Succeed0: 1000010001
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 1100000000
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 1100000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 0000000010
+decision: 0800000000
+DISPLAY FRAME: 0001010100
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 1100000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 1100000000
+decision: 0080000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 7
+DISPLAY FRAME: 0000001009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0080000000
+DISPLAY FRAME: 1000010001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000010
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 1000010001
+Succeed1: 0000001000
+Succeed0: 0000001000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000010
+Succeed1: 1000010001
+Succeed0: 0000001000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 0000000010
+Succeed0: 1000010001
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 0000000010
+decision: 0080000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0080000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 1100000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 1100000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0001010100
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 1000010001
+input frame len: 30
+Succeed2: 1000010001
+Succeed1: 0000001000
+Succeed0: 0000001000
+decision: 0080000000
+DISPLAY FRAME: 0000000011
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000000010
+Succeed1: 1000010001
+Succeed0: 0000001000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000010
+Succeed0: 1000010001
+decision: 0080000000
+DISPLAY FRAME: 1100000000
+DISPLAY FRAME: 0001010100
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000000010
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 1100000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0110100000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 1100000000
+decision: 0080000000
+DISPLAY FRAME: 0000000011
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0080000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 1000010001
+Succeed1: 0000001000
+Succeed0: 0000001000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000011
+Succeed1: 1000010001
+Succeed0: 0000001000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000011
+Succeed0: 1000010001
+decision: 0080000000
+DISPLAY FRAME: 0001010100
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000000011
+decision: 0080000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 1100000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 1100000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0110100000
+Succeed1: 0000001000
+Succeed0: 0000001000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0110100000
+input frame len: 30
+Succeed2: 0000000011
+Succeed1: 0110100000
+Succeed0: 0000001000
+decision: 0080000000
+DISPLAY FRAME: 0000000011
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000011
+Succeed0: 0110100000
+decision: 0008000000
+dir: 2
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1100000000
+Received 2 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 1100000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000000011
+decision: 0008000000
+DISPLAY FRAME: 0001010100
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0008000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 1100000000
+Succeed0: 0000000000
+decision: 0008000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0101001110
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 1100000000
+decision: 0008000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0110100000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0080000000
+dir: 1
+DISPLAY FRAME: 0000000011
+DISPLAY FRAME: 0000100000
+Received 1 from user.
+im handleread, current pos is: 7
+DISPLAY FRAME: 0000100009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0110100000
+Succeed1: 0000000000
+Succeed0: 0000001000
+decision: 0080000000
+DISPLAY FRAME: 0001010100
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000011
+Succeed1: 0110100000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000011
+Succeed0: 0110100000
+decision: 0008000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000000011
+decision: 0008000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0008000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 1100000000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 1100000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0080000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 7
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0101001110
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101001110
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0110100000
+Succeed1: 0000000000
+Succeed0: 0101001110
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000011
+Succeed1: 0110100000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000011
+Succeed0: 0110100000
+decision: 0008000000
+dir: 2
+DISPLAY FRAME: 0101001110
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0110100000
+DISPLAY FRAME: 0000000011
+DISPLAY FRAME: 0000100000
+Received 2 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0000100009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000000011
+decision: 0008000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0008000000
+DISPLAY FRAME: 0001010100
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 1100000000
+Succeed0: 0000000000
+decision: 0008000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 1100000000
+decision: 0008000000
+DISPLAY FRAME: 0101001110
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0080000000
+dir: 1
+DISPLAY FRAME: 0110100000
+DISPLAY FRAME: 0000000011
+Received 1 from user.
+im handleread, current pos is: 7
+DISPLAY FRAME: 0000000019
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0101001110
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 1100000000
+DISPLAY FRAME: 0001010100
+DISPLAY FRAME: 0011000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101001110
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0110100000
+Succeed1: 0000000000
+Succeed0: 0101001110
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000011
+Succeed1: 0110100000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000011
+Succeed0: 0110100000
+decision: 0008000000
+dir: 2
+DISPLAY FRAME: 0101001110
+DISPLAY FRAME: 0000000000
+Received 2 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000000011
+decision: 0008000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0008000000
+DISPLAY FRAME: 0110100000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 1100000000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010100
+Succeed0: 1100000000
+decision: 0008000000
+DISPLAY FRAME: 0000000011
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0000000000
+Succeed0: 0001010100
+decision: 0080000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 7
+DISPLAY FRAME: 0000000019
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0101001110
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0080000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101001110
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0110100000
+Succeed1: 0000000000
+Succeed0: 0101001110
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000011
+Succeed1: 0110100000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000011
+Succeed0: 0110100000
+decision: 0008000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0000100009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000000011
+decision: 0008000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0001010100
+Succeed1: 1100000000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0011000001
+Succeed1: 0001010100
+Succeed0: 1100000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0011000001
+Succeed0: 0001010100
+decision: 0000800000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 5
+DISPLAY FRAME: 0000100009
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0011000001
+decision: 0000800000
+DISPLAY FRAME: 1100000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0011000001
+DISPLAY FRAME: 1100000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0101001110
+input frame len: 30
+Succeed2: 0101001110
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000800000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0110100000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101001110
+Succeed0: 0000000000
+decision: 0000800000
+DISPLAY FRAME: 0000000011
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0110100000
+Succeed1: 0000000000
+Succeed0: 0101001110
+decision: 0000800000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000011
+Succeed1: 0110100000
+Succeed0: 0000000000
+decision: 0000800000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0011000001
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000011
+Succeed0: 0110100000
+decision: 0008000000
+dir: 1
+DISPLAY FRAME: 1100000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0101001110
+Received 1 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0101001119
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000000011
+decision: 0008000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0110100000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0008000000
+DISPLAY FRAME: 0000000011
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 1100000000
+Succeed0: 0000000000
+decision: 0008000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0011000001
+Succeed1: 0000100000
+Succeed0: 1100000000
+decision: 0008000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0011000001
+Succeed0: 0000100000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0011000001
+decision: 0000800000
+dir: 2
+DISPLAY FRAME: 0011000001
+DISPLAY FRAME: 1100000000
+DISPLAY FRAME: 0000000000
+Received 2 from user.
+im handleread, current pos is: 5
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0101001110
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101001110
+Succeed0: 0000000000
+decision: 0000800000
+DISPLAY FRAME: 0101001110
+input frame len: 30
+Succeed2: 0110100000
+Succeed1: 0000000000
+Succeed0: 0101001110
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000000011
+Succeed1: 0110100000
+Succeed0: 0000000000
+decision: 0000800000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000011
+Succeed0: 0110100000
+decision: 0008000000
+dir: 1
+DISPLAY FRAME: 0110100000
+Received 1 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0110100009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000000011
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0008000000
+DISPLAY FRAME: 0000000011
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0011000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0011000001
+Succeed0: 0000100000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0011000001
+decision: 0000800000
+dir: 2
+DISPLAY FRAME: 0000010000
+Received 2 from user.
+im handleread, current pos is: 5
+DISPLAY FRAME: 0000010009
+input frame len: 30
+Succeed2: 0101001110
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101001110
+Succeed0: 0000000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0110100000
+Succeed1: 0000000000
+Succeed0: 0101001110
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000000011
+Succeed1: 0110100000
+Succeed0: 0000000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000011
+Succeed0: 0110100000
+decision: 0008000000
+dir: 1
+DISPLAY FRAME: 0010000000
+Received 1 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0010000009
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000100000
+Succeed0: 0000000011
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000100000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0011000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0011000001
+Succeed0: 0000100000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0011000001
+decision: 0000800000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 5
+DISPLAY FRAME: 0010000009
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0101001110
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000800000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0011000001
+DISPLAY FRAME: 1100000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0101001110
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101001110
+Succeed0: 0000000000
+decision: 0000800000
+DISPLAY FRAME: 0110100000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0110100000
+Succeed1: 0000000000
+Succeed0: 0101001110
+decision: 0000800000
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000011
+Succeed1: 0110100000
+Succeed0: 0000000000
+decision: 0000800000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0000000011
+Succeed0: 0110100000
+decision: 0008000000
+dir: 1
+DISPLAY FRAME: 0011000001
+DISPLAY FRAME: 1100000000
+Received 1 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 1100000009
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000010000
+Succeed0: 0000000011
+decision: 0008000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0101001110
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001100
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000010000
+decision: 0008000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000010000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0008000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0011000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0008000000
+DISPLAY FRAME: 0011000001
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0011000001
+Succeed0: 0000100000
+decision: 0008000000
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0011000001
+decision: 0000800000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 5
+DISPLAY FRAME: 1100000009
+input frame len: 30
+Succeed2: 0101001110
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000800000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0101001110
+DISPLAY FRAME: 0001000000
+DISPLAY FRAME: 0000001100
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101001110
+Succeed0: 0000000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0110100000
+Succeed1: 0000000000
+Succeed0: 0101001110
+decision: 0000800000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0110100000
+Succeed0: 0000000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0000100000
+Succeed0: 0110100000
+decision: 0008000000
+dir: 1
+DISPLAY FRAME: 0000010000
+Received 1 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0000010009
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000010000
+Succeed0: 0000100000
+decision: 0008000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000010000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0008000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0011000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0011000001
+Succeed0: 0000100000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0011000001
+decision: 0000800000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 5
+DISPLAY FRAME: 0000100009
+input frame len: 30
+Succeed2: 0101001110
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000800000
+DISPLAY FRAME: 0011000001
+DISPLAY FRAME: 1100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101001110
+Succeed0: 0000000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000001100
+Succeed1: 0000000000
+Succeed0: 0101001110
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000001100
+Succeed0: 0000000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0000100000
+Succeed0: 0000001100
+decision: 0000800000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000010000
+Succeed0: 0000100000
+decision: 0008000000
+dir: 1
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+Received 1 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000010000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0011000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0011000001
+Succeed0: 0000100000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0011000001
+decision: 0000800000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 5
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0101001110
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000800000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0101001110
+Succeed0: 0000000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000001100
+Succeed1: 0001000000
+Succeed0: 0101001110
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000001100
+Succeed0: 0001000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0000100000
+Succeed0: 0000001100
+decision: 0000800000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000010000
+Succeed0: 0000100000
+decision: 0008000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0001000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000010000
+decision: 0008000000
+DISPLAY FRAME: 0000001100
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0008000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0011000001
+input frame len: 30
+Succeed2: 0011000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0008000000
+DISPLAY FRAME: 1100000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0011000001
+Succeed0: 0000100000
+decision: 0008000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0001000000
+DISPLAY FRAME: 0000001100
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1100000000
+Succeed0: 0011000001
+decision: 0000800000
+dir: 2
+DISPLAY FRAME: 0000100000
+Received 2 from user.
+im handleread, current pos is: 5
+DISPLAY FRAME: 0000100009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 1100000000
+decision: 0000800000
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0000800000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0011000001
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000001100
+Succeed1: 0001000000
+Succeed0: 0000000000
+decision: 0000800000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000001100
+Succeed0: 0001000000
+decision: 0000800000
+DISPLAY FRAME: 0000001100
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000010000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0000100000
+Succeed0: 0000001100
+decision: 0000800000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000010000
+Succeed0: 0000100000
+decision: 0008000000
+dir: 1
+DISPLAY FRAME: 0000000000
+Received 1 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000010000
+decision: 0008000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0008000000
+DISPLAY FRAME: 0000110000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0011000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 1100000000
+Succeed1: 0011000001
+Succeed0: 0000100000
+decision: 0008000000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 1100000000
+Succeed0: 0011000001
+decision: 0000800000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 5
+DISPLAY FRAME: 0001000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 1100000000
+decision: 0000800000
+DISPLAY FRAME: 0000001100
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 0000800000
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000001100
+Succeed1: 0001000000
+Succeed0: 0000000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000001100
+Succeed0: 0001000000
+decision: 0000800000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0000100000
+Succeed0: 0000001100
+decision: 0000800000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000010000
+Succeed0: 0000100000
+decision: 0008000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000010000
+decision: 0008000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0008000000
+DISPLAY FRAME: 0000110000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0011000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0011000001
+Succeed0: 0000100000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0011000001
+decision: 0000800000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 5
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 0000800000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000001100
+Succeed1: 0001000000
+Succeed0: 0000000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000001100
+Succeed0: 0001000000
+decision: 0000800000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0000100000
+Succeed0: 0000001100
+decision: 0000800000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000010000
+Succeed0: 0000100000
+decision: 0008000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 6
+DISPLAY FRAME: 0001000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000010000
+decision: 0008000000
+DISPLAY FRAME: 0000001100
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0008000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000110000
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000110000
+Succeed0: 0000100000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000110000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 0008000000
+DISPLAY FRAME: 0000010000
+input frame len: 30
+Succeed2: 0000001100
+Succeed1: 0001000000
+Succeed0: 0000000000
+decision: 0008000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000001100
+Succeed0: 0001000000
+decision: 0080000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 7
+DISPLAY FRAME: 0000010009
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0000100000
+Succeed0: 0000001100
+decision: 0080000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000010000
+Succeed0: 0000100000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000010000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0800000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000010009
+input frame len: 30
+Succeed2: 0000110000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000110000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000110000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000110000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0001000000
+DISPLAY FRAME: 0000001100
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0000000000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000001100
+Succeed1: 0001000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000001100
+Succeed0: 0001000000
+decision: 8000000000
+DISPLAY FRAME: 0000110000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0000100000
+Succeed0: 0000001100
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0001000000
+DISPLAY FRAME: 0000001100
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000010000
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000010000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000110000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000110000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000110000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000110000
+decision: 8000000000
+DISPLAY FRAME: 0000001100
+DISPLAY FRAME: 0101010000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000001100
+Succeed1: 0001000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000001100
+Succeed0: 0001000000
+decision: 8000000000
+DISPLAY FRAME: 0000110000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0000100000
+Succeed0: 0000001100
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000010000
+Succeed0: 0000100000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000010000
+decision: 8000000000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000110000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000110000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0101010000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000110000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000001100
+Succeed1: 0001000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000001100
+Succeed0: 0001000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000001100
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000110000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000110000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000110000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000110000
+decision: 8000000000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000001100
+Succeed1: 0001000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0101010000
+Succeed1: 0000001100
+Succeed0: 0001000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101010000
+Succeed0: 0000001100
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0101010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0101010000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000110000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000110000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000110000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0101010000
+Succeed1: 0000000000
+Succeed0: 0001000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101010000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0101010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000110000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000110000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000110000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000110000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000100001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 8000000000
+DISPLAY FRAME: 0101010000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000001
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000110000
+input frame len: 30
+Succeed2: 0101010000
+Succeed1: 0000000000
+Succeed0: 0000000001
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000100001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101010000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0101010000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0101010000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000110000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000110000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000100001
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000110000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000110000
+decision: 8000000000
+DISPLAY FRAME: 0101010000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100001
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100001
+Succeed0: 0100000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000001
+Succeed0: 0000100001
+decision: 8000000000
+DISPLAY FRAME: 0100000001
+input frame len: 30
+Succeed2: 0101010000
+Succeed1: 0000000000
+Succeed0: 0000000001
+decision: 8000000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101010000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000100001
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0101010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000110000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0101010000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000110000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0000110000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100001
+Succeed0: 0000100000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000001
+Succeed0: 0000100001
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0101010000
+Succeed1: 0000000000
+Succeed0: 0000000001
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101010000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0100000001
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0101010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000110000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000100001
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000110000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000100000
+Succeed0: 0000110000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100001
+Succeed1: 0000100000
+Succeed0: 0000100000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100001
+Succeed0: 0000100000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000001
+Succeed0: 0000100001
+decision: 8000000000
+input frame len: 30
+Succeed2: 0101010000
+Succeed1: 0000000000
+Succeed0: 0000000001
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101010000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0101010000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0101010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0100000001
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0100000001
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000100000
+Succeed0: 0100000001
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100001
+Succeed1: 0000100000
+Succeed0: 0000100000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100001
+Succeed0: 0000100000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000001
+Succeed0: 0000100001
+decision: 8000000000
+input frame len: 30
+Succeed2: 0101010000
+Succeed1: 0000000000
+Succeed0: 0000000001
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101010000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0101010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0100000001
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0100000001
+Succeed0: 0100000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000100000
+Succeed0: 0100000001
+decision: 8000000000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 0000100001
+Succeed1: 0000100000
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0100000001
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000100001
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100001
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0101010000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000001
+Succeed0: 0000100001
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000100
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0101010000
+Succeed1: 0000000000
+Succeed0: 0000000001
+decision: 8000000000
+DISPLAY FRAME: 0100000001
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101010000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000100001
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0101010000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0101010000
+DISPLAY FRAME: 1000100001
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000100
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000100
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0100000001
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0100000001
+Succeed1: 0100000000
+Succeed0: 0000000100
+decision: 8000000000
+DISPLAY FRAME: 0000100001
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0100000001
+Succeed0: 0100000000
+decision: 8000000000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000100000
+Succeed0: 0100000001
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000100001
+Succeed1: 0000100000
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 1000100001
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000100
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100001
+Succeed0: 0000100000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000001
+Succeed0: 0000100001
+decision: 8000000000
+DISPLAY FRAME: 0100000001
+input frame len: 30
+Succeed2: 0101010000
+Succeed1: 0000000000
+Succeed0: 0000000001
+decision: 8000000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0101010000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000100001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0101010000
+decision: 8000000000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000100
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0100000001
+Succeed1: 0100000000
+Succeed0: 0000000100
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0100000001
+Succeed0: 0100000000
+decision: 8000000000
+DISPLAY FRAME: 1000100001
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000100000
+Succeed0: 0100000001
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100001
+Succeed1: 0000100000
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 0000000100
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100001
+Succeed0: 0000100000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000001
+Succeed0: 0000100001
+decision: 8000000000
+input frame len: 30
+Succeed2: 0101010000
+Succeed1: 0000000000
+Succeed0: 0000000001
+decision: 8000000000
+DISPLAY FRAME: 0100000001
+input frame len: 30
+Succeed2: 1000100001
+Succeed1: 0101010000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000100001
+Succeed0: 0101010000
+decision: 8000000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000100001
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000000000
+Succeed0: 1000100001
+decision: 0800000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000100009
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000100
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0100000001
+Succeed1: 0100000000
+Succeed0: 0000000100
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0100000001
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 0000011000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000011009
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000100000
+Succeed0: 0100000001
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100001
+Succeed1: 0000100000
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100001
+Succeed0: 0000100000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000001
+Succeed0: 0000100001
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000000001
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000100001
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000100001
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 1000100001
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000000000
+Succeed0: 1000100001
+decision: 0800000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 1000100009
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000100
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000001
+Succeed1: 0100000000
+Succeed0: 0000000100
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0100000001
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000100000
+Succeed0: 0100000001
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000100001
+Succeed1: 0000100000
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100001
+Succeed0: 0000100000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000001
+Succeed0: 0000100001
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000000001
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000100001
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000100001
+Succeed0: 0000001000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000000000
+Succeed0: 1000100001
+decision: 0800000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000000109
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000100
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0100000001
+Succeed1: 0100000000
+Succeed0: 0000000100
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0100000001
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000000109
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000100000
+Succeed0: 0100000001
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000100001
+Succeed1: 0000100000
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000011000
+Succeed1: 0000100001
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 0100000001
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000011000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000011000
+Succeed0: 0000100001
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 1000100001
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000011000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000100
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0100000001
+input frame len: 30
+Succeed2: 1000100001
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000100001
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000011000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000000000
+Succeed0: 1000100001
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 1000100001
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000100
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000000109
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000100
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0100000001
+input frame len: 30
+Succeed2: 0100000001
+Succeed1: 0100000000
+Succeed0: 0000000100
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0100000001
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 0000011000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000011009
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000100000
+Succeed0: 0100000001
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 1000100001
+input frame len: 30
+Succeed2: 0000011000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000100
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0001010000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000011000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000011000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1000100001
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000100001
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000011000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000000000
+Succeed0: 1000100001
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001000
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000001009
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000100
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0100000001
+Succeed1: 0100000000
+Succeed0: 0000000100
+decision: 0800000000
+DISPLAY FRAME: 1000100001
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0100000001
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 1000100009
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000100000
+Succeed0: 0100000001
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 0000011000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0001010000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000011000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000011000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000100001
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000100001
+Succeed0: 0000001000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000000000
+Succeed0: 1000100001
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000011000
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000011009
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000100
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000001
+Succeed1: 0100000000
+Succeed0: 0000000100
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000001
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000000000
+Succeed0: 0100000001
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 1000100001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000011000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0000010000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000011000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000011000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000100001
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000100001
+Succeed0: 0000001000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000000000
+Succeed0: 1000100001
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0000000000
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000100
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0001010000
+input frame len: 30
+Succeed2: 0001010000
+Succeed1: 0100000000
+Succeed0: 0000000100
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000000000
+Succeed0: 0001010000
+decision: 8000000000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000011000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000011000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000011000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000100001
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000100001
+Succeed0: 0000001000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000000000
+Succeed0: 1000100001
+decision: 0800000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000100
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000011000
+input frame len: 30
+Succeed2: 0001010000
+Succeed1: 0000000000
+Succeed0: 0000000100
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000000000
+Succeed0: 0001010000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000011000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000011000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000011000
+decision: 0800000000
+input frame len: 30
+Succeed2: 1000100001
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000100001
+Succeed0: 0000001000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0000000000
+Succeed0: 1000100001
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000010000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0001010000
+Succeed1: 0000000000
+Succeed0: 0000010000
+decision: 0800000000
+DISPLAY FRAME: 1000100001
+DISPLAY FRAME: 0001000100
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0001010000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000000000
+Succeed0: 0001010000
+decision: 0800000000
+DISPLAY FRAME: 0000011000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0001000100
+DISPLAY FRAME: 0000010000
+input frame len: 30
+Succeed2: 0000011000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0001010000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000011000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000011000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000011000
+decision: 0800000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0001000100
+input frame len: 30
+Succeed2: 1000100001
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0001010000
+input frame len: 30
+Succeed2: 0001000100
+Succeed1: 1000100001
+Succeed0: 0000001000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0001000100
+Succeed0: 1000100001
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000011000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000010000
+Succeed0: 0001000100
+decision: 0800000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0001010000
+Succeed1: 0000000000
+Succeed0: 0000010000
+decision: 0800000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0001000100
+DISPLAY FRAME: 0000010000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000000000
+Succeed0: 0001010000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0001010000
+input frame len: 30
+Succeed2: 0000011000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000011000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000011000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0001000100
+Succeed1: 0010000000
+Succeed0: 0000001000
+decision: 0800000000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0001000100
+Succeed0: 0010000000
+decision: 0800000000
+DISPLAY FRAME: 0001000100
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000010000
+Succeed0: 0001000100
+decision: 0800000000
+DISPLAY FRAME: 0000010000
+input frame len: 30
+Succeed2: 0001010000
+Succeed1: 0000000000
+Succeed0: 0000010000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0001010000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000000000
+Succeed0: 0001010000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000011000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000011000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 1000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000011000
+decision: 0800000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0001000100
+Succeed1: 0010000000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 0010000000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0010000009
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0001000100
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0001000100
+DISPLAY FRAME: 0000010000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000010000
+Succeed0: 0001000100
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001010000
+Succeed1: 0000000000
+Succeed0: 0000010000
+decision: 8000000000
+DISPLAY FRAME: 0001010000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000000000
+Succeed0: 0001010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000011000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000011000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 1000000000
+Succeed0: 0000011000
+decision: 8000000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0100000000
+Succeed0: 1000000000
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0000000000
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0001000100
+Succeed1: 0010000000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 1000000000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 1000000009
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0001000100
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000010000
+Succeed0: 0001000100
+decision: 8000000000
+input frame len: 30
+Succeed2: 0001010000
+Succeed1: 0000000000
+Succeed0: 0000010000
+decision: 8000000000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000000000
+Succeed0: 0001010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0001000100
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000010000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0100000000
+Succeed0: 1000000000
+decision: 0800000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000010009
+input frame len: 30
+Succeed2: 0001000100
+Succeed1: 0010000000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000010009
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0001000100
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000010000
+Succeed0: 0001000100
+decision: 8000000000
+input frame len: 30
+Succeed2: 0001010000
+Succeed1: 0000000000
+Succeed0: 0000010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0000000000
+Succeed0: 0001010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0010000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000000000
+Succeed0: 0010000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 1000000000
+decision: 0800000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0100000000
+Succeed0: 1000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0001000100
+Succeed1: 0010000000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0001000100
+Succeed0: 0010000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000010000
+Succeed0: 0001000100
+decision: 8000000000
+input frame len: 30
+Succeed2: 0001010000
+Succeed1: 0000000000
+Succeed0: 0000010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001010000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0001010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0001010000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 1000000000
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+DISPLAY FRAME: 0100000000
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0100000009
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0001000100
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0100000000
+Succeed0: 1000000000
+decision: 0800000000
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0001000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0001000100
+Succeed1: 0010000000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 1000000009
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0001000100
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000010000
+Succeed0: 0001000100
+decision: 8000000000
+DISPLAY FRAME: 0010000000
+DISPLAY FRAME: 0001000100
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 1000000000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0001010000
+Succeed1: 0000000000
+Succeed0: 0000010000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0001010000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 1000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0001010000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 8000000000
+DISPLAY FRAME: 0001000100
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 1000000000
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0001000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 1000000009
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0100000000
+Succeed0: 1000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001000100
+Succeed1: 0010000000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 1000000000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 1000000009
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0001000100
+Succeed0: 0010000000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0010000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000010000
+Succeed0: 0001000100
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 0000000000
+Succeed0: 0000010000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0001000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0001000000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 1000000000
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 1000000009
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0100000000
+Succeed0: 1000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0001000100
+Succeed1: 0010000000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 0100000000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0100000009
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0001000100
+Succeed0: 0010000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000010000
+Succeed0: 0001000100
+decision: 8000000000
+DISPLAY FRAME: 0000000100
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 1000000000
+Succeed0: 0000010000
+decision: 8000000000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0001000000
+Succeed0: 1000000000
+decision: 0800000000
+dir: 2
+Received 2 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0001000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0001000000
+decision: 0800000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 0080000000
+dir: 2
+DISPLAY FRAME: 1000000000
+DISPLAY FRAME: 0000000000
+Received 2 from user.
+im handleread, current pos is: 7
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 1000000000
+decision: 0080000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0100000000
+Succeed0: 1000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0001000100
+Succeed1: 0010000000
+Succeed0: 0100000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0001000100
+Succeed0: 0010000000
+decision: 0800000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000001009
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0001000100
+decision: 0800000000
+DISPLAY FRAME: 0000000100
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0001000000
+Succeed0: 1000000000
+decision: 0800000000
+DISPLAY FRAME: 1000000000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0001000000
+decision: 0800000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 0080000000
+dir: 2
+DISPLAY FRAME: 1000000000
+Received 2 from user.
+im handleread, current pos is: 7
+DISPLAY FRAME: 1000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 1000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0010000000
+Succeed1: 0100000000
+Succeed0: 1000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0010000000
+Succeed0: 0100000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0010000000
+decision: 0800000000
+dir: 1
+Received 1 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0800000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0001000000
+Succeed0: 1000000000
+decision: 0800000000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0001000000
+decision: 0800000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 0080000000
+dir: 2
+DISPLAY FRAME: 0000000000
+Received 2 from user.
+im handleread, current pos is: 7
+DISPLAY FRAME: 0000000009
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 1000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0100000000
+Succeed0: 1000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000100
+Succeed0: 0100000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000100
+decision: 0080000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0001000000
+Succeed0: 1000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0001000000
+decision: 0080000000
+DISPLAY FRAME: 0001000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 1000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000001000
+Succeed0: 1000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000100
+Succeed0: 0000001000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000100
+decision: 0080000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0001000000
+Succeed0: 1000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0001000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000000000
+Succeed0: 1000000000
+decision: 0080000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000001
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0000000100
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000001000
+Succeed0: 0000000001
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000100
+Succeed0: 0000001000
+decision: 0080000000
+DISPLAY FRAME: 0001000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000100
+decision: 0080000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000100
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 1000000000
+DISPLAY FRAME: 0001000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0001000000
+Succeed0: 1000000000
+decision: 0080000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0001000000
+decision: 0080000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0000000100
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0001000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100000
+Succeed0: 1000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000001
+Succeed0: 0000100000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000001000
+Succeed0: 0000000001
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000100
+Succeed0: 0000001000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000100
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 1000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0001000000
+Succeed0: 1000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0001000000
+decision: 0080000000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 0080000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000001
+Succeed0: 0000100000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000010000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000001000
+Succeed0: 0000000001
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000100
+Succeed0: 0000001000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000100
+decision: 0080000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0001000000
+Succeed0: 1000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0100000000
+Succeed0: 0001000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0100000000
+decision: 0080000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000001
+Succeed0: 0000100000
+decision: 0080000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000001000
+Succeed0: 0000000001
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000100
+Succeed0: 0000001000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000100
+decision: 0080000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0001000000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0000000100
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0001000000
+Succeed0: 1000000000
+decision: 0080000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0001000000
+decision: 0080000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0080000000
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000001
+Succeed0: 0000100000
+decision: 0080000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000001000
+Succeed0: 0000000001
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000100
+Succeed0: 0000001000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000100
+decision: 0080000000
+input frame len: 30
+Succeed2: 1000000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 1000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000010000
+Succeed0: 1000000000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000010000
+decision: 0080000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0080000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000010000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000001
+Succeed0: 0000100000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000001000
+Succeed0: 0000000001
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000100
+Succeed0: 0000001000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000000100
+decision: 0080000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000010000
+Succeed0: 0100000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000010000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000001
+Succeed0: 0000100000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000001000
+Succeed0: 0000000001
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000100
+Succeed0: 0000001000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000000000
+Succeed0: 0000000100
+decision: 0080000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0100000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0100000000
+Succeed0: 0100000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000010000
+Succeed0: 0100000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000010000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000001
+Succeed0: 0000100000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000100
+Succeed1: 0000001000
+Succeed0: 0000000001
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000100
+Succeed0: 0000001000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000001000
+Succeed0: 0000000100
+decision: 0080000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0100000000
+Succeed0: 0000001000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0100000000
+Succeed0: 0100000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000010000
+Succeed0: 0100000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000010000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000001
+Succeed0: 0000100000
+decision: 0080000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000001000
+Succeed0: 0000000001
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000001000
+decision: 0080000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000001
+DISPLAY FRAME: 1010100000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0100000000
+Succeed0: 0000001000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0100000010
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0100000000
+Succeed0: 0100000000
+decision: 0080000000
+DISPLAY FRAME: 1010100000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000010000
+Succeed0: 0100000000
+decision: 0080000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0000010000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000010000
+decision: 0080000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0100000010
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 0080000000
+DISPLAY FRAME: 1010100000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0100000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000000001
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 0080000000
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0000100000
+input frame len: 30
+Succeed2: 1010100000
+Succeed1: 0000000001
+Succeed0: 0000100000
+decision: 0080000000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1010100000
+Succeed0: 0000000001
+decision: 0080000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 1010100000
+decision: 0800000000
+dir: 1
+DISPLAY FRAME: 0100000010
+DISPLAY FRAME: 1010100000
+DISPLAY FRAME: 0000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0100000000
+Received 1 from user.
+im handleread, current pos is: 8
+DISPLAY FRAME: 0100000009
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0100000000
+Succeed0: 0000001000
+decision: 0800000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0100000000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 0000010000
+DISPLAY FRAME: 0000100000
+Received 1 from user.
+im handleread, current pos is: 9
+DISPLAY FRAME: 0000100009
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000010000
+Succeed0: 0100000000
+decision: 8000000000
+DISPLAY FRAME: 0000100000
+DISPLAY FRAME: 0000000001
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000010000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+DISPLAY FRAME: 0100000010
+DISPLAY FRAME: 1010100000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+input frame len: 30
+Succeed2: 0100000010
+Succeed1: 0000100000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000001000
+input frame len: 30
+Succeed2: 1010100000
+Succeed1: 0100000010
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1010100000
+Succeed0: 0100000010
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+WTF 10100
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 1010100000
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0000010000
+WTF 10100
+DISPLAY FRAME: 0000000000
+WTF 10100
+DISPLAY FRAME: 0000100000
+WTF 10100
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0100000000
+Succeed0: 0000001000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0100000000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+DISPLAY FRAME: 0000000001
+WTF 10100
+DISPLAY FRAME: 0000001000
+WTF 10100
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000010000
+Succeed0: 0100000000
+decision: 8000000000
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000010000
+decision: 8000000000
+DISPLAY FRAME: 0100000010
+WTF 10100
+DISPLAY FRAME: 1010100000
+WTF 10100
+DISPLAY FRAME: 0000000000
+WTF 10100
+DISPLAY FRAME: 0000001000
+WTF 10100
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000000000
+Succeed0: 0000100000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+WTF 10100
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0100000000
+WTF 10100
+input frame len: 30
+Succeed2: 0100000010
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+WTF 10100
+DISPLAY FRAME: 0000000000
+WTF 10100
+input frame len: 30
+Succeed2: 1010100000
+Succeed1: 0100000010
+Succeed0: 0000001000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+WTF 10100
+DISPLAY FRAME: 0000000000
+WTF 10100
+DISPLAY FRAME: 0000000000
+WTF 10100
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 1010100000
+Succeed0: 0100000010
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+WTF 10100
+input frame len: 30
+Succeed2: 0000001000
+Succeed1: 0000000000
+Succeed0: 1010100000
+decision: 0800000000
+dir: 2
+DISPLAY FRAME: 0000000000
+WTF 10100
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0000001000
+Succeed0: 0000000000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0100000000
+Succeed1: 0100000000
+Succeed0: 0000001000
+decision: 0800000000
+input frame len: 30
+Succeed2: 0000010000
+Succeed1: 0100000000
+Succeed0: 0100000000
+decision: 8000000000
+dir: 1
+input frame len: 30
+Succeed2: 0000100000
+Succeed1: 0000010000
+Succeed0: 0100000000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+WTF 10100
+input frame len: 30
+Succeed2: 0000000000
+Succeed1: 0000100000
+Succeed0: 0000010000
+decision: 8000000000
+DISPLAY FRAME: 0000000000
+WTF 10100

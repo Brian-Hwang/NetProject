@@ -66,27 +66,28 @@ min_element(std::vector<std::pair<uint8_t, uint8_t>>::iterator begin,
 }
 
 uint8_t moving_algorithm(std::string& input_frame, int current_pos) {
+    std::cout << "input frame len: " << input_frame.size() << std::endl;
     //std::cout << "hello i'm algorithm.\n";
     char upper0[11] {};
-    if (input_frame.copy(upper0, 10, 80) != 10) {
+    if (input_frame.copy(upper0, 10, 0) != 10) {
         std::cerr << "error at string copy.0" << std::endl;
         exit(1);
     }
     
     char upper1[11] {};
-    if (input_frame.copy(upper1, 10, 70) != 10) {
+    if (input_frame.copy(upper1, 10, 10) != 10) {
         std::cerr << "error at string copy.1" << std::endl;
         exit(1);
     }
 
     char upper2[11] {};
-    if (input_frame.copy(upper2, 10, 60) != 10) {
+    if (input_frame.copy(upper2, 10, 20) != 10) {
         std::cerr << "error at string copy.1" << std::endl;
         exit(1);
     }
-    std::cout << "Succeed0: " << upper0 << std::endl;
-    std::cout << "Succeed1: " << upper1 << std::endl;
     std::cout << "Succeed2: " << upper2 << std::endl;
+    std::cout << "Succeed1: " << upper1 << std::endl;
+    std::cout << "Succeed0: " << upper0 << std::endl;
 
     /****
      * 1101101011
@@ -258,15 +259,6 @@ namespace ns3
                 SendPacket(from, buf);
                 delete[] buf;
             }
-        }
-        else {
-                //std::cout << "YEAH! SENDING " << static_cast<int>(direction) << std::endl;
-                std::cout << "dir: " << static_cast<int>(direction) << std::endl;
-                char *buf = new char[2];
-                buf[0] = direction;
-                buf[1] = '\0';
-                SendPacket(from, buf);
-                delete[] buf;
         }
 
         // User assumes that the character moved exactly what he has ordered

@@ -33,6 +33,8 @@ int main(int argc, char *argv[]){
     LogComponentEnable("PointToPointNetDevice", LOG_LEVEL_FUNCTION);
     LogComponentEnable("PointToPointChannel", LOG_LEVEL_FUNCTION);
 */
+      GlobalValue::Bind ("SimulatorImplementationType", 
+                     StringValue ("ns3::RealtimeSimulatorImpl"));
     std::string dr = "100Mbps";
     std::string delay = "1us";
 
