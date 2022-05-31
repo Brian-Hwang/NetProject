@@ -274,12 +274,12 @@ namespace ns3
 
             m_generateBricks = !m_generateBricks;
 
-            for(int i = 0; i < m_fieldSize*m_fieldSize; i++){
+            /*for(int i = 0; i < m_fieldSize*m_fieldSize; i++){
                 if(!(i % m_fieldSize))
                     std::cout << std::endl;
                 std::cout << m_lastFrame[i];
                 
-            }
+            }*/
 
 
         }
