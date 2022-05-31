@@ -13,7 +13,10 @@ using namespace ns3;
 static void Rxcontent(std::string context, Ptr<const Packet> p){
     uint8_t *buf = new uint8_t [1];
     p->CopyData(buf, 1);
-    NS_LOG_UNCOND("Received Packet! Contents: " << std::to_string(buf[0]));
+    Ptr<Packet> copyP = p->Copy();
+    SeqTsHeader hdr;
+    copyP->RemoveHeader(hdr);
+    NS_LOG_UNCOND("Change Sent at: " << hdr.GetTs().GetSeconds() <<"\tChange Received: " << Simulator::Now().GetSeconds());
     delete[] buf;
 }
 /*static void Txcontent(std::string context, Ptr<const Packet> p){
@@ -27,8 +30,8 @@ NS_LOG_COMPONENT_DEFINE("TestTeamProject");
 
 int main(int argc, char *argv[]){
 
-    LogComponentEnable("GameServer", LOG_LEVEL_ALL);
-    LogComponentEnable("GameUser", LOG_LEVEL_ALL);
+    //LogComponentEnable("GameServer", LOG_LEVEL_ALL);
+    //LogComponentEnable("GameUser", LOG_LEVEL_ALL);
     LogComponentEnable("TestTeamProject", LOG_LEVEL_ALL);
 /*    LogComponentEnable("UdpL4Protocol", LOG_LEVEL_ALL);
     LogComponentEnable("UdpSocket", LOG_LEVEL_FUNCTION);
@@ -43,7 +46,7 @@ int main(int argc, char *argv[]){
       GlobalValue::Bind ("SimulatorImplementationType", 
                      StringValue ("ns3::RealtimeSimulatorImpl"));
     std::string dr = "100Mbps";
-    std::string delay = "1us";
+    std::string delay = "1ms";
 
     NS_LOG_UNCOND("Test");
     NodeContainer nodes;

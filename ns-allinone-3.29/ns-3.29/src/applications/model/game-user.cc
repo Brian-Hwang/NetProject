@@ -13,6 +13,7 @@
 #include "ns3/udp-socket-factory.h"
 #include "ns3/game-user.h"
 #include "ns3/string.h"
+#include "ns3/seq-ts-header.h"
 
 uint8_t sub_abs_uint8(uint8_t a, uint8_t b) {
     return a > b ? a - b : b - a;
@@ -250,6 +251,7 @@ namespace ns3
             NS_LOG_DEBUG("Moving " << num_of_packet << " times to position " << static_cast<int>(move));
             //std::cout << "dir: " << static_cast<int>(direction) << std::endl;
                 //std::cout << "YEAH! SENDING " << static_cast<int>(direction) << std::endl;
+            
             char *buf = new char[2];
             buf[0] = direction;
             buf[1] = '\0';
@@ -279,6 +281,11 @@ namespace ns3
 
         //[TODO] Should this be 2?? Or rather strlen(payload)?
         Ptr<Packet> packet = Create<Packet>(buf, 2);
+        NS_LOG_DEBUG("Before Header");
+        SeqTsHeader hdr;
+        packet->AddHeader(hdr);
+        NS_LOG_DEBUG("After Header");
+            
 
         m_txTrace(packet);
 

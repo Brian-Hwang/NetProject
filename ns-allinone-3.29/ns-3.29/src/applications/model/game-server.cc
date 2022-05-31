@@ -277,7 +277,6 @@ namespace ns3
             {
                 m_totalRx++;
                 m_rxTrace(packet);
-
                 //extract payload
                 uint8_t *payload = new uint8_t[packet->GetSize()];
                 packet->CopyData(payload, packet->GetSize());
