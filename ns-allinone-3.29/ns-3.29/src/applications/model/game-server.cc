@@ -89,7 +89,8 @@ namespace ns3
           m_currPos(0),
           m_nextFrame(NULL),
           m_inFile(NULL),
-          m_outFile(NULL)
+          m_outFile(NULL),
+          m_generateBricks(true)
     {
         m_lastFrame = "";
         m_sendEvent = EventId();
@@ -265,11 +266,13 @@ namespace ns3
 
             //add 0s and 1s randomly
             for(int i = 0; i < m_fieldSize; i++){
-                if(((float)std::rand()/RAND_MAX) > 0.9)
+                if(m_generateBricks && ((float)std::rand()/RAND_MAX) > 0.9)
                     m_lastFrame.insert(0, "1");
                 else
                     m_lastFrame.insert(0, "0");
             }
+
+            m_generateBricks = !m_generateBricks;
 
             for(int i = 0; i < m_fieldSize*m_fieldSize; i++){
                 if(!(i % m_fieldSize))

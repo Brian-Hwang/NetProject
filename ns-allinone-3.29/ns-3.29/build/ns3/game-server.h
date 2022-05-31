@@ -74,6 +74,7 @@ namespace ns3
         std::ifstream m_inFile;
         std::ofstream m_outFile;
 
+        bool m_generateBricks;
 
 
         Address m_peerAddress;
