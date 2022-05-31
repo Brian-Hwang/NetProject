@@ -209,21 +209,15 @@ namespace ns3
     }
 
     void GameUser::SendResponse(Ptr<Socket> socket) {
-        NS_LOG_DEBUG("Huh?!?");
         NS_LOG_FUNCTION(this);
-        NS_LOG_DEBUG("Huh?!?");
 
         //Receive Packet Frame Here
         Ptr<Packet> packet;
         Address from;
-        NS_LOG_DEBUG("It is the creation of the payload array...");
         uint8_t *payload = NULL; 
-        NS_LOG_DEBUG("Created payload array...");
         while((packet = m_socket->RecvFrom(from))){
-            NS_LOG_DEBUG("Tried to receive data...");
             if(packet->GetSize() > 0){
                 payload = new uint8_t[packet->GetSize()];
-                NS_LOG_DEBUG("Successfully Received Data on user");
                 //m_totalRx++;
                 m_rxTrace(packet);
                 packet->CopyData(payload, packet->GetSize());

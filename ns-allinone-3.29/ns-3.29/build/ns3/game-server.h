@@ -36,9 +36,11 @@ namespace ns3
         virtual void StopApplication(void);
 
         void HandleRead(Ptr<Socket> socket);
-//        void ScheduleDisplay(void);
+        void ScheduleDisplay(void);
+        void ScheduleUpdate(void);
+        void UpdateBricks(void);
         void ScheduleTransmit(Time dt);
-        void Display(bool falldown);
+        void Display(void);
         char *NextFrame(uint16_t);
         void SendFrame(void);
 

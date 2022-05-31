@@ -38,8 +38,8 @@ namespace ns3
                                               UintegerValue(0),
                                               MakeUintegerAccessor(&GameServer::m_peerPort),
                                               MakeUintegerChecker<uint16_t>())
-                                .AddAttribute("Interval", "The time to wait between packets",
-                                              TimeValue (MilliSeconds(50)),
+                                .AddAttribute("IntervalBrick", "The time interval to update the bricks",
+                                              TimeValue (Seconds(0.5)),
                                               MakeTimeAccessor (&GameServer::m_interval),
                                               MakeTimeChecker())
                                 .AddAttribute("InFile", "The name of the input file to get data for calculation from.",
@@ -112,7 +112,7 @@ namespace ns3
         {
             m_inFile.open(m_inFilename);
 
-            NS_ASSERT_MSG(m_inFile, "Unable to open Input File.");
+            NS_ASSERT_MSG(m_inFile, "Unable to open Input File " << m_inFilename<<". ");
 
             m_entireMapStream << m_inFile.rdbuf();
             m_entireMapStream >> m_entireMap;
@@ -133,9 +133,12 @@ namespace ns3
 
         //Schedule Display first frame
         //ScheduleDisplay();
-        Display(true);
+        //Display(true);
         m_socket->SetRecvCallback(MakeCallback(&GameServer::HandleRead, this));
+        //ScheduleTransmit(Seconds(0.));
+        UpdateBricks();
         ScheduleTransmit(Seconds(0.));
+        ScheduleDisplay();
     }
 
     void GameServer::SendFrame(void){
@@ -156,9 +159,9 @@ namespace ns3
         m_txTrace(packet);
         m_socket->Send(packet);
 
-        Display(true);
+        //Display(true);
     }
-/*
+
     void GameServer::ScheduleDisplay(void)
     {
         NS_LOG_FUNCTION(this);
@@ -167,7 +170,15 @@ namespace ns3
             m_displayEvent = Simulator::Schedule(m_dispFreq, &GameServer::Display, this);
         }
     }
-    */
+    void GameServer::ScheduleUpdate(void)
+    {
+        NS_LOG_FUNCTION(this);
+        if (m_running)
+        {
+            m_displayEvent = Simulator::Schedule(m_interval, &GameServer::UpdateBricks, this);
+        }
+    }
+    
 
     void 
     GameServer::ScheduleTransmit (Time dt)
@@ -178,16 +189,16 @@ namespace ns3
     }
 
 
-    void GameServer::Display(bool falldown)
+    void GameServer::Display(void)
     {
         NS_LOG_FUNCTION(this);
 
         uint16_t dim = m_fieldSize * m_fieldSize;
 
-        NS_LOG_DEBUG("Next Frame is " << m_display_start << "|" << m_entireMap.size() << std::endl);
+        //NS_LOG_DEBUG("Next Frame is " << m_display_start << "|" << m_entireMap.size() << std::endl);
 
         std::string display_frame {};
-        if (falldown) {
+        /*if (falldown) {
             char buf[101];
             size_t nread = m_entireMap.copy(buf, 100, m_display_start);
             buf[nread] = '\0';
@@ -202,8 +213,8 @@ namespace ns3
         else {
             display_frame = m_lastFrame;
             display_frame[dim - m_fieldSize + 9] = '9';
-        }
-        
+        }*/
+        display_frame = m_lastFrame;
         //std::cout << "DISPLAY FRAME: " << display_frame.substr(90, 99) << std::endl;
         
         // write to outFile
@@ -213,13 +224,31 @@ namespace ns3
 
         if (m_display_start + 200 < m_entireMap.size())
         {
-            ScheduleTransmit(m_interval);
+            ScheduleTransmit(Seconds(0.));
+            ScheduleDisplay();
         }
         else {
             //std::cout << "WTF " << m_entireMap.size() << std::endl;
             StopApplication();
         }
         //std::cout << "hummm\n";
+    }
+
+    void GameServer::UpdateBricks(void){
+        NS_LOG_FUNCTION(this);
+        //Call this function every X seconds
+        //Update the value m_lastFrame (bad name)
+        char buf[101];
+        size_t nread = m_entireMap.copy(buf, 100, m_display_start);
+        buf[nread] = '\0';
+        m_lastFrame = buf;
+        if (nread < 100) {
+            std::string fill_str (100-nread, '0');
+            m_lastFrame += fill_str;
+        }
+        m_display_start += 100;
+
+        ScheduleUpdate();
     }
 
     void GameServer::HandleRead(Ptr<Socket> socket)
@@ -235,7 +264,7 @@ namespace ns3
                 m_rxTrace(packet);
                 uint8_t *payload = new uint8_t[packet->GetSize()];
                 packet->CopyData(payload, packet->GetSize());
-                NS_LOG_DEBUG("Received " << static_cast<int>(payload[0]) << " from user.");
+                //NS_LOG_DEBUG("Received " << static_cast<int>(payload[0]) << " from user.");
                 //std::cout << "Received " << static_cast<int>(payload[0]) << " from user." << std::endl;
 
                 //m_currPos = static_cast<int>(payload[0]);
@@ -255,7 +284,7 @@ namespace ns3
                 delete[] payload;
             }
         }
-        Display(false); 
+        //Display(false); 
     }
 
     void GameServer::StopApplication()

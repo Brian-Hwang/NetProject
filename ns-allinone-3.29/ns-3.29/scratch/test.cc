@@ -16,6 +16,12 @@ static void Rxcontent(std::string context, Ptr<const Packet> p){
     NS_LOG_UNCOND("Received Packet! Contents: " << std::to_string(buf[0]));
     delete[] buf;
 }
+/*static void Txcontent(std::string context, Ptr<const Packet> p){
+    uint8_t *buf = new uint8_t [1];
+    p->CopyData(buf, 1);
+    NS_LOG_UNCOND("Sent Packet! Contents: " << std::to_string(buf[0]));
+    delete[] buf;
+}*/
 
 NS_LOG_COMPONENT_DEFINE("TestTeamProject");
 
@@ -69,14 +75,15 @@ int main(int argc, char *argv[]){
     userApp.Start(Seconds(1.0));
     //userApp.Stop(Seconds(40.0));
 
-    GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(0), port)), port, "/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
+    GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(0), port)), port, "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
     server.SetAttribute("FileIO", BooleanValue(true));
-    server.SetAttribute("InFile", StringValue("/home/woodong/ntest/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt"));
+    server.SetAttribute("InFile", StringValue("/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt"));
     server.SetAttribute("DisplayFreq", TimeValue(Seconds(0.05)));
     ApplicationContainer serverApp = server.Install(nodes.Get(1));
     serverApp.Start(Seconds(1.0));
     //serverApp.Stop(Seconds(40.0));
     serverApp.Get(0)->TraceConnect("Rx", "Arrived", MakeCallback(&Rxcontent));    
+    //userApp.Get(0)->TraceConnect("Tx", "Sent", MakeCallback(&Txcontent));    
 
     Simulator::Run();
     Simulator::Stop(Seconds(400.0));
