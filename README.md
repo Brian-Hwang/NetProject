@@ -15,7 +15,7 @@ In our project, our own-made AI tries to send the movement control to the server
 
 You can run the base version of ✨Dodge!✨ with the following command:
 
-    ./waf --run asdf
+    ./waf --run scratch/dodge
 Once the application is done running, the you can check the game visualization with the following command:
 
     .py ASDF
