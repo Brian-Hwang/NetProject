@@ -15,6 +15,7 @@
 #include "ns3/string.h"
 #include "ns3/seq-ts-header.h"
 
+
 uint8_t sub_abs_uint8(uint8_t a, uint8_t b) {
     return a > b ? a - b : b - a;
 }
@@ -66,75 +67,317 @@ min_element(std::vector<std::pair<uint8_t, uint8_t>>::iterator begin,
     return min;
 }
 
-uint8_t moving_algorithm(std::string& input_frame, int current_pos) {
-    //std::cout << "input frame len: " << input_frame.size() << std::endl;
-    //std::cout << "hello i'm algorithm.\n";
-    char upper0[11] {};
-    if (input_frame.copy(upper0, 10, 0) != 10) {
-        std::cerr << "error at string copy.0" << std::endl;
-        exit(1);
-    }
+int8_t moving_algorithm(std::string& input_frame, int current_position)
+{
+
+    // move right = 2
+    // move left = 1
+    // stay = 0
+    uint8_t move = 0;
+    std::string oneline = "3333333333";
     
-    char upper1[11] {};
-    if (input_frame.copy(upper1, 10, 10) != 10) {
-        std::cerr << "error at string copy.1" << std::endl;
-        exit(1);
-    }
+    int number_of_obstacles_in_left = 0;
+    int number_of_obstacles_in_right = 0;
+    int number_of_obstacles_on_current_position = 0;
+    //for (int i = 2; i>=0; i--)
+    for (int i = 0; i < 3; i++) {
+        std::cout << "inputframe:" << input_frame << std::endl;
+        for (int j = 0; j < 10; j++) {
+            
+            oneline[j] = input_frame[i * 10 + j];
+            if (input_frame[i * 10 + j] == '1') {
+                if (j < 4) {
+                    number_of_obstacles_in_left += 1;
+                }
+                else if (j > 5) {
+                    number_of_obstacles_in_right += 1;
 
-    char upper2[11] {};
-    if (input_frame.copy(upper2, 10, 20) != 10) {
-        std::cerr << "error at string copy.1" << std::endl;
-        exit(1);
-    }
-    //std::cout << "Succeed2: " << upper2 << std::endl;
-    //std::cout << "Succeed1: " << upper1 << std::endl;
-    //std::cout << "Succeed0: " << upper0 << std::endl;
+                }
+                else {
+                    number_of_obstacles_on_current_position += 1;
+                }
 
-    /****
-     * 1101101011
-     * 0111010101
-     * 1000101011
-     *     8
-     *  aaa a a
-     * b   b b b
-     *   c  c c
-     * the character finds the optimal tiles to move by examine the upper three blocks
-     * "safe" tile means that when we are on it, we will survive at the next "tic"
-     */
+            }
 
-    std::vector<uint8_t> upper2_safe {};
-    for (uint8_t i = 0; i != 10; ++i)
-        if (upper2[i] == '0') upper2_safe.push_back(i);
+        }
+        std::cout << "number of obstacles in left" << number_of_obstacles_in_left << std::endl;
+        // if current position is same as the wall.
+        // and obstacle is on top of the characters head
+        // -> MOVE LEFT OR RIGHT
+        // 
+        //        100000000
+        //        8
 
-    std::vector<std::pair<uint8_t, uint8_t>> upper0_safe {};
-    for (uint8_t i = 0; i != 10; ++i)
-        if (upper0[i] == '0')
-            upper0_safe.emplace_back(i, 3 * sub_abs_uint8(i, current_pos));
+        //        100000101
+        //                8
+        std::cout << "oneline:" << oneline << std::endl;
+        std::cout << "oneline[current_position:" << oneline[current_position] << std::endl;
+        
+        if (i == 2) {
+            if (current_position == 9) {
+                if (oneline[current_position] == '1') {
+                    move = 1;
+                    
+                    return move;
+                }
 
-    std::vector<std::pair<uint8_t, uint8_t>> upper1_safe {};
-    for (uint8_t i = 0; i != 10; ++i)
-        if (upper1[i] == '0') {
-            std::vector<uint8_t> temp = sub_each(upper2_safe, i);
-            auto min = min_element(std::begin(temp), std::end(temp));
-            upper1_safe.emplace_back(i, *min);
+            }
+            else if (current_position == 0) {
+                if (oneline[current_position] == '1') {
+                    move = 2;
+                    return move;
+                }
+            }
         }
 
-    std::vector<std::pair<uint8_t, uint8_t>> decision {};
-    for (auto& i : upper0_safe) {
-        std::vector<uint8_t> temp = sub_each(upper1_safe, i.first);
-        auto min = min_element(std::begin(temp), std::end(temp));
-        decision.emplace_back(i.first,
-                              i.second + 2 * (*min) + upper1_safe[std::distance(temp.begin(), min)].second);
-    }
+        // if current position is same as the wall.
+        // and moving results death
+        // -> STAY
+        // 
+        //        011000000
+        //        8
 
-    uint8_t dec = min_element(decision.begin(), decision.end())->first; 
-    std::string for_display {"0000000000"};
-    for_display.replace(static_cast<int>(dec), 1, "8");
-    //std::cout << "decision: " << for_display << std::endl;
-    //return min_element(decision.begin(), decision.end())->first;
-    return dec;
+        //        100000110
+        //                8
+
+        if (i == 2) {
+            if (current_position == 9) {
+                if (oneline[current_position - 1] == '1') {
+                    move = 0;
+                    return move;
+                }
+
+            }
+            else if (current_position == 0) {
+                if (oneline[current_position + 1] == '1') {
+                    move = 0;
+                    return move;
+                }
+            }
+        }
+         
+        if (i == 2) {
+
+        // two steps further , evade three horizontal blocks 000.
+            if (current_position > 0 && current_position < 9) {
+
+
+                std::string sampleline3 = "3333333333";
+                for ( int eds = 0; eds<10; eds++){
+
+                    sampleline3[eds] = input_frame[1*10 + eds];
+                    
+                }
+                if (sampleline3[current_position] == '1'){
+
+                    
+                    if (sampleline3[current_position-1] == '1' && sampleline3[current_position+1] == '1'){
+                        if (current_position < 8 && current_position > 4){
+                            if (oneline[current_position+1] != '1'){
+                                move = 2;
+                                return move;
+                            
+                            }
+                        
+                        }
+                        if (current_position > 2 && current_position < 5){
+                            if (oneline[current_position-1] != '1'){
+                                move = 1;
+                                return move;
+                            }
+                        
+                        }
+                        
+                        
+                        
+
+                    
+                    }
+                }
+
+            }
+        }  
+         
+        if (i == 2) {
+
+        // two steps further 
+            if (current_position > 0 && current_position < 9) {
+
+
+                std::string sampleline2 = "3333333333";
+                for ( int eds = 0; eds<10; eds++){
+
+                    sampleline2[eds] = input_frame[1*10 + eds];
+                    
+                }
+                if (sampleline2[current_position] == '1'){
+
+                       
+                    if (oneline[current_position-1] == '1' && oneline[current_position+1] == '1'){
+                                              
+                        if (current_position < 8){
+                            if (oneline[current_position+2] != '1'){
+                                move = 2;
+                                return move;
+                            }
+                                
+                        }
+                        if (current_position > 1){
+                            if (oneline[current_position-2] != '1'){
+                                move = 1;
+                                return move;
+                            }
+                        }
+                        
+                        
+
+                    
+                    }
+                }
+
+            }
+        }     
+
+
+
+        // if two obstacles exist in the side 
+        // -> STAY
+
+        //        100010101
+        //             8
+        if (i == 2) {
+
+            if (current_position > 0 && current_position < 9) {
+                if (oneline[current_position - 1] == '1' && oneline[current_position + 1] == '1') {
+                    move = 0;
+                    return move;
+
+                    std::cout << "\t\t\t\t\t\t" << "sidebyside" << std::endl;
+                }
+            }
+        }
+
+        // if obstacle is on top of the characters head
+        // if choosing wrong direction may cause death
+        // -> MOVE LEFT OR RIGHT
+
+        //        100011001
+        //             8
+
+        //        100001101
+        //             8
+        if (i == 2) {
+            if (current_position > 0 && current_position < 9) {
+                if (oneline[current_position] == '1') {
+                    if (oneline[current_position + 1] == '1') {
+                        move = 1;
+                        
+
+                        return move;
+                    }
+                    else if (oneline[current_position - 1] == '1') {
+                        move = 2;
+                        return move;
+                    }
+
+                   // if obstacle on top of head...
+                    else{
+                     if (oneline[current_position+1] != '1'){
+                        move = 2;
+                        std::cout << "\t\t\t\t\t\t" << "must move right" << std::endl;
+                        
+                        
+                        
+                        // if moving right will eventually cause death, move left
+                        std::string sampleline = "3333333333";
+                        for (int ed = 0; ed<10; ed++){
+                            sampleline[ed] = input_frame[1 * 10 + ed];
+                        } 
+                        if (current_position < 8){
+                            if (sampleline[current_position+1] == '1'){
+                                move = 1;
+                                return move;
+                            }
+                        }
+
+                        //oneline[j] = input_frame[i * 10 + j];                            
+                        return move;
+                    }
+                     if (oneline[current_position-1] !='1'){
+                        std::cout << "\t\t\t\t\t\t" << "must move left" << std::endl;
+                        move = 1;
+                        return move;
+                     }
+
+
+                    }
+                }
+
+            }
+        }
+       
+        /*
+        if ( i == 2){
+
+
+            if (current_position > 2 && current_position < 7 ){
+                 std::cout << "\t\t\t\t\t\t" << "freeposition" << std::endl;
+                 
+
+                if (number_of_obstacles_in_left < number_of_obstacles_in_right) {
+
+                    move = 2;
+        //move = 1
+                    return move;
+            }
+                if (number_of_obstacles_in_left > number_of_obstacles_in_right) {
+
+                    move = 1;
+                    return move;
+                }
+    
+    
+            }   
+    
+        } 
+        */
+
+    }
+    
+    std::cout << "\t\t\t\t\t\t" << "noevent" << std::endl;
+
+    /* 
+    if ( i == 2){
+
+
+        if (current_position > 2 && current_position < 7 ){
+
+
+            if (number_of_obstacles_in_left < number_of_obstacles_in_right) {
+
+                move = 2;
+        //move = 1
+                return move;
+            }
+            if (number_of_obstacles_in_left > number_of_obstacles_in_right) {
+
+                move = 1;
+                return move;
+            }
+    
+    
+        }   
+    
+    }
+   */
+
+    move = 0;
+    return move;
+    // if not returned until here, error.
+
 }
 
+    
 namespace ns3
 {
 
@@ -239,11 +482,27 @@ namespace ns3
         // calculate the desired position to move on
         //std::cout << "algo input frame len: " << input_frame.size() << std::endl;
         int8_t move = moving_algorithm(input_frame, m_currPos);
+        
+
+        int sample_move = static_cast<int> (move);
+        if (sample_move == 1){
+             move = m_currPos - 1;
+        }
+        else if (sample_move == 2){
+            move = m_currPos + 1;    
+        }
+        else if (sample_move == 0){
+            move = m_currPos;
+        }
+
 
         // number of packet == number of movement 
         // yeah the character will move one tile at a time
         // direction -> left = 1, right = 2
         uint8_t direction = 0;
+
+        
+
         int num_of_packet = 0;
         NS_LOG_DEBUG("Current Position: " << static_cast<int>(m_currPos) << "\tDesired Position: " << static_cast<int>(move));
         //std::cout << "num of packet to send: " << num_of_packet << std::endl;
