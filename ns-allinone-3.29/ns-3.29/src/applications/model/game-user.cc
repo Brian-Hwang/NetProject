@@ -278,6 +278,7 @@ namespace ns3
             buf[i] = (uint8_t)payload[i];
 
         NS_LOG_DEBUG("Converted char to " << buf);
+        NS_LOG_DEBUG("Sending " << payload);
 
         //[TODO] Should this be 2?? Or rather strlen(payload)?
         Ptr<Packet> packet = Create<Packet>(buf, 2);

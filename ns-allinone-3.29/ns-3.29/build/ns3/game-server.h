@@ -13,6 +13,7 @@
 #include "ns3/uinteger.h"
 #include "ns3/string.h"
 #include "ns3/nstime.h"
+#include "ns3/traced-value.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -53,7 +54,7 @@ namespace ns3
         bool m_running;
         uint8_t m_fieldSize;
         bool m_fileIO;
-        uint8_t m_currPos;
+        TracedValue<uint8_t> m_currPos;
         std::stringstream m_entireMapStream;
         std::string m_entireMap;
         std::string m_lastFrame;

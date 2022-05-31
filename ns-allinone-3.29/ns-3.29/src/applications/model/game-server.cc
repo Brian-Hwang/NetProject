@@ -12,6 +12,7 @@
 #include "ns3/trace-source-accessor.h"
 #include "ns3/udp-socket-factory.h"
 #include "ns3/game-server.h"
+#include "ns3/seq-ts-header.h"
 #include <algorithm>
 
 namespace ns3
@@ -73,7 +74,9 @@ namespace ns3
                                 .AddTraceSource("Rx", "A packet has been received",
                                                 MakeTraceSourceAccessor(&GameServer::m_rxTrace), "ns3::Packet::TracedCallback")
                                 .AddTraceSource("Tx", "A packet has been sent",
-                                                MakeTraceSourceAccessor(&GameServer::m_txTrace), "ns3::Packet::TracedCallback");
+                                                MakeTraceSourceAccessor(&GameServer::m_txTrace), "ns3::Packet::TracedCallback")
+                                .AddTraceSource("Position", "The current position of the player",
+                                                MakeTraceSourceAccessor(&GameServer::m_currPos), "ns3::Packet::TracedCallback");
         return tid;
     }
 
@@ -277,21 +280,24 @@ namespace ns3
             {
                 m_totalRx++;
                 m_rxTrace(packet);
+                SeqTsHeader hdr;
+                packet->RemoveHeader(hdr);
                 //extract payload
                 uint8_t *payload = new uint8_t[packet->GetSize()];
                 packet->CopyData(payload, packet->GetSize());
-
-
+                NS_LOG_DEBUG("About to Move " + std::to_string(static_cast<int>(payload[0])));
                 //adjust player position accordingly
                 if (static_cast<int>(payload[0]) == 2)
                 {
-                    m_currPos = (m_currPos + 1 > m_fieldSize - 1) ? m_fieldSize - 1
-                                                                  : m_currPos + 1;
+                    NS_LOG_DEBUG("Move Right");
+                    m_currPos = (static_cast<uint8_t>(m_currPos) + 1 > m_fieldSize - 1) ? m_fieldSize - 1
+                                                                  : static_cast<uint8_t>(m_currPos) + 1;
                 }
                 else if (static_cast<int>(payload[0]) == 1)
                 {
-                    m_currPos = (m_currPos - 1 < 0) ? 0
-                                                    : m_currPos - 1;
+                    NS_LOG_DEBUG("Move Left");
+                    m_currPos = (static_cast<uint8_t>(m_currPos) - 1 < 0) ? 0
+                                                    : static_cast<uint8_t>(m_currPos) - 1;
                 }
 
                 delete[] payload;

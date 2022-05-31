@@ -19,6 +19,10 @@ static void Rxcontent(std::string context, Ptr<const Packet> p){
     NS_LOG_UNCOND("Change Sent at: " << hdr.GetTs().GetSeconds() <<"\tChange Received: " << Simulator::Now().GetSeconds());
     delete[] buf;
 }
+
+static void PosUpdate(uint8_t oldVal, uint8_t newVal){
+    NS_LOG_UNCOND("Position updated from " << oldVal << " to " << newVal);
+}
 /*static void Txcontent(std::string context, Ptr<const Packet> p){
     uint8_t *buf = new uint8_t [1];
     p->CopyData(buf, 1);
@@ -30,8 +34,8 @@ NS_LOG_COMPONENT_DEFINE("TestTeamProject");
 
 int main(int argc, char *argv[]){
 
-    //LogComponentEnable("GameServer", LOG_LEVEL_ALL);
-    //LogComponentEnable("GameUser", LOG_LEVEL_ALL);
+    LogComponentEnable("GameServer", LOG_LEVEL_DEBUG);
+    LogComponentEnable("GameUser", LOG_LEVEL_ALL);
     LogComponentEnable("TestTeamProject", LOG_LEVEL_ALL);
 /*    LogComponentEnable("UdpL4Protocol", LOG_LEVEL_ALL);
     LogComponentEnable("UdpSocket", LOG_LEVEL_FUNCTION);
@@ -47,6 +51,21 @@ int main(int argc, char *argv[]){
                      StringValue ("ns3::RealtimeSimulatorImpl"));
     std::string dr = "100Mbps";
     std::string delay = "1ms";
+    std::string proto = "Udp";
+    Time fps = Seconds(0.05);
+    Time speed = Seconds(0.5);
+    Time speedInc = Seconds(0.01);
+    Time speedInt = Seconds(1.);
+
+    /*CommandLine cmd;
+    cmd.AddValue("Delay", "Link Delay", delay);
+    cmd.AddValue("Protocol", "UDP or TCP", proto);
+    cmd.AddValue("FrameRate", "After what time should a new frame be written to output", fps);
+    cmd.AddValue("Speed", "Beginning Speed of the Game", speed);
+    cmd.AddValue("SpeedInc", "In what intervals does speed inmcrease?", speedInc);
+    cmd.AddValue("SpeedInt", "After how much time is speed increased?", speedInt);
+
+    cmd.Parse(argc, argv);*/
 
     NS_LOG_UNCOND("Test");
     NodeContainer nodes;
@@ -82,11 +101,15 @@ int main(int argc, char *argv[]){
     GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(0), port)), port, "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
     server.SetAttribute("FileIO", BooleanValue(true));
     server.SetAttribute("InFile", StringValue("/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt"));
-    server.SetAttribute("DisplayFreq", TimeValue(Seconds(0.05)));
+    /*server.SetAttribute("DisplayFreq", TimeValue(Seconds(fps)));
+    server.SetAttribute("SpeedIncrease", TimeValue(Seconds(speedInc)));
+    server.SetAttribute("SpeedIncreaseInterval", TimeValue(Seconds(speedInt)));
+    server.SetAttribute("IntervalBrick", TimeValue(Seconds(speed)));*/
     ApplicationContainer serverApp = server.Install(nodes.Get(1));
     serverApp.Start(Seconds(1.0));
     //serverApp.Stop(Seconds(40.0));
     serverApp.Get(0)->TraceConnect("Rx", "Arrived", MakeCallback(&Rxcontent));    
+    serverApp.Get(0)->TraceConnectWithoutContext("Position", MakeCallback(&PosUpdate));    
     //userApp.Get(0)->TraceConnect("Tx", "Sent", MakeCallback(&Txcontent));    
 
     Simulator::Stop(Seconds(55.0));
