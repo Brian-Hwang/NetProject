@@ -14,6 +14,8 @@
 #include "ns3/game-server.h"
 #include "ns3/seq-ts-header.h"
 #include <algorithm>
+#include <ctime>
+#include <cstdlib>
 
 namespace ns3
 {
@@ -115,7 +117,7 @@ namespace ns3
         }
 
         m_currPos = (int)(m_fieldSize / 2);
-        //m_nextFrame = new char[m_fieldSize * m_fieldSize];
+        m_lastFrame = std::string(m_fieldSize*m_fieldSize, '0');
 
         if (!m_inFile && m_fileIO)
         {
@@ -135,6 +137,9 @@ namespace ns3
             NS_ASSERT_MSG(m_outFile, "Unable to open Output File.");
         }
 
+        if(!m_fileIO){
+            std::srand(static_cast<unsigned int>(std::time(nullptr)));
+        }
         m_running = true;
 
         m_socket->SetRecvCallback(MakeCallback(&GameServer::HandleRead, this));
@@ -229,7 +234,7 @@ namespace ns3
         m_outFile << display_frame.c_str();
 
         //if there are frames left, keep sending
-        if (m_display_start + 200 < m_entireMap.size())
+        if (!m_fileIO | (m_display_start + 200 < m_entireMap.size()))
         {
             ScheduleTransmit(Seconds(0.));
             ScheduleDisplay();
@@ -244,15 +249,37 @@ namespace ns3
         NS_LOG_FUNCTION(this);
         //Call this function every X seconds
         //Update the value m_lastFrame (bad name)
-        char buf[101];
-        size_t nread = m_entireMap.copy(buf, 100, m_display_start);
-        buf[nread] = '\0';
-        m_lastFrame = buf;
-        if (nread < 100) {
-            std::string fill_str (100-nread, '0');
-            m_lastFrame += fill_str;
+        if(m_fileIO){
+            char buf[101];
+            size_t nread = m_entireMap.copy(buf, 100, m_display_start);
+            buf[nread] = '\0';
+            m_lastFrame = buf;
+            if (nread < 100) {
+                std::string fill_str (100-nread, '0');
+                m_lastFrame += fill_str;
+            }
+            m_display_start += 100;
+        }else{
+            //slice off the last row, it will have disappeared after the update
+            m_lastFrame = m_lastFrame.substr(0, (m_fieldSize * (m_fieldSize - 1)));
+
+            //add 0s and 1s randomly
+            for(int i = 0; i < m_fieldSize; i++){
+                if(((float)std::rand()/RAND_MAX) > 0.9)
+                    m_lastFrame.insert(0, "1");
+                else
+                    m_lastFrame.insert(0, "0");
+            }
+
+            for(int i = 0; i < m_fieldSize*m_fieldSize; i++){
+                if(!(i % m_fieldSize))
+                    std::cout << std::endl;
+                std::cout << m_lastFrame[i];
+                
+            }
+
+
         }
-        m_display_start += 100;
 
         //schedule the next update
         ScheduleUpdate();
@@ -263,8 +290,11 @@ namespace ns3
         //Update the value m_interval by decreasing it by m_speedIncrease
         
         m_interval -= m_speedIncrease;
-        
-        ScheduleSpeedIncrease();
+       
+        if(m_interval <= m_dispFreq)
+            m_interval = m_dispFreq;
+        else
+            ScheduleSpeedIncrease();
     }
 
     void GameServer::HandleRead(Ptr<Socket> socket)

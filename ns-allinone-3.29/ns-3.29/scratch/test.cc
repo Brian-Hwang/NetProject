@@ -34,7 +34,7 @@ NS_LOG_COMPONENT_DEFINE("TestTeamProject");
 
 int main(int argc, char *argv[]){
 
-    LogComponentEnable("GameServer", LOG_LEVEL_DEBUG);
+    LogComponentEnable("GameServer", LOG_LEVEL_ALL);
     LogComponentEnable("GameUser", LOG_LEVEL_ALL);
     LogComponentEnable("TestTeamProject", LOG_LEVEL_ALL);
 /*    LogComponentEnable("UdpL4Protocol", LOG_LEVEL_ALL);
@@ -96,10 +96,10 @@ int main(int argc, char *argv[]){
     ApplicationContainer userApp = user.Install(nodes.Get(0));
 
     userApp.Start(Seconds(1.0));
-    //userApp.Stop(Seconds(40.0));
+    userApp.Stop(Seconds(80.0));
 
     GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(0), port)), port, "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output.txt", 10);
-    server.SetAttribute("FileIO", BooleanValue(true));
+    //server.SetAttribute("FileIO", BooleanValue(true));
     server.SetAttribute("InFile", StringValue("/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt"));
     /*server.SetAttribute("DisplayFreq", TimeValue(Seconds(fps)));
     server.SetAttribute("SpeedIncrease", TimeValue(Seconds(speedInc)));
@@ -107,12 +107,12 @@ int main(int argc, char *argv[]){
     server.SetAttribute("IntervalBrick", TimeValue(Seconds(speed)));*/
     ApplicationContainer serverApp = server.Install(nodes.Get(1));
     serverApp.Start(Seconds(1.0));
-    //serverApp.Stop(Seconds(40.0));
+    serverApp.Stop(Seconds(80.0));
     serverApp.Get(0)->TraceConnect("Rx", "Arrived", MakeCallback(&Rxcontent));    
     serverApp.Get(0)->TraceConnectWithoutContext("Position", MakeCallback(&PosUpdate));    
     //userApp.Get(0)->TraceConnect("Tx", "Sent", MakeCallback(&Txcontent));    
 
-    Simulator::Stop(Seconds(55.0));
+    Simulator::Stop(Seconds(80.0));
     Simulator::Run();
     Simulator::Destroy();
 }
