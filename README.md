@@ -11,6 +11,8 @@ In our project, our own-made AI tries to send the movement control to the server
 
 **How to Run the Project:**
 
+**All cammands should run under NetProject/ns-allinone-3.29/ns-3.29/
+
 You can run the base version of ✨Dodge!✨ with the following command:
 
     ./waf --run asdf
