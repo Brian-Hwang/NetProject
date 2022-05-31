@@ -36,9 +36,13 @@ namespace ns3
         virtual void StopApplication(void);
 
         void HandleRead(Ptr<Socket> socket);
-//        void ScheduleDisplay(void);
+        void ScheduleDisplay(void);
+        void ScheduleUpdate(void);
+        void ScheduleSpeedIncrease(void);
+        void UpdateBricks(void);
+        void UpdateSpeed(void);
         void ScheduleTransmit(Time dt);
-        void Display(bool falldown);
+        void Display(void);
         char *NextFrame(uint16_t);
         void SendFrame(void);
 
@@ -58,12 +62,18 @@ namespace ns3
         char *m_nextFrame;
         Time m_dispFreq;
         Time m_interval;
+        Time m_speedIncrease;
+        Time m_speedInterval;
+        
         EventId m_displayEvent;
         EventId m_sendEvent;
+        EventId m_speedEvent;
         std::string m_inFilename;
         std::string m_outFilename;
         std::ifstream m_inFile;
         std::ofstream m_outFile;
+
+
 
         Address m_peerAddress;
         uint16_t m_peerPort;

@@ -38,9 +38,17 @@ namespace ns3
                                               UintegerValue(0),
                                               MakeUintegerAccessor(&GameServer::m_peerPort),
                                               MakeUintegerChecker<uint16_t>())
-                                .AddAttribute("Interval", "The time to wait between packets",
-                                              TimeValue (MilliSeconds(50)),
+                                .AddAttribute("IntervalBrick", "The time interval to update the bricks",
+                                              TimeValue (Seconds(0.5)),
                                               MakeTimeAccessor (&GameServer::m_interval),
+                                              MakeTimeChecker())
+                                .AddAttribute("SpeedIncrease", "The amount by which the brick speed should increase over time",
+                                              TimeValue (Seconds(0.01)),
+                                              MakeTimeAccessor (&GameServer::m_speedIncrease),
+                                              MakeTimeChecker())
+                                .AddAttribute("SpeedIncreaseInterval", "The time interval after which the speed will be increased",
+                                              TimeValue (Seconds(1.)),
+                                              MakeTimeAccessor (&GameServer::m_speedInterval),
                                               MakeTimeChecker())
                                 .AddAttribute("InFile", "The name of the input file to get data for calculation from.",
                                               StringValue(),
@@ -101,8 +109,6 @@ namespace ns3
             m_socket = Socket::CreateSocket(GetNode(), tid);
             m_socket->Bind(m_address);
             m_socket->Connect(m_peerAddress);
-            //m_socket->Listen();
-            //m_socket->ShutdownSend();
         }
 
         m_currPos = (int)(m_fieldSize / 2);
@@ -112,7 +118,7 @@ namespace ns3
         {
             m_inFile.open(m_inFilename);
 
-            NS_ASSERT_MSG(m_inFile, "Unable to open Input File.");
+            NS_ASSERT_MSG(m_inFile, "Unable to open Input File " << m_inFilename<<". ");
 
             m_entireMapStream << m_inFile.rdbuf();
             m_entireMapStream >> m_entireMap;
@@ -128,37 +134,49 @@ namespace ns3
 
         m_running = true;
 
-        //send first frame
-        //SendFrame();
-
-        //Schedule Display first frame
-        //ScheduleDisplay();
-        Display(true);
         m_socket->SetRecvCallback(MakeCallback(&GameServer::HandleRead, this));
-        ScheduleTransmit(Seconds(0.));
+        
+        //Update the first bricks
+        UpdateBricks();
+        
+        //send first frame
+        SendFrame();
+        
+        //Schedule Display first frame
+        ScheduleDisplay();
+
+        //Schedule first Speed Increase
+        ScheduleSpeedIncrease();
     }
 
     void GameServer::SendFrame(void){
         NS_LOG_FUNCTION(this);
 
+        //Save the last three rows into tranmission buffer
+        //The user-side moving algorithm makes decisions based on the closest three rows only
         char buf[31];
         size_t nread = m_lastFrame.copy(buf, 30, 60);
+        
+        //fill up with 0s as needed
         while (nread < 30) {
             buf[nread++] = '0'; 
         }
+
+        //terminate with null for proper reading on user side
         buf[nread] = '\0';
-        m_send_start += 10;
+
+
+        //m_send_start += 10;
 
         //Create a packet sending the frame here
         uint8_t* p = reinterpret_cast<uint8_t*> (&buf);
-        Ptr<Packet> packet = Create<Packet>(p, 31);        
+        Ptr<Packet> packet = Create<Packet>(p, 31);  
+
         //Send the actual packet here
         m_txTrace(packet);
         m_socket->Send(packet);
-
-        Display(true);
     }
-/*
+
     void GameServer::ScheduleDisplay(void)
     {
         NS_LOG_FUNCTION(this);
@@ -167,7 +185,23 @@ namespace ns3
             m_displayEvent = Simulator::Schedule(m_dispFreq, &GameServer::Display, this);
         }
     }
-    */
+    void GameServer::ScheduleUpdate(void)
+    {
+        NS_LOG_FUNCTION(this);
+        if (m_running)
+        {
+            m_displayEvent = Simulator::Schedule(m_interval, &GameServer::UpdateBricks, this);
+        }
+    }
+    void GameServer::ScheduleSpeedIncrease(void)
+    {
+        NS_LOG_FUNCTION(this);
+        if (m_running)
+        {
+            m_speedEvent = Simulator::Schedule(m_speedInterval, &GameServer::UpdateSpeed, this);
+        }
+    }
+    
 
     void 
     GameServer::ScheduleTransmit (Time dt)
@@ -178,48 +212,56 @@ namespace ns3
     }
 
 
-    void GameServer::Display(bool falldown)
+    void GameServer::Display(void)
     {
         NS_LOG_FUNCTION(this);
 
         uint16_t dim = m_fieldSize * m_fieldSize;
 
-        NS_LOG_DEBUG("Next Frame is " << m_display_start << "|" << m_entireMap.size() << std::endl);
-
         std::string display_frame {};
-        if (falldown) {
-            char buf[101];
-            size_t nread = m_entireMap.copy(buf, 100, m_display_start);
-            buf[nread] = '\0';
-            m_lastFrame = buf;
-            if (nread < 100) {
-                std::string fill_str (100-nread, '0');
-                m_lastFrame += fill_str;
-            }
-            display_frame = m_lastFrame;
-            m_display_start += 100;
-        }
-        else {
-            display_frame = m_lastFrame;
-            display_frame[dim - m_fieldSize + 9] = '9';
-        }
-        
-        //std::cout << "DISPLAY FRAME: " << display_frame.substr(90, 99) << std::endl;
+        display_frame = m_lastFrame;
         
         // write to outFile
-        //std::reverse(display_frame.begin(), display_frame.end());
         display_frame[dim - m_fieldSize + static_cast<int>(m_currPos)] = '2';
         m_outFile << display_frame.c_str();
 
+        //if there are frames left, keep sending
         if (m_display_start + 200 < m_entireMap.size())
         {
-            ScheduleTransmit(m_interval);
+            ScheduleTransmit(Seconds(0.));
+            ScheduleDisplay();
         }
+        //else terminate the application
         else {
-            //std::cout << "WTF " << m_entireMap.size() << std::endl;
             StopApplication();
         }
-        //std::cout << "hummm\n";
+    }
+
+    void GameServer::UpdateBricks(void){
+        NS_LOG_FUNCTION(this);
+        //Call this function every X seconds
+        //Update the value m_lastFrame (bad name)
+        char buf[101];
+        size_t nread = m_entireMap.copy(buf, 100, m_display_start);
+        buf[nread] = '\0';
+        m_lastFrame = buf;
+        if (nread < 100) {
+            std::string fill_str (100-nread, '0');
+            m_lastFrame += fill_str;
+        }
+        m_display_start += 100;
+
+        //schedule the next update
+        ScheduleUpdate();
+    }
+    void GameServer::UpdateSpeed(void){
+        NS_LOG_FUNCTION(this);
+        //Call this function every X seconds
+        //Update the value m_interval by decreasing it by m_speedIncrease
+        
+        m_interval -= m_speedIncrease;
+        
+        ScheduleSpeedIncrease();
     }
 
     void GameServer::HandleRead(Ptr<Socket> socket)
@@ -227,35 +269,35 @@ namespace ns3
         NS_LOG_FUNCTION(this);
         Ptr<Packet> packet;
         Address from;
+
+        //read data from receive buffer
         while ((packet = m_socket->RecvFrom(from)))
         {
             if (packet->GetSize() > 0)
             {
                 m_totalRx++;
                 m_rxTrace(packet);
+
+                //extract payload
                 uint8_t *payload = new uint8_t[packet->GetSize()];
                 packet->CopyData(payload, packet->GetSize());
-                NS_LOG_DEBUG("Received " << static_cast<int>(payload[0]) << " from user.");
-                //std::cout << "Received " << static_cast<int>(payload[0]) << " from user." << std::endl;
 
-                //m_currPos = static_cast<int>(payload[0]);
 
-                if (static_cast<int>(payload[0]) == 1)
+                //adjust player position accordingly
+                if (static_cast<int>(payload[0]) == 2)
                 {
                     m_currPos = (m_currPos + 1 > m_fieldSize - 1) ? m_fieldSize - 1
                                                                   : m_currPos + 1;
                 }
-                else if (static_cast<int>(payload[0]) == 2)
+                else if (static_cast<int>(payload[0]) == 1)
                 {
                     m_currPos = (m_currPos - 1 < 0) ? 0
                                                     : m_currPos - 1;
                 }
-                //std::cout << "im handleread, current pos is: " << static_cast<int>(m_currPos) << std::endl;
 
                 delete[] payload;
             }
         }
-        Display(false); 
     }
 
     void GameServer::StopApplication()
