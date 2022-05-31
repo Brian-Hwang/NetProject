@@ -211,6 +211,8 @@ namespace ns3
     void GameUser::SendResponse(Ptr<Socket> socket) {
         NS_LOG_FUNCTION(this);
 
+        Simulator::Cancel(m_endEvent);
+
         //Receive Packet Frame Here
         Ptr<Packet> packet;
         Address from;
@@ -242,17 +244,18 @@ namespace ns3
         // direction -> left = 1, right = 2
         uint8_t direction = 0;
         int num_of_packet = 0;
+        NS_LOG_DEBUG("Current Position: " << static_cast<int>(m_currPos) << "\tDesired Position: " << static_cast<int>(move));
         //std::cout << "num of packet to send: " << num_of_packet << std::endl;
         if ((num_of_packet = sub_abs_uint8(move, m_currPos, direction)) > 0) {
+            NS_LOG_DEBUG("Moving " << num_of_packet << " times to position " << static_cast<int>(move));
             //std::cout << "dir: " << static_cast<int>(direction) << std::endl;
-            for (int i = 0; i < num_of_packet; ++i) {
                 //std::cout << "YEAH! SENDING " << static_cast<int>(direction) << std::endl;
-                char *buf = new char[2];
-                buf[0] = direction;
-                buf[1] = '\0';
+            char *buf = new char[2];
+            buf[0] = direction;
+            buf[1] = '\0';
+            for (int i = 0; i < num_of_packet; ++i)
                 SendPacket(from, buf);
-                delete[] buf;
-            }
+            delete[] buf;
         }
 
         // User assumes that the character moved exactly what he has ordered
@@ -260,6 +263,8 @@ namespace ns3
 
         if(payload != NULL)
             delete[] payload;
+
+        m_endEvent = Simulator::Schedule(Seconds(2.0), &GameUser::StopApplication, this);
     }
 
     void GameUser::SendPacket(Address from, char *payload)

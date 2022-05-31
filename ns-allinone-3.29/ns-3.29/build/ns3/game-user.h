@@ -44,6 +44,7 @@ namespace ns3
         uint32_t m_packetsSent;
         bool m_running;
 
+        EventId m_endEvent;
         uint16_t m_port;
 
         TracedCallback<Ptr<const Packet>> m_rxTrace;

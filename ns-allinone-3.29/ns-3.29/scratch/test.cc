@@ -29,6 +29,7 @@ int main(int argc, char *argv[]){
 
     LogComponentEnable("GameServer", LOG_LEVEL_ALL);
     LogComponentEnable("GameUser", LOG_LEVEL_ALL);
+    LogComponentEnable("TestTeamProject", LOG_LEVEL_ALL);
 /*    LogComponentEnable("UdpL4Protocol", LOG_LEVEL_ALL);
     LogComponentEnable("UdpSocket", LOG_LEVEL_FUNCTION);
     LogComponentEnable("Socket", LOG_LEVEL_FUNCTION);
@@ -85,7 +86,7 @@ int main(int argc, char *argv[]){
     serverApp.Get(0)->TraceConnect("Rx", "Arrived", MakeCallback(&Rxcontent));    
     //userApp.Get(0)->TraceConnect("Tx", "Sent", MakeCallback(&Txcontent));    
 
+    Simulator::Stop(Seconds(55.0));
     Simulator::Run();
-    Simulator::Stop(Seconds(400.0));
     Simulator::Destroy();
 }
