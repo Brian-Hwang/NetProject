@@ -62,7 +62,9 @@ The configuration of the project can be split into 3 parts:
 ## **Contributors**
 
 [Maike](https://github.com/hema2601)
-[Brian Hwang]https://github.com/Brian-Hwang)
+
+[Brian Hwang] (https://github.com/Brian-Hwang)
+
  ... ADD PLEASE!
 
 
