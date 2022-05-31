@@ -4,13 +4,13 @@
 2022 Spring Semester Network Project Team#10
 
 
-##**About the Project:**
+## **About the Project:**
 
 ✨Dodge!✨ is a online application project based of NS-3, which simulates the network scenario under various topologies for the Dodge game. 
 The Dodge game is a game which the player gets to move right or left, to dodge the bricks falling from the sky.
 In our project, our own-made AI tries to send the movement control to the server, to show how the outcome differs depending on the different topologies and network throughput.
 
-##**How to Run the Project:**
+## **How to Run the Project:**
 
 **All cammands should run under NetProject/ns-allinone-3.29/ns-3.29/
 ** Prerequisite:
@@ -33,7 +33,7 @@ Once the application is done running, the you can check the game visualization w
 	    EDIT HERE
 
 
-##**Command Line Variations:**
+## **Command Line Variations:**
 
 ✨Dodge!✨ can take various command line inputs to show different scenarios.
 
@@ -44,7 +44,7 @@ Once the application is done running, the you can check the game visualization w
  3. Throughput
 	 adsf
 
-##**Details of configuration**
+## **Details of configuration**
 
 The configuration of the project can be split into 3 parts:
 
@@ -53,11 +53,11 @@ The configuration of the project can be split into 3 parts:
  3. Test Scenario
 
 
-##**Docker Address**
+## **Docker Address**
 
 asdf.com
 
-##**Contributors**
+## **Contributors**
 
 asdf
 asdf
