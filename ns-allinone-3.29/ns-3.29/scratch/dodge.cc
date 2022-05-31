@@ -65,12 +65,13 @@ int main(int argc, char *argv[])
     Time speedInt = Seconds(1.);
 
     CommandLine cmd;
-    // cmd.AddValue("Delay", "Link Delay", delay);
+    cmd.AddValue("Delay", "Link Delay", delay);
+    cmd.AddValue("DataRate", "Data Rate", dr);
     cmd.AddValue("Protocol", "UDP or TCP or Wifi", proto);
-    // cmd.AddValue("FrameRate", "After what time should a new frame be written to output", fps);
-    // cmd.AddValue("Speed", "Beginning Speed of the Game", speed);
-    // cmd.AddValue("SpeedInc", "In what intervals does speed inmcrease?", speedInc);
-    // cmd.AddValue("SpeedInt", "After how much time is speed increased?", speedInt);
+    cmd.AddValue("FrameRate", "After what time should a new frame be written to output", fps);
+    cmd.AddValue("Speed", "Beginning Speed of the Game", speed);
+    cmd.AddValue("SpeedInc", "In what intervals does speed inmcrease?", speedInc);
+    cmd.AddValue("SpeedInt", "After how much time is speed increased?", speedInt);
 
     cmd.Parse(argc, argv);
 
