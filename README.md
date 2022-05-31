@@ -30,7 +30,8 @@ Once the application is done running, the you can check the game visualization w
 
 2. Actual Game visualization (WHERE)
 
-	    EDIT HERE
+	    ... ADD PLEASE!
+
 
 
 ## **Command Line Variations:**
@@ -38,11 +39,11 @@ Once the application is done running, the you can check the game visualization w
 ✨Dodge!✨ can take various command line inputs to show different scenarios.
 
  1. Topology
-	 asdf
+ ... ADD PLEASE!
  2. User Number
-	 asdf
+ ... ADD PLEASE!
  3. Throughput
-	 adsf
+ ... ADD PLEASE!
 
 ## **Details of configuration**
 
@@ -51,18 +52,17 @@ The configuration of the project can be split into 3 parts:
  1. Application (Server - Client network)
  2. Game Model
  3. Test Scenario
+ ... ADD PLEASE!
 
 
 ## **Docker Address**
 
-asdf.com
+ ... ADD PLEASE!
 
 ## **Contributors**
 
-asdf
-asdf
-asdf
-asdf
-asdf
+[Maike](https://github.com/hema2601)
+[Brian Hwang]https://github.com/Brian-Hwang)
+ ... ADD PLEASE!
 
 
