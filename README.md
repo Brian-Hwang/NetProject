@@ -40,20 +40,35 @@ Once the application is done running, the you can check the game visualization w
 ✨Dodge!✨ can take various command line inputs to show different scenarios.
 
  1. Topology
- ... ADD PLEASE!
- 2. User Number
- ... ADD PLEASE!
- 3. Throughput
- ... ADD PLEASE!
+    	./waf --run "scratch/dodge --protocol=udp"
+        ./waf --run "scratch/dodge --protocol=wifi"
 
-## **Details of configuration**
+ 2. Data Rate
+    	./waf --run "scratch/dodge --DataRate=500Mbps"
 
-The configuration of the project can be split into 3 parts:
+ 3. Delay
+     	./waf --run "scratch/dodge --Delay=1ms"
 
- 1. Application (Server - Client network)
- 2. Game Model
- 3. Test Scenario
- ... ADD PLEASE!
+ 4. Frame Rate    
+ 	./waf --run "scratch/dodge --FrameRate=0.01"
+
+ 5. Speed    
+ 	./waf --run "scratch/dodge --Speed=0.1"
+
+ 6. Speed Increment
+    	./waf --run "scratch/dodge --SpeedInc=0.01"
+    
+ 7. Speed Interval
+    ./waf --run "scratch/dodge --SpeedInt=0.1"
+
+
+## *System configuration**
+
+The System configuration can be shown as below:
+
+<img width = "80%" src="https://github.com/Brian-Hwang/NetProject/171389853-246a9840-500e-4179-9ad9-3deb5a671d5e.gif"/>
+
+
 
 ## **Dodge Game(Actual Game Visualization)**
 
