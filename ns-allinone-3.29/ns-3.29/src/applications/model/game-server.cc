@@ -163,11 +163,12 @@ namespace ns3
 
         //Save the last three rows into tranmission buffer
         //The user-side moving algorithm makes decisions based on the closest three rows only
-        char buf[31];
-        size_t nread = m_lastFrame.copy(buf, 30, 60);
+        size_t frameLen = 40;
+        char buf[frameLen +1];
+        size_t nread = m_lastFrame.copy(buf, frameLen, 60);
         
         //fill up with 0s as needed
-        while (nread < 30) {
+        while (nread < frameLen) {
             buf[nread++] = '0'; 
         }
 
@@ -179,7 +180,7 @@ namespace ns3
 
         //Create a packet sending the frame here
         uint8_t* p = reinterpret_cast<uint8_t*> (&buf);
-        Ptr<Packet> packet = Create<Packet>(p, 31);  
+        Ptr<Packet> packet = Create<Packet>(p, frameLen+1);  
 
         //Send the actual packet here
         m_txTrace(packet);
@@ -232,7 +233,7 @@ namespace ns3
         
         //Game Over Condition
         if(display_frame[dim-m_fieldSize + static_cast<int>(m_currPos)] == '1'){
-            NS_LOG_UNCOND("GAME OVER at " << Simulator::Now().GetSeconds());
+            NS_LOG_UNCOND("GAME OVER at " << Simulator::Now().GetSeconds() << "s" << "\tFinal Speed: Update every " << m_interval.GetSeconds() << "s");
             StopApplication();
         }
 
@@ -275,7 +276,7 @@ namespace ns3
 
             //add 0s and 1s randomly
             for(int i = 0; i < m_fieldSize; i++){
-                if(m_generateBricks && ((float)std::rand()/RAND_MAX) > 0.9)
+                if(m_generateBricks && ((float)std::rand()/RAND_MAX) > 0.85)
                     m_lastFrame.insert(0, "1");
                 else
                     m_lastFrame.insert(0, "0");

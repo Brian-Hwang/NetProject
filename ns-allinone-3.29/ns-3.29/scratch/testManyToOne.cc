@@ -18,7 +18,7 @@ static void Rxcontent(std::string context, Ptr<const Packet> p){
     Ptr<Packet> copyP = p->Copy();
     SeqTsHeader hdr;
     copyP->RemoveHeader(hdr);
-    NS_LOG_UNCOND(context << "\tChange Sent at: " << hdr.GetTs().GetSeconds() <<"\tChange Received: " << Simulator::Now().GetSeconds());
+    NS_LOG_UNCOND(context << "\t" << Simulator::Now().GetSeconds() <<"\t" << Simulator::Now().GetSeconds() - hdr.GetTs().GetSeconds() );
     delete[] buf;
 }
 
@@ -34,7 +34,7 @@ int main(int argc, char *argv[]){
                      StringValue ("ns3::RealtimeSimulatorImpl"));
     
     std::string dr = "100Mbps";
-    std::string delay = "1us";
+    std::string delay = "1ms";
     int numNodes = 20;
     std::string incast = "Client";
 
@@ -127,7 +127,7 @@ int main(int argc, char *argv[]){
         }
         
         
-        serverApps.Get(i)->TraceConnect("Rx", ("Game" + std::to_string(i)), MakeCallback(&Rxcontent));    
+        serverApps.Get(i)->TraceConnect("Rx", (std::to_string(i)), MakeCallback(&Rxcontent));    
     }
 
     //need to pass full path to sender

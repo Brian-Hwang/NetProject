@@ -41,8 +41,8 @@ NS_LOG_COMPONENT_DEFINE("TestTeamProject");
 int main(int argc, char *argv[])
 {
 
-    LogComponentEnable("GameServer", LOG_LEVEL_ALL);
-    LogComponentEnable("GameUser", LOG_LEVEL_ALL);
+    //LogComponentEnable("GameServer", LOG_LEVEL_ALL);
+    //LogComponentEnable("GameUser", LOG_LEVEL_ALL);
     LogComponentEnable("TestTeamProject", LOG_LEVEL_ALL);
     GlobalValue::Bind("SimulatorImplementationType",
                       StringValue("ns3::RealtimeSimulatorImpl"));

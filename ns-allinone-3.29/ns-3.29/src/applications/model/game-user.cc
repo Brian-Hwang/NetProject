@@ -81,7 +81,7 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
     int number_of_obstacles_on_current_position = 0;
     //for (int i = 2; i>=0; i--)
     for (int i = 0; i < 3; i++) {
-        std::cout << "inputframe:" << input_frame << std::endl;
+        //std::cout << "inputframe:" << input_frame << std::endl;
         for (int j = 0; j < 10; j++) {
             
             oneline[j] = input_frame[i * 10 + j];
@@ -100,7 +100,7 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
             }
 
         }
-        std::cout << "number of obstacles in left" << number_of_obstacles_in_left << std::endl;
+        //std::cout << "number of obstacles in left" << number_of_obstacles_in_left << std::endl;
         // if current position is same as the wall.
         // and obstacle is on top of the characters head
         // -> MOVE LEFT OR RIGHT
@@ -110,8 +110,8 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
 
         //        100000101
         //                8
-        std::cout << "oneline:" << oneline << std::endl;
-        std::cout << "oneline[current_position:" << oneline[current_position] << std::endl;
+        //std::cout << "oneline:" << oneline << std::endl;
+        //std::cout << "oneline[current_position:" << oneline[current_position] << std::endl;
         
         if (i == 2) {
             if (current_position == 9) {
@@ -252,7 +252,7 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
                     move = 0;
                     return move;
 
-                    std::cout << "\t\t\t\t\t\t" << "sidebyside" << std::endl;
+                    //std::cout << "\t\t\t\t\t\t" << "sidebyside" << std::endl;
                 }
             }
         }
@@ -284,7 +284,7 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
                     else{
                      if (oneline[current_position+1] != '1'){
                         move = 2;
-                        std::cout << "\t\t\t\t\t\t" << "must move right" << std::endl;
+                        //std::cout << "\t\t\t\t\t\t" << "must move right" << std::endl;
                         
                         
                         
@@ -304,7 +304,7 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
                         return move;
                     }
                      if (oneline[current_position-1] !='1'){
-                        std::cout << "\t\t\t\t\t\t" << "must move left" << std::endl;
+                        //std::cout << "\t\t\t\t\t\t" << "must move left" << std::endl;
                         move = 1;
                         return move;
                      }
@@ -344,7 +344,7 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
 
     }
     
-    std::cout << "\t\t\t\t\t\t" << "noevent" << std::endl;
+    //std::cout << "\t\t\t\t\t\t" << "noevent" << std::endl;
 
     /* 
     if ( i == 2){
@@ -477,10 +477,20 @@ namespace ns3
 
         //[TODO] decide whether user keeps its own information about position or if it should extrcat it from frame
         //std::cout << "coke\n";
+        
+        //This frame is len 40 now
         std::string input_frame = (char*) payload;
         
+        //PlayerLine has the frame row that includes the player
+        std::string playerLine = input_frame.substr(input_frame.size() - 10);
+        //Input Frame still has the three rows above the player
+        input_frame = input_frame.substr(0, input_frame.size() - 10);
+        
+
+        std::cout << "algo input frame len: " << input_frame.size() << std::endl;
+        std::cout << "Player line frame len: " << playerLine.size() << std::endl;
+        
         // calculate the desired position to move on
-        //std::cout << "algo input frame len: " << input_frame.size() << std::endl;
         int8_t move = moving_algorithm(input_frame, m_currPos);
         
 
