@@ -30,8 +30,8 @@ NS_LOG_COMPONENT_DEFINE("TestTeamProject");
 int main(int argc, char *argv[])
 {
 
-    LogComponentEnable("GameServer", LOG_LEVEL_FUNCTION);
-    LogComponentEnable("GameUser", LOG_LEVEL_ALL);
+    //LogComponentEnable("GameServer", LOG_LEVEL_FUNCTION);
+    //LogComponentEnable("GameUser", LOG_LEVEL_ALL);
     LogComponentEnable("TestTeamProject", LOG_LEVEL_ALL);
     GlobalValue::Bind("SimulatorImplementationType",
                       StringValue("ns3::RealtimeSimulatorImpl"));
@@ -45,7 +45,6 @@ int main(int argc, char *argv[])
     Time speedInt = Seconds(1.);
     bool io = false;
 
-    NS_LOG_UNCOND(fps);
     CommandLine cmd;
     cmd.AddValue("Delay", "Link Delay", delay);
     cmd.AddValue("DataRate", "Data Rate", dr);
@@ -57,7 +56,6 @@ int main(int argc, char *argv[])
     cmd.AddValue("SpeedInt", "After how much time is speed increased?", speedInt);
 
     cmd.Parse(argc, argv);
-    NS_LOG_UNCOND(fps);
 
     NS_LOG_UNCOND(proto);
     NodeContainer nodes;
