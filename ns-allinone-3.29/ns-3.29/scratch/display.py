@@ -58,5 +58,5 @@ while(n != 10000):
     sleep(0.1)
     n = n + 1
 
-print("GAME OVER")
+print("END OF GAME")
 f.close()

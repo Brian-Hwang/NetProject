@@ -81,7 +81,7 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
     int number_of_obstacles_on_current_position = 0;
     //for (int i = 2; i>=0; i--)
     for (int i = 0; i < 3; i++) {
-        std::cout << "inputframe:" << input_frame << std::endl;
+        //std::cout << "inputframe:" << input_frame << std::endl;
         for (int j = 0; j < 10; j++) {
             
             oneline[j] = input_frame[i * 10 + j];
@@ -100,7 +100,7 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
             }
 
         }
-        std::cout << "number of obstacles in left" << number_of_obstacles_in_left << std::endl;
+        //std::cout << "number of obstacles in left" << number_of_obstacles_in_left << std::endl;
         // if current position is same as the wall.
         // and obstacle is on top of the characters head
         // -> MOVE LEFT OR RIGHT
@@ -110,8 +110,8 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
 
         //        100000101
         //                8
-        std::cout << "oneline:" << oneline << std::endl;
-        std::cout << "oneline[current_position:" << oneline[current_position] << std::endl;
+        //std::cout << "oneline:" << oneline << std::endl;
+        //std::cout << "oneline[current_position:" << oneline[current_position] << std::endl;
         
         if (i == 2) {
             if (current_position == 9) {
@@ -252,7 +252,7 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
                     move = 0;
                     return move;
 
-                    std::cout << "\t\t\t\t\t\t" << "sidebyside" << std::endl;
+                    //std::cout << "\t\t\t\t\t\t" << "sidebyside" << std::endl;
                 }
             }
         }
@@ -284,7 +284,7 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
                     else{
                      if (oneline[current_position+1] != '1'){
                         move = 2;
-                        std::cout << "\t\t\t\t\t\t" << "must move right" << std::endl;
+                        //std::cout << "\t\t\t\t\t\t" << "must move right" << std::endl;
                         
                         
                         
@@ -304,7 +304,7 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
                         return move;
                     }
                      if (oneline[current_position-1] !='1'){
-                        std::cout << "\t\t\t\t\t\t" << "must move left" << std::endl;
+                        //std::cout << "\t\t\t\t\t\t" << "must move left" << std::endl;
                         move = 1;
                         return move;
                      }
@@ -344,7 +344,7 @@ int8_t moving_algorithm(std::string& input_frame, int current_position)
 
     }
     
-    std::cout << "\t\t\t\t\t\t" << "noevent" << std::endl;
+    //std::cout << "\t\t\t\t\t\t" << "noevent" << std::endl;
 
     /* 
     if ( i == 2){
@@ -441,10 +441,11 @@ namespace ns3
         {
             // this is udp for now [TODO] decide UDP or TCP
             TypeId tid = TypeId::LookupByName("ns3::UdpSocketFactory");
+            
+            
             m_socket = Socket::CreateSocket(GetNode(), tid);
             if (m_socket->Bind(InetSocketAddress(Ipv4Address::GetAny(), m_port)) == -1)
                 NS_FATAL_ERROR("Failed to bind socket");
-            //m_socket->Connect(m_address);
             m_socket->SetRecvCallback(MakeCallback(&GameUser::SendResponse, this));
         }
         m_currPos = (int)(m_fieldSize/2);
@@ -460,15 +461,21 @@ namespace ns3
         //Receive Packet Frame Here
         Ptr<Packet> packet;
         Address from;
+        
+        SeqTsHeader hdr;
+        
         uint8_t *payload = NULL; 
         while((packet = m_socket->RecvFrom(from))){
             if(packet->GetSize() > 0){
+                
+                packet->RemoveHeader(hdr);
+                
                 payload = new uint8_t[packet->GetSize()];
                 //m_totalRx++;
                 m_rxTrace(packet);
                 packet->CopyData(payload, packet->GetSize());
 
-                NS_LOG_DEBUG("Received " << payload << " from server.");
+                //NS_LOG_DEBUG("Received " << payload << " from server.");
                 if(packet->GetSize() > m_fieldSize * m_fieldSize){
                     NS_LOG_DEBUG("This frame seems too big...");
                 }
@@ -504,7 +511,7 @@ namespace ns3
         
 
         int num_of_packet = 0;
-        NS_LOG_DEBUG("Current Position: " << static_cast<int>(m_currPos) << "\tDesired Position: " << static_cast<int>(move));
+        //NS_LOG_DEBUG("Current Position: " << static_cast<int>(m_currPos) << "\tDesired Position: " << static_cast<int>(move));
         //std::cout << "num of packet to send: " << num_of_packet << std::endl;
         if ((num_of_packet = sub_abs_uint8(move, m_currPos, direction)) > 0) {
             NS_LOG_DEBUG("Moving " << num_of_packet << " times to position " << static_cast<int>(move));
@@ -514,8 +521,10 @@ namespace ns3
             char *buf = new char[2];
             buf[0] = direction;
             buf[1] = '\0';
-            for (int i = 0; i < num_of_packet; ++i)
-                SendPacket(from, buf);
+            for (int i = 0; i < num_of_packet; ++i){
+                //SendPacket(from, buf);
+                SendPacket(from, buf, hdr);
+            }
             delete[] buf;
         }
 
@@ -528,7 +537,8 @@ namespace ns3
         m_endEvent = Simulator::Schedule(Seconds(2.0), &GameUser::StopApplication, this);
     }
 
-    void GameUser::SendPacket(Address from, char *payload)
+    //void GameUser::SendPacket(Address from, char *payload)
+    void GameUser::SendPacket(Address from, char *payload, SeqTsHeader hdr)
     {
         NS_LOG_FUNCTION(this);
 
@@ -536,15 +546,13 @@ namespace ns3
         for(uint8_t i = 0; i < strlen(payload); i++)
             buf[i] = (uint8_t)payload[i];
 
-        NS_LOG_DEBUG("Converted char to " << buf);
-        NS_LOG_DEBUG("Sending " << payload);
+        //NS_LOG_DEBUG("Converted char to " << buf);
+        //NS_LOG_DEBUG("Sending " << payload);
 
         //[TODO] Should this be 2?? Or rather strlen(payload)?
         Ptr<Packet> packet = Create<Packet>(buf, 2);
-        NS_LOG_DEBUG("Before Header");
-        SeqTsHeader hdr;
+        //SeqTsHeader hdr;
         packet->AddHeader(hdr);
-        NS_LOG_DEBUG("After Header");
             
 
         m_txTrace(packet);

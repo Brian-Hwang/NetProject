@@ -73,6 +73,10 @@ namespace ns3
                                               BooleanValue(false),
                                               MakeBooleanAccessor(&GameServer::m_fileIO),
                                               MakeBooleanChecker())
+                                .AddAttribute("GameOver", "Determines whether the Simulation detects Game Over automatically, or if it just simulates while ignoring it.",
+                                              BooleanValue(false),
+                                              MakeBooleanAccessor(&GameServer::m_gameOver),
+                                              MakeBooleanChecker())
                                 .AddTraceSource("Rx", "A packet has been received",
                                                 MakeTraceSourceAccessor(&GameServer::m_rxTrace), "ns3::Packet::TracedCallback")
                                 .AddTraceSource("Tx", "A packet has been sent",
@@ -114,6 +118,7 @@ namespace ns3
             TypeId tid = TypeId::LookupByName("ns3::UdpSocketFactory");
             m_socket = Socket::CreateSocket(GetNode(), tid);
             m_socket->Bind(m_address);
+            m_socket->SetAllowBroadcast(true);
             m_socket->Connect(m_peerAddress);
         }
 
@@ -143,6 +148,7 @@ namespace ns3
         }
         m_running = true;
 
+        
         m_socket->SetRecvCallback(MakeCallback(&GameServer::HandleRead, this));
         
         //Update the first bricks
@@ -180,6 +186,10 @@ namespace ns3
         //Create a packet sending the frame here
         uint8_t* p = reinterpret_cast<uint8_t*> (&buf);
         Ptr<Packet> packet = Create<Packet>(p, 31);  
+
+        SeqTsHeader hdr;
+        packet->AddHeader(hdr);
+
 
         //Send the actual packet here
         m_txTrace(packet);
@@ -231,7 +241,7 @@ namespace ns3
         display_frame = m_lastFrame;
         
         //Game Over Condition
-        if(display_frame[dim-m_fieldSize + static_cast<int>(m_currPos)] == '1'){
+        if(m_gameOver && display_frame[dim-m_fieldSize + static_cast<int>(m_currPos)] == '1'){
             NS_LOG_UNCOND("GAME OVER at " << Simulator::Now().GetSeconds());
             StopApplication();
         }
@@ -275,7 +285,7 @@ namespace ns3
 
             //add 0s and 1s randomly
             for(int i = 0; i < m_fieldSize; i++){
-                if(m_generateBricks && ((float)std::rand()/RAND_MAX) > 0.9)
+                if(m_generateBricks && ((float)std::rand()/RAND_MAX) > 0.85)
                     m_lastFrame.insert(0, "1");
                 else
                     m_lastFrame.insert(0, "0");
@@ -318,17 +328,14 @@ namespace ns3
                 //extract payload
                 uint8_t *payload = new uint8_t[packet->GetSize()];
                 packet->CopyData(payload, packet->GetSize());
-                NS_LOG_DEBUG("About to Move " + std::to_string(static_cast<int>(payload[0])));
                 //adjust player position accordingly
                 if (static_cast<int>(payload[0]) == 2)
                 {
-                    NS_LOG_DEBUG("Move Right");
                     m_currPos = (static_cast<uint8_t>(m_currPos) + 1 > m_fieldSize - 1) ? m_fieldSize - 1
                                                                   : static_cast<uint8_t>(m_currPos) + 1;
                 }
                 else if (static_cast<int>(payload[0]) == 1)
                 {
-                    NS_LOG_DEBUG("Move Left");
                     m_currPos = (static_cast<uint8_t>(m_currPos) - 1 < 0) ? 0
                                                     : static_cast<uint8_t>(m_currPos) - 1;
                 }

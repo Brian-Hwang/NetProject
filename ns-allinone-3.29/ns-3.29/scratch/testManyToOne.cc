@@ -18,7 +18,7 @@ static void Rxcontent(std::string context, Ptr<const Packet> p){
     Ptr<Packet> copyP = p->Copy();
     SeqTsHeader hdr;
     copyP->RemoveHeader(hdr);
-    NS_LOG_UNCOND(context << "\tChange Sent at: " << hdr.GetTs().GetSeconds() <<"\tChange Received: " << Simulator::Now().GetSeconds());
+    NS_LOG_UNCOND(context << "\t" << Simulator::Now().GetSeconds() << "\t" <<  Simulator::Now().GetSeconds() - hdr.GetTs().GetSeconds() );
     delete[] buf;
 }
 
@@ -34,7 +34,7 @@ int main(int argc, char *argv[]){
                      StringValue ("ns3::RealtimeSimulatorImpl"));
     
     std::string dr = "100Mbps";
-    std::string delay = "1us";
+    std::string delay = "1ms";
     int numNodes = 20;
     std::string incast = "Client";
 
@@ -98,10 +98,11 @@ int main(int argc, char *argv[]){
     GameUserHelper user (ports[0],  10);
     user.SetAttribute("DataRate", DataRateValue(DataRate("20Mb/s")));
     
-    GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(0), ports[0])), ports[0], "/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output0.txt", 10);
+    GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(0), ports[0])), ports[0], "./scratch/output0.txt", 10);
 //    server.SetAttribute("FileIO", BooleanValue(true));
-    server.SetAttribute("InFile", StringValue("/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames.txt"));
+    server.SetAttribute("InFile", StringValue("./scratch/frames.txt"));
     server.SetAttribute("DisplayFreq", TimeValue(Seconds(0.05)));
+    server.SetAttribute("GameOver", BooleanValue(true));
     
     for(int i = 0; i < numNodes -1; i++){
         //Create User Application
@@ -110,7 +111,7 @@ int main(int argc, char *argv[]){
 
         //Create Server Application
         //server.SetAttribute("Local", AddressValue(destination));
-        server.SetAttribute("OutFile",  StringValue("/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/output" + std::to_string(i) + ".txt"));
+        server.SetAttribute("OutFile",  StringValue("./scratch/output" + std::to_string(i) + ".txt"));
         server.SetAttribute("RemotePort", UintegerValue(ports[i]));
         //server.SetAttribute("InFile",  StringValue("/root/NetProject/ns-allinone-3.29/ns-3.29/scratch/frames" + std::to_string(i) + ".txt"));
         
@@ -127,7 +128,7 @@ int main(int argc, char *argv[]){
         }
         
         
-        serverApps.Get(i)->TraceConnect("Rx", ("Game" + std::to_string(i)), MakeCallback(&Rxcontent));    
+        serverApps.Get(i)->TraceConnect("Rx", (std::to_string(i)), MakeCallback(&Rxcontent));    
     }
 
     //need to pass full path to sender

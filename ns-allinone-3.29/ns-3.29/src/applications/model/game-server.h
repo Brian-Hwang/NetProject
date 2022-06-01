@@ -74,8 +74,10 @@ namespace ns3
         std::ifstream m_inFile;
         std::ofstream m_outFile;
 
-        bool m_generateBricks;
+        std::string m_proto;
 
+        bool m_generateBricks;
+        bool m_gameOver;
 
         Address m_peerAddress;
         uint16_t m_peerPort;

@@ -12,6 +12,7 @@
 #include "ns3/log.h"
 #include "ns3/uinteger.h"
 #include "ns3/string.h"
+#include "ns3/seq-ts-header.h"
 #include <iostream>
 #include <fstream>
 
@@ -30,7 +31,7 @@ namespace ns3
         virtual void StopApplication(void);
 
         // function for actually sending a packet
-        void SendPacket(Address from, char *payload);
+        void SendPacket(Address from, char *payload, SeqTsHeader hdr);
         void SendResponse(Ptr<Socket> socket);
         Address m_address;
         uint32_t m_nPackets;
@@ -46,6 +47,8 @@ namespace ns3
 
         EventId m_endEvent;
         uint16_t m_port;
+
+        std::string m_proto;
 
         TracedCallback<Ptr<const Packet>> m_rxTrace;
         TracedCallback<Ptr<const Packet>> m_txTrace;
