@@ -54,6 +54,14 @@ The configuration of the project can be split into 3 parts:
  3. Test Scenario
  ... ADD PLEASE!
 
+## **Dodge Game(Actual Game Visualization)**
+
+<img width = "80%" src="https://github.com/Brian-Hwang/NetProject/issues/6#issue-1255688008"/>
+
+The Dodge Game takes pro.output_txt file as input, read each line and translate data into player and enemy positions.
+Player dodges bricks by moving characters to left or right.
+If the player collides with the falling bricks, game stops and prints 'Game Over' screen.
+Game measures elapsed time after game starts and prints it out. It helps measuring performance of input data created by own-made AI with network scenarios. 
 
 ## **Docker Address**
 
@@ -65,6 +73,13 @@ The configuration of the project can be split into 3 parts:
 
 [Brian Hwang](https://github.com/Brian-Hwang)
 
+[]()
+
+[]()
+
+[]()
+
+[HyunJoong Kim](https://github.com/SWKHJ)
  ... ADD PLEASE!
 
 
