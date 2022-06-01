@@ -89,8 +89,11 @@ Game measures elapsed time after game starts and prints it out. It helps measuri
 
 ## **Docker Address**
 
- ... ADD PLEASE!
-
+ A Docker image can be found here: https://hub.docker.com/repository/docker/helmai/team10
+ Just run:
+ ```
+ docker pull helmai/team10:base
+ ```
 ## **Contributors**
 
 [Maike](https://github.com/hema2601)
