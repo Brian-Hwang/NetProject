@@ -75,7 +75,7 @@ Once the application is done running, the you can check the game visualization w
 The System configuration can be shown as below:
 
 <img width = "80%" src="https://github.com/Brian-Hwang/NetProject/config.png"/>
-![alt text](https://github.com/Brian-Hwang/NetProject/blob/main/config.png)
+![alt text](https://github.com/Brian-Hwang/NetProject/blob/main/config.png?raw=true "Title")
 
 
 ## **Dodge Game(Actual Game Visualization)**
