@@ -247,7 +247,8 @@ namespace ns3
         }
 
         //Move Player
-        display_frame[dim - m_fieldSize + static_cast<int>(m_currPos)] = '2';
+        if(display_frame[dim-m_fieldSize + static_cast<int>(m_currPos)] != '1')
+            display_frame[dim - m_fieldSize + static_cast<int>(m_currPos)] = '2';
         
         
         // write to outFile

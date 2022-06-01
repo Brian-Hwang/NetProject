@@ -139,12 +139,12 @@ int main(int argc, char *argv[])
     ApplicationContainer userApp = user.Install(nodes.Get(0));
 
     userApp.Start(Seconds(1.0));
-    userApp.Stop(Seconds(80.0));
+    userApp.Stop(Seconds(50.0));
 
-    GameServerHelper server(Address(InetSocketAddress(interfaceClient.GetAddress(0), port)), port, "scratch/output1.txt", 10);
+    GameServerHelper server(Address(InetSocketAddress(interfaceClient.GetAddress(0), port)), port, "scratch/output.txt", 10);
     
-    server.SetAttribute("FileIO", BooleanValue(true));
-    server.SetAttribute("InFile", StringValue("scratch/frames.txt"));
+    server.SetAttribute("FileIO", BooleanValue(io));
+    server.SetAttribute("InFile", StringValue("scratch/frames1.txt"));
     server.SetAttribute("DisplayFreq", TimeValue(fps));
     server.SetAttribute("SpeedIncrease", TimeValue(speedInc));
     server.SetAttribute("SpeedIncreaseInterval", TimeValue(speedInt));
@@ -152,10 +152,10 @@ int main(int argc, char *argv[])
     
     ApplicationContainer serverApp = server.Install(nodes.Get(1));
     serverApp.Start(Seconds(1.0));
-    serverApp.Stop(Seconds(80.0));
+    serverApp.Stop(Seconds(50.0));
     serverApp.Get(0)->TraceConnect("Rx", "Arrived", MakeCallback(&Rxcontent));
 
-    Simulator::Stop(Seconds(80.0));
+    Simulator::Stop(Seconds(50.0));
     Simulator::Run();
     Simulator::Destroy();
 }

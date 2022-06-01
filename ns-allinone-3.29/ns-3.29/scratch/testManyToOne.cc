@@ -33,15 +33,32 @@ int main(int argc, char *argv[]){
     GlobalValue::Bind ("SimulatorImplementationType", 
                      StringValue ("ns3::RealtimeSimulatorImpl"));
     
-    std::string dr = "100Mbps";
+ std::string dr = "100Mbps";
     std::string delay = "1ms";
+    std::string proto = "Udp";
+    Time fps = Seconds(0.05);
+    Time speed = Seconds(0.5);
+    Time speedInc = Seconds(0.01);
+    Time speedInt = Seconds(1.);
+    bool io = false;
     int numNodes = 20;
     std::string incast = "Client";
 
     CommandLine cmd;
+    cmd.AddValue("Delay", "Link Delay", delay);
+    cmd.AddValue("DataRate", "Data Rate", dr);
+    cmd.AddValue("Protocol", "UDP or Wifi", proto);
+    cmd.AddValue("FromInput", "Set true if instead of random frame generation, frames should be read from a file", io);
+    cmd.AddValue("FrameRate", "After what time should a new frame be written to output", fps);
+    cmd.AddValue("Speed", "Beginning Speed of the Game", speed);
+    cmd.AddValue("SpeedInc", "In what intervals does speed increase?", speedInc);
+    cmd.AddValue("SpeedInt", "After how much time is speed increased?", speedInt);
     cmd.AddValue("Incast", "Decide whether to have incast traffic on server or client.", incast);
     cmd.AddValue("Nodes", "The number of nodes in the simulation.", numNodes);
+
     cmd.Parse(argc, argv);
+
+    
 
     int mode;
 
@@ -62,7 +79,7 @@ int main(int argc, char *argv[]){
 
     CsmaHelper csma;
     csma.SetChannelAttribute("DataRate", DataRateValue(5000000));
-    csma.SetChannelAttribute("Delay", TimeValue(MicroSeconds(10)));
+    csma.SetChannelAttribute("Delay", StringValue(delay));
     csma.EnablePcapAll("secondTest");
     NetDeviceContainer terminalDevices;
     NetDeviceContainer switchDevices;
@@ -100,9 +117,15 @@ int main(int argc, char *argv[]){
     
     GameServerHelper server(Address(InetSocketAddress(interfaces.GetAddress(0), ports[0])), ports[0], "./scratch/output0.txt", 10);
 //    server.SetAttribute("FileIO", BooleanValue(true));
-    server.SetAttribute("InFile", StringValue("./scratch/frames.txt"));
-    server.SetAttribute("DisplayFreq", TimeValue(Seconds(0.05)));
-    server.SetAttribute("GameOver", BooleanValue(true));
+    //server.SetAttribute("InFile", StringValue("./scratch/frames.txt"));
+    //server.SetAttribute("DisplayFreq", TimeValue(Seconds(0.05)));
+    //server.SetAttribute("GameOver", BooleanValue(true));
+    server.SetAttribute("FileIO", BooleanValue(io));
+    server.SetAttribute("InFile", StringValue("scratch/frames1.txt"));
+    server.SetAttribute("DisplayFreq", TimeValue(fps));
+    server.SetAttribute("SpeedIncrease", TimeValue(speedInc));
+    server.SetAttribute("SpeedIncreaseInterval", TimeValue(speedInt));
+    server.SetAttribute("IntervalBrick", TimeValue(speed));
     
     for(int i = 0; i < numNodes -1; i++){
         //Create User Application

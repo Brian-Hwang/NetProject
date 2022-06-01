@@ -1,6 +1,7 @@
 import random
 import os
 from time import sleep
+import sys
 
 WHITE = '\u001b[37m'
 RED = '\u001b[31m'
@@ -27,7 +28,10 @@ def readNextFrame(size, f):
     return frame
 
 
-f = open("output1.txt", "r")
+if (len(sys.argv) > 1):
+    f = open(sys.argv[1], "r")
+else:
+    f = open("output.txt", "r")
 
 while(n != 10000):
     nextFrame = readNextFrame(size, f)
@@ -55,7 +59,10 @@ while(n != 10000):
         print("")
 
     print(n)
-    sleep(0.1)
+    if(len(sys.argv)>2):
+        sleep(float(sys.argv[2]))
+    else:
+        sleep(0.1)
     n = n + 1
 
 print("END OF GAME")
