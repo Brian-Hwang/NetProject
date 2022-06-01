@@ -1,5 +1,6 @@
 
 
+
 # NetProject Team 10 - ✨Dodge!✨
 2022 Spring Semester Network Project Team#10
 
@@ -40,33 +41,40 @@ Once the application is done running, the you can check the game visualization w
 ✨Dodge!✨ can take various command line inputs to show different scenarios.
 
  1. Topology
-    	./waf --run "scratch/dodge --protocol=udp"
-        ./waf --run "scratch/dodge --protocol=wifi"
+
+		./waf --run "scratch/dodge --protocol=udp"
+	    ./waf --run "scratch/dodge --protocol=wifi"
 
  2. Data Rate
-    	./waf --run "scratch/dodge --DataRate=500Mbps"
+
+		./waf --run "scratch/dodge --DataRate=500Mbps"
 
  3. Delay
-     	./waf --run "scratch/dodge --Delay=1ms"
+
+	 	./waf --run "scratch/dodge --Delay=1ms"
 
  4. Frame Rate    
- 	./waf --run "scratch/dodge --FrameRate=0.01"
+
+		./waf --run "scratch/dodge --FrameRate=0.01"
 
  5. Speed    
- 	./waf --run "scratch/dodge --Speed=0.1"
+
+		./waf --run "scratch/dodge --Speed=0.1"
 
  6. Speed Increment
-    	./waf --run "scratch/dodge --SpeedInc=0.01"
+
+		./waf --run "scratch/dodge --SpeedInc=0.01"
+
     
  7. Speed Interval
-    ./waf --run "scratch/dodge --SpeedInt=0.1"
-
+ 
+	    ./waf --run "scratch/dodge --SpeedInt=0.1"
 
 ## *System configuration**
 
 The System configuration can be shown as below:
 
-<img width = "80%" src="https://github.com/Brian-Hwang/NetProject/171389853-246a9840-500e-4179-9ad9-3deb5a671d5e.gif"/>
+<img width = "80%" src="https://github.com/Brian-Hwang/NetProject/config.png"/>
 
 
 
@@ -97,5 +105,11 @@ Game measures elapsed time after game starts and prints it out. It helps measuri
 
 [HyunJoong Kim](https://github.com/SWKHJ)
  ... ADD PLEASE!
+
+
+
+
+
+
 
 
