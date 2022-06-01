@@ -230,8 +230,17 @@ namespace ns3
         std::string display_frame {};
         display_frame = m_lastFrame;
         
-        // write to outFile
+        //Game Over Condition
+        if(display_frame[dim-m_fieldSize + static_cast<int>(m_currPos)] == '1'){
+            NS_LOG_UNCOND("GAME OVER at " << Simulator::Now().GetSeconds());
+            StopApplication();
+        }
+
+        //Move Player
         display_frame[dim - m_fieldSize + static_cast<int>(m_currPos)] = '2';
+        
+        
+        // write to outFile
         m_outFile << display_frame.c_str();
 
         //if there are frames left, keep sending
@@ -273,15 +282,6 @@ namespace ns3
             }
 
             m_generateBricks = !m_generateBricks;
-
-            /*for(int i = 0; i < m_fieldSize*m_fieldSize; i++){
-                if(!(i % m_fieldSize))
-                    std::cout << std::endl;
-                std::cout << m_lastFrame[i];
-                
-            }*/
-
-
         }
 
         //schedule the next update
@@ -344,8 +344,15 @@ namespace ns3
         m_running = false;
         if (m_displayEvent.IsRunning())
         {
-            Simulator::Cancel (m_sendEvent);
             Simulator::Cancel(m_displayEvent);
+        }
+        if (m_sendEvent.IsRunning())
+        {
+            Simulator::Cancel (m_sendEvent);
+        }
+        if (m_speedEvent.IsRunning())
+        {
+            Simulator::Cancel (m_speedEvent);
         }
         if (m_socket)
         {

@@ -44,18 +44,9 @@ int main(int argc, char *argv[])
     LogComponentEnable("GameServer", LOG_LEVEL_ALL);
     LogComponentEnable("GameUser", LOG_LEVEL_ALL);
     LogComponentEnable("TestTeamProject", LOG_LEVEL_ALL);
-    /*    LogComponentEnable("UdpL4Protocol", LOG_LEVEL_ALL);
-        LogComponentEnable("UdpSocket", LOG_LEVEL_FUNCTION);
-        LogComponentEnable("Socket", LOG_LEVEL_FUNCTION);
-        LogComponentEnable("UdpSocketImpl", LOG_LEVEL_LOGIC);
-        LogComponentEnable("Ipv4Interface", LOG_LEVEL_LOGIC);
-        LogComponentEnable("Ipv4L3Protocol", LOG_LEVEL_LOGIC);
-        LogComponentEnable("TrafficControlLayer", LOG_LEVEL_FUNCTION);
-        LogComponentEnable("PointToPointNetDevice", LOG_LEVEL_FUNCTION);
-        LogComponentEnable("PointToPointChannel", LOG_LEVEL_FUNCTION);
-    */
     GlobalValue::Bind("SimulatorImplementationType",
                       StringValue("ns3::RealtimeSimulatorImpl"));
+    
     std::string dr = "100Mbps";
     std::string delay = "1ms";
     std::string proto = "Udp";
