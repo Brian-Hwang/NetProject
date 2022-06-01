@@ -93,20 +93,20 @@ Game measures elapsed time after game starts and prints it out. It helps measuri
  ```
  docker pull helmai/team10:base
  ```
-## **Contributors**
+## **Added Files**
 
-[Maike](https://github.com/hema2601)
-
-[Brian Hwang](https://github.com/Brian-Hwang)
-
-[]()
-
-[]()
-
-[]()
-
-[HyunJoong Kim](https://github.com/SWKHJ)
- ... ADD PLEASE!
+/src/applications/model/game-server.cc
+/src/applications/model/game-server.h
+/src/applications/model/game-client.cc
+/src/applications/model/game-client.h
+/src/applications/helper/game-server-helper.cc
+/src/applications/helper/game-server-helper.h
+/src/applications/helper/game-client-helper.cc
+/src/applications/helper/game-client-helper.h
+/scratch/dodge.cc
+/scratch/testManyToOne.cc
+/scratch/display.py
+(+ game team code)
 
 
 
