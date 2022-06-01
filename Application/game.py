@@ -10,7 +10,7 @@ pygame.mixer.init()
 
 gameplay_font = pygame.font.SysFont("dejavuserif", 20)
 endgame_font =  pygame.font.SysFont("dejavuserif", 50)
-sleep(2)
+
 fd = open('pro_output.txt', 'r')
 count = 0
 while True:
@@ -86,6 +86,7 @@ len_one = 0
 one_index = []
 here = ""
 fd = open('pro_output.txt', 'r')
+sleep(2)
 while (running ==1 or running ==2):
     sleep(0.1)
     on +=1
