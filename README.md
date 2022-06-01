@@ -57,7 +57,7 @@ The configuration of the project can be split into 3 parts:
 
 ## **Dodge Game(Actual Game Visualization)**
 
-<img width = "80%" src="https://github.com/Brian-Hwang/NetProject/issues/6#issue-1255688008"/>
+<img width = "80%" src="https://github.com/Brian-Hwang/NetProject/171389853-246a9840-500e-4179-9ad9-3deb5a671d5e.gif"/>
 
 The Dodge Game takes pro.output_txt file as input, read each line and translate data into player and enemy positions.
 Player dodges bricks by moving characters to left or right.
