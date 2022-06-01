@@ -31,11 +31,15 @@ Once the application is done running, the you can check the game visualization w
 	    python3 display.py
  
  2. Process the output(in ~/Application)  
+ 
 	    python3 preprocess.py
+	    
 	("output.txt" file should be located in Application folder)
 	
  3. Actual Game visualization (/Application)
-	    python3 game.py 
+ 
+	    python3 game.py
+	    
 	("pro_output.txt" file should be located in Application folder, pro_output2.txt indicate each frame)
 
 
